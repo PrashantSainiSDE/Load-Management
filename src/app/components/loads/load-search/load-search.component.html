@@ -1,0 +1,213 @@
+<!-- <main>
+    <div class="main-wrapper">
+        <div id="content">
+            <app-header></app-header> -->
+            <div class="main-area position-relative">
+                <!-- Top Search :: Start -->
+                <div class="collapse" id="collapseExample">
+                    <div class="top-search card card-body  border-0 rounded-0">
+                        <form class="form-inline">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="What are you looking for?" aria-label="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button"><i class="far fa-search font-14"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Top Search :: End -->
+                <div class="page-card bg-white">
+                    <div class="page-card-title d-flex align-items-center justify-content-between">
+                        <p class="font-15 font-weight-600 mb-0 text-capitalize">Load Search</p>
+                    </div>
+                    <div class="page-card-body">
+                        <!-- Search Box :: Start -->
+                        <div class="p-20 pb-0">
+                            <div class="w-100 position-relative b-tab">
+                                <ul class="nav nav-pills detail-tab" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active font-13 font-weight-500 text-uppercase pt-0" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#search-in-progress" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Search In Progress</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link font-13 font-weight-500 text-uppercase pt-0" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#search-params" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" tabindex="-1">Search Params</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="search-in-progress" role="tabpanel" aria-labelledby="pills-home-tab">
+                                    <div class="pt-20 pb-20">
+                                        <form method="post">
+                                            <div class="row">
+                                                <div class="col-xl-12">
+                                                    <h6 class="border-bottom-light pb-2 mb-3 font-14">Search In Progress</h6>
+                                                </div>
+                                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                                    <div class="form-group">
+                                                        <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">DOT Number</label>
+                                                        <input type="text" name="dotno" class="form-control" placeholder="DOT Number">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                                    <div class="form-group">
+                                                        <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Company Name</label>
+                                                        <input type="text" name="companyname" class="form-control" placeholder="Company Name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                                    <div class="form-group">
+                                                        <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">City Name</label>
+                                                        <input type="text" name="dbaname" class="form-control" placeholder="City Name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                                    <div class="form-group">
+                                                        <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">States</label>
+                                                        <input type="text" name="states" class="form-control" placeholder="State">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                                    <button class="btn btn-primary font-weight-400 font-12 ps-4 pe-4 mt-30">Search</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade show" id="search-params" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                    <div class="pt-20 pb-20">
+                                        <form method="post">
+                                            <div class="row">
+                                                <div class="col-xl-12">
+                                                    <h6 class="border-bottom-light pb-2 mb-3 font-14">Search Params</h6>
+                                                </div>
+                                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                                    <div class="form-group">
+                                                        <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Carrier</label>
+                                                        <input type="text" name="carrier" class="form-control" placeholder="Carrier">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                                    <div class="form-group">
+                                                        <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Customer</label>
+                                                        <input type="text" name="customer" class="form-control" placeholder="Customer">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                                    <div class="form-group has-search">
+                                                        <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Start Date</label>
+                                                        <div class="input-group">
+                                                            <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                            <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                                    <div class="form-group has-search">
+                                                        <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">End Date</label>
+                                                        <div class="input-group">
+                                                            <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                            <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                                    <div class="form-group">
+                                                        <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Pickup State</label>
+                                                        <input type="text" name="pickupstate" class="form-control" placeholder="Pickup State">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                                    <div class="form-group">
+                                                        <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Drop State</label>
+                                                        <input type="text" name="dropoffstate" class="form-control" placeholder="Drop State">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xxl-6 col-xl-6 col-lg-6">
+                                                    <div class="form-group d-flex align-items-center gap-3">
+                                                        <a href="javascript:;" class="font-12 font-weight-500 text-main d-block text-decoration-underline">Clear All</a>
+                                                        <button class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Search</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- Search Box :: End -->
+                        <!-- Table Result :: Start -->
+                        <div class="table-responsive p-20 pb-0">
+                            <table class="table table-bordered table-striped position-relative">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase whitespace-nowrap">Load ID</th>
+                                        <th class="text-uppercase">Customer</th>
+                                        <th class="text-uppercase whitespace-nowrap">Cust. Ref.</th>
+                                        <th class="text-uppercase whitespace-nowrap">Last Contact</th>
+                                        <th class="text-uppercase">Carrier</th>
+                                        <th class="text-uppercase whitespace-nowrap">Load Status</th>
+                                        <th class="text-uppercase">Expense</th>
+                                        <th class="text-uppercase">Income</th>
+                                        <th class="text-uppercase">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Guided logistics</td>
+                                        <td class="text-capitalize">1233</td>
+                                        <td class="text-capitalize whitespace-nowrap"><i class="far fa-info-circle me-1 font-13" data-bs-toggle="tooltip" title="WI 53593, USA: 08/10/2022, 4:32AM"></i><span class="text-danger font-14 font-weight-400">8412H Ago</span></td>
+                                        <td class="text-capitalize">3d logistic trucking llc</td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Delivered</span></td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$7,000.00</td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-main me-3"><i class="far fa-eye" data-bs-toggle="tooltip" aria-label="View" data-bs-original-title="View"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Guided logistics</td>
+                                        <td class="text-capitalize">1233</td>
+                                        <td class="text-capitalize whitespace-nowrap"><i class="far fa-info-circle me-1 font-13" data-bs-toggle="tooltip" title="WI 53593, USA: 08/10/2022, 4:32AM"></i><span class="text-danger font-14 font-weight-400">8412H Ago</span></td>
+                                        <td class="text-capitalize">3d logistic trucking llc</td>
+                                        <td class="text-capitalize"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$7,000.00</td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-main me-3"><i class="far fa-eye" data-bs-toggle="tooltip" aria-label="View" data-bs-original-title="View"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Table Result :: End -->
+                        <!-- Pagination :: Start -->
+                        <div class="row mt-30">
+                            <div class="col-xl-12">
+                                <nav aria-label="Page navigation example ms-auto me-auto">
+                                    <ul class="pagination justify-content-center gap-2">
+                                        <li class="page-item">
+                                            <a class="page-link font-22" href="javascript:;" aria-label="Previous"><i class="far fa-angle-left font-weight-300"></i></a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link font-14" href="javascript:;">1</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">2</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">3</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">4</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">5</a></li>
+                                        <li class="page-item"><a class="page-link font-22" href="javascript:;" aria-label="Next"><i class="far fa-angle-right font-weight-300"></i></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Pagination :: End -->
+                    </div>
+                </div>
+            </div>
+        <!-- </div>
+            <app-footer></app-footer>
+    </div>
+</main> -->

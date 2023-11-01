@@ -1,0 +1,111 @@
+// .table>:not(caption)>*>* {
+//     padding: 0.5rem 0.5rem !important;
+//     border-bottom-width: var(--bs-border-width) !important;
+// }
+
+// table thead th {
+//     font-weight: 600;
+// }
+// .status span {
+//     margin-right: 4px;
+// }
+
+
+
+
+
+.default-status {
+  border: 1px solid var(--default-status-color);
+  color: var(--default-status-color);
+}
+
+
+
+.Pending {
+  border: 1px solid var(--pending-color);
+  color: var(--pending-color);
+}
+
+
+
+.Assigned {
+  border: 1px solid var(--assigned-color);
+  color: var(--assigned-color);
+}
+
+
+
+.Need-Carrier {
+  border: 1px solid var(--need-carrier-color);
+  color: var(--need-carrier-color);
+}
+
+
+
+.Dispatched {
+  border: 1px solid var(--dispatched-color);
+  color: var(--dispatched-color);
+}
+
+
+
+.In-Transit {
+  border: 1px solid var(--in-transit-color);
+  color: var(--in-transit-color);
+}
+
+
+
+.Delivered {
+  border: 1px solid var(--delivered-color);
+  color: var(--delivered-color);
+}
+
+
+
+
+
+
+// .quote {
+//   color: #ffffff;
+// }
+
+// .pending {
+//   color: #b3b3ff;
+// }
+
+// .confirmed {
+//   color: #ffffff;
+// }
+
+// .assigned {
+//   color: #80ff80;
+// }
+
+// .need-carrier {
+//   color: #ff99e6;
+// }
+
+// .dispatched {
+//   color: #ffcccc;
+// }
+
+// .at-shipper {
+//   color: #ffffff;
+// }
+
+// .in-transit {
+//   color: #8ae7b6;
+// }
+
+// .at-receiver {
+//   color: #ffffff;
+// }
+
+// .delivered {
+//   color: #80ffff;
+// }
+
+// .possible-claim {
+//   color: #ffffff;
+// }

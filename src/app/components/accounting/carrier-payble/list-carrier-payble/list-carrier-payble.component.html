@@ -1,0 +1,589 @@
+<!-- <main>
+    <div class="main-wrapper">
+        <div id="content">
+            <app-header></app-header> -->
+            <div class="main-area position-relative">
+                <!-- Top Search :: Start -->
+                <div class="collapse" id="collapseExample">
+                    <div class="top-search card card-body  border-0 rounded-0">
+                        <form class="form-inline">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="What are you looking for?" aria-label="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button"><i class="far fa-search font-14"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Top Search :: End -->
+                <div class="page-card bg-white">
+                    <div class="page-card-title d-flex align-items-center justify-content-between">
+                        <p class="font-15 font-weight-600 mb-0 text-capitalize">Carrier Payable List</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="dropdown filter-dropdown">
+                                <span class="btn btn-sm btn-primary dropdown-toggle font-12 " type="button" id="dropdownMenuButton23" data-bs-toggle="dropdown" aria-expanded="true"><span class="text text-uppercase text-white">Pending</span> <i class="far fa-angle-down font-12 text-white"></i></span>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton23" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 36px);" data-popper-placement="bottom-start">
+                                    <p class="dropdown-item pending font-13 text-uppercase text-main mb-0 border-bottom">Filter</p>
+                                    <a class="dropdown-item pending font-13 text-capitalize" href="javascript:;">Pending</a>
+                                    <a class="dropdown-item pending font-13 text-capitalize" href="javascript:;">Due</a>
+                                    <a class="dropdown-item pending font-13 text-capitalize" href="javascript:;">Paid</a>
+                                </div>
+                            </div>
+                            <a href="javascript:;" class="btn btn-outline-info text-main text-uppercase text-center font-12" type="button"><i class="far fa-plus"></i> Get Load</a>
+                        </div>
+                    </div>
+                        <!-- Search Box :: End -->
+                        <!-- Table Result :: Start -->
+                        <div class="table-responsive p-20 pb-0">
+                            <table class="table table-bordered table-striped position-relative">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-start">Load ID</th>
+                                        <th class="text-uppercase whitespace-nowrap">Carrier / Branch</th>
+                                        <th class="text-uppercase whitespace-nowrap">Invoice Date</th>
+                                        <th class="text-uppercase whitespace-nowrap">Due Date</th>
+                                        <th class="text-uppercase whitespace-nowrap">Amount Due</th>
+                                        <th class="text-uppercase whitespace-nowrap">Amount paid</th>
+                                        <th class="text-uppercase whitespace-nowrap">Accounting Date</th>
+                                        <th class="text-uppercase whitespace-nowrap">Generate Bill</th>
+                                        <th class="text-uppercase whitespace-nowrap">Manage Documents</th>
+                                        <th class="text-uppercase whitespace-nowrap">Payment</th>
+                                        <th class="text-uppercase whitespace-nowrap">Send Back to Loads</th>
+                                        <th class="text-uppercase whitespace-nowrap">Invoice Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start text-capitalize whitespace-nowrap">15798</td>
+                                        <td class="text-capitalize whitespace-nowrap">All Transport LLC</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="amount-due.html" class="font-weight-400 font-14 text-primary">$5,500.00</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">12/12/2023</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#generateBill">Generate</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="font-weight-400 font-14 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">$5,500.00</td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-primary font-weight-400 font-14">Send back</a></td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="font-weight-400 font-14 text-warning"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Table Result :: End -->
+                        <!-- Pagination :: Start -->
+                        <div class="row mt-30">
+                            <div class="col-xl-12">
+                                <nav aria-label="Page navigation example ms-auto me-auto">
+                                    <ul class="pagination justify-content-center gap-2">
+                                        <li class="page-item">
+                                            <a class="page-link font-22" href="javascript:;" aria-label="Previous"><i class="far fa-angle-left font-weight-300"></i></a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link font-14" href="javascript:;">1</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">2</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">3</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">4</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">5</a></li>
+                                        <li class="page-item"><a class="page-link font-22" href="javascript:;" aria-label="Next"><i class="far fa-angle-right font-weight-300"></i></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Pagination :: End -->
+                    </div>
+            </div>
+            <!-- </div>
+        </div>
+            <app-footer></app-footer>
+</main> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Generate Bill :: Start -->
+<div class="modal fade" id="generateBill" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-capitalize font-18 mb-0" id="exampleModalLabel">Generate Bill</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="card border-radius-10 bg-light border mb-10">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="mb-10">
+                            <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load ID-</p>
+                            <p class="edit-text font-13 font-weight-400 mb-0">15135</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="mb-10">
+                            <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Phone Number-</p>
+                            <p class="edit-text font-13 font-weight-400 mb-0">8956236525</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12">
+                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load ID-</p>
+                        <p class="edit-text font-13 font-weight-400 mb-0"><b>All Transport LLC</b></p>
+                        <p class="edit-text font-13 font-weight-400 mb-0">13830 SW 268th ST, Apt 102, Homestead,FL 33032</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6">
+                <div class="form-group">
+                    <label class="text-uppercase font-weight-400 font-12 mb-10">Factoring Company</label>
+                    <select class="form-control form-select" aria-placeholder="Customer Branch">
+                        <option>Select Customer Branch</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="form-group has-search">
+                    <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Bill Date</label>
+                    <div class="input-group" id="dropoffdate-filter">
+                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                        <input type="date" class="form-control border-radius-6" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="form-group">
+                    <label class="text-uppercase font-weight-400 font-12 mb-10">Total Amount</label>
+                    <input class="form-control" type="text" placeholder="Total Amount" value="$5500" />
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="form-group">
+                    <label class="text-uppercase font-weight-400 font-12 mb-10">Payment terms</label>
+                    <input class="form-control" type="text" placeholder="Payment Terms" value="30" />
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="form-group">
+                    <label class="text-uppercase font-weight-400 font-12 mb-10">Carrier Remit Address</label>
+                    <textarea class="form-control" rows="2" placeholder="Carrier Remit Address" value="13830 SW 268th ST, Apt 102, Homestead FL 33032"></textarea>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="form-group">
+                    <label class="text-uppercase font-weight-400 font-12 mb-10">Notes</label>
+                    <textarea class="form-control" rows="2" placeholder="Notes"></textarea>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="form-check form-group mb-0">
+                  <input class="form-check-input" type="checkbox" value="" id="quickpay">
+                  <label class="text-uppercase font-weight-400 font-12 mb-10" for="quickpay">Quick Pay 2.75%</label>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a type="button" class="font-weight-400 font-12 me-3" data-bs-dismiss="modal">Cancel</a>
+        <button type="button" class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Generate Bill :: End -->
+<!-- Add Document :: Start -->
+<div class="modal fade" id="addDocs" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-capitalize font-18 mb-0" id="exampleModalLabel">Add Document</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row mb-20">
+            <div class="col-xl-6 col-lg-6">
+                <div class="form-group">
+                    <label class="text-uppercase font-weight-400 font-12 mb-10">Document Name</label>
+                    <select id="docs-name" class="js-states form-control form-select" aria-placeholder="Select Customer">
+                        <option></option>
+                        <option>Bill of Lading ( BOL)</option>
+                        <option>Proof of Delivery ( POD)</option>
+                        <option>Lumper Receipt</option>
+                        <option>Customer Confirmation</option>
+                        <option>Carrier Confirmation</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="form-group">
+                    <label class="text-uppercase font-weight-400 font-12 mb-10">Document Description</label>
+                    <input class="form-control" type="text" placeholder="Document Description"/>
+                </div>
+            </div>
+            <div class="col-xl-12 col-lg-12">
+                <div class="form-group">
+                    <label class="text-uppercase font-weight-400 font-12 mb-10">Attach Document</label>
+                    <input name="file1" type="file" class="dropify border-radius-6" data-height="100" />
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <button type="button" class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Add</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="border rounded border-dashed p-2 mb-10">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 me-3">
+                            <div class="avatar-sm">
+                                <div class="avatar-title bg-light text-secondary rounded font-18 text-main">
+                                    <i class="far fa-file-pdf"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 overflow-hidden">
+                            <h5 class="font-13 mb-1"><a href="javascript:;" class="text-body text-truncate d-block font-weight-500">App-pages.pdf</a></h5>
+                            <span class="text-muted font-13 font-weight-400 me-2">Document Description</span>
+                        </div>
+                        <div class="flex-shrink-0 ms-2">
+                            <div class="d-flex gap-1">
+                                <button type="button" class="btn btn-icon text-main btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="View" data-bs-original-title="View"><i class="far fa-eye"></i></button>
+                                <button type="button" class="btn btn-icon text-red btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"><i class="far fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border rounded border-dashed p-2 mb-10">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 me-3">
+                            <div class="avatar-sm">
+                                <div class="avatar-title bg-light text-secondary rounded font-18 text-main">
+                                    <i class="far fa-file-pdf"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 overflow-hidden">
+                            <h5 class="font-13 mb-1"><a href="javascript:;" class="text-body text-truncate d-block font-weight-500">App-pages.pdf</a></h5>
+                            <span class="text-muted font-13 font-weight-400 me-2">Document Description</span>
+                        </div>
+                        <div class="flex-shrink-0 ms-2">
+                            <div class="d-flex gap-1">
+                                <button type="button" class="btn btn-icon text-main btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="View" data-bs-original-title="View"><i class="far fa-eye"></i></button>
+                                <button type="button" class="btn btn-icon text-red btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"><i class="far fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border rounded border-dashed p-2 mb-10">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 me-3">
+                            <div class="avatar-sm">
+                                <div class="avatar-title bg-light text-secondary rounded font-18 text-main">
+                                    <i class="far fa-file-pdf"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 overflow-hidden">
+                            <h5 class="font-13 mb-1"><a href="javascript:;" class="text-body text-truncate d-block font-weight-500">App-pages.pdf</a></h5>
+                            <span class="text-muted font-13 font-weight-400 me-2">Document Description</span>
+                        </div>
+                        <div class="flex-shrink-0 ms-2">
+                            <div class="d-flex gap-1">
+                                <button type="button" class="btn btn-icon text-main btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="View" data-bs-original-title="View"><i class="far fa-eye"></i></button>
+                                <button type="button" class="btn btn-icon text-red btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"><i class="far fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Add Document :: End -->

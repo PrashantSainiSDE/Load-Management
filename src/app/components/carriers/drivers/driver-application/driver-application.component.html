@@ -1,0 +1,1271 @@
+<!-- <main>
+    <div class="main-wrapper">
+        <div id="content">
+            <app-header></app-header> -->
+            <div class="main-area position-relative">
+                <!-- Top Search :: Start -->
+                <div class="collapse" id="collapseExample">
+                    <div class="top-search card card-body  border-0 rounded-0">
+                        <form class="form-inline">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="What are you looking for?"/>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button"><i class="far fa-search font-14"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Top Search :: End -->
+                <div class="page-card bg-white">
+                    <div class="page-card-title d-flex align-items-center justify-content-between">
+                        <p class="font-15 font-weight-600 mb-0 text-capitalize">Driver Application</p>
+                    </div>
+                    <div class="page-card-body">
+                        <mat-stepper #stepper>
+
+                            <form id="wizard" class="step-form">
+                                <mat-step>
+                                    <h2 class="visually-hidden" id="step-1">First Step</h2>
+                                    <section style="padding: 20px; margin-top: 8px;">
+                                        <div class="row">
+                                            <div class="col-xl-12 text-center">
+                                                <h4 class="text-uppercase font-20 font-weight-500 text-main">Commercial Driver Application</h4>
+                                                <p class="font-13 font-weight-400">Provide all information Requested</p>
+                                            </div>
+                                        </div>
+                                        <div class="row p-20 ps-0 pe-0">
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group has-search">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Date</label>
+                                                    <div class="input-group">
+                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">First Name</label>
+                                                    <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Middle Name</label>
+                                                    <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Last Name</label>
+                                                    <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group has-search">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Date Of Birth</label>
+                                                    <div class="input-group">
+                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">City</label>
+                                                    <input type="text" class="form-control" name="city" placeholder="City">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">State</label>
+                                                    <input type="text" class="form-control" name="state" placeholder="State">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Zip</label>
+                                                    <input type="text" class="form-control" name="zip" placeholder="Zip">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Cellular Telephone</label>
+                                                    <input type="text" class="form-control" name="telephone" placeholder="Cellular Telephone">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Social Security Number</label>
+                                                    <input type="text" class="form-control" name="ssn" placeholder="Social Security Number">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Address</label>
+                                                    <textarea class="form-control" placeholder="Address" rows="1"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12 col-lg-12">
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" id="addressDetails" name="question1" data-trigger="hidden_fields_one" class="trigger form-check-input">
+                                                    <label class="font-13 font-weight-400 mb-10" for="addressDetails">If your above address is less than 3 years continue listing them below to cover the previous 3 year period</label>
+                                                </div>
+                                                <div id="hidden_fields_one" class="hidden-check-data">
+                                                    <div class="border-bottom-light border-bottom-dashed">
+                                                        <div class="row">
+                                                            <div class="col-xl-2 col-lg-4">
+                                                                <div class="form-group has-search">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">From</label>
+                                                                    <div class="input-group">
+                                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-2 col-lg-4">
+                                                                <div class="form-group has-search">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">To</label>
+                                                                    <div class="input-group">
+                                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xl-2 col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">City</label>
+                                                                    <input type="text" class="form-control" name="city" placeholder="City">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-2 col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">State</label>
+                                                                    <input type="text" class="form-control" name="state" placeholder="State">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-2 col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Zip</label>
+                                                                    <input type="text" class="form-control" name="zip" placeholder="Zip">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-4 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Street</label>
+                                                                    <textarea class="form-control" placeholder="Address" rows="1"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="border-bottom-light border-bottom-dashed pt-2">
+                                                        <div class="row">
+                                                            <div class="col-xl-2 col-lg-4">
+                                                                <div class="form-group has-search">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">From</label>
+                                                                    <div class="input-group">
+                                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-2 col-lg-4">
+                                                                <div class="form-group has-search">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">To</label>
+                                                                    <div class="input-group">
+                                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xl-2 col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">City</label>
+                                                                    <input type="text" class="form-control" name="city" placeholder="City">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-2 col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">State</label>
+                                                                    <input type="text" class="form-control" name="state" placeholder="State">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-2 col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Zip</label>
+                                                                    <input type="text" class="form-control" name="zip" placeholder="Zip">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-4 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Street</label>
+                                                                    <textarea class="form-control" placeholder="Address" rows="1"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="border-bottom-light border-bottom-dashed pt-2">
+                                                        <div class="row">
+                                                            <div class="col-xl-2 col-lg-4">
+                                                                <div class="form-group has-search">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">From</label>
+                                                                    <div class="input-group">
+                                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-2 col-lg-4">
+                                                                <div class="form-group has-search">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">To</label>
+                                                                    <div class="input-group">
+                                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xl-2 col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">City</label>
+                                                                    <input type="text" class="form-control" name="city" placeholder="City">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-2 col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">State</label>
+                                                                    <input type="text" class="form-control" name="state" placeholder="State">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-2 col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Zip</label>
+                                                                    <input type="text" class="form-control" name="zip" placeholder="Zip">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-4 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Street</label>
+                                                                    <textarea class="form-control" placeholder="Address" rows="1"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="form-group">
+                                                    <h4 class="text-capitalize font-15 font-weight-500 text-main"><i class="far fa-folder-open"></i> Driver’s License Information: all licenses held, last 3 years</h4>
+                                                </div>
+                                                <div class="table-responsive mb-20">
+                                                    <table class="table table-bordered table-striped position-relative">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>#</th>
+                                                                <th>State</th>
+                                                                <th>Number</th>
+                                                                <th>Expiration Date</th>
+                                                                <th>Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td><input type="text" class="form-control" name="sate" placeholder="State"/></td>
+                                                                <td><input type="text" class="form-control" name="sate" placeholder="Number"/></td>
+                                                                <td>
+                                                                    <div class="has-search">
+                                                                        <div class="input-group">
+                                                                            <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                            <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td><input type="text" class="form-control" name="sate" placeholder="State"/></td>
+                                                                <td><input type="text" class="form-control" name="sate" placeholder="Number"/></td>
+                                                                <td>
+                                                                    <div class="has-search">
+                                                                        <div class="input-group">
+                                                                            <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                            <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3</td>
+                                                                <td><input type="text" class="form-control" name="sate" placeholder="State"/></td>
+                                                                <td><input type="text" class="form-control" name="sate" placeholder="Number"/></td>
+                                                                <td>
+                                                                    <div class="has-search">
+                                                                        <div class="input-group">
+                                                                            <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                            <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="form-group d-flex align-items-center justify-content-between">
+                                                    <h4 class="text-capitalize font-15 font-weight-500 text-main"><i class="far fa-folder-open"></i> Experience</h4>
+                                                    <a class="text-main font-14 font-weight-500" type="button" id="addExp"><i class="far fa-plus"></i> Add</a>
+                                                </div>
+                                                <div class="table-responsive mb-20">
+                                                    <table class="table table-bordered table-striped position-relative" id="productTable">
+                                                        <thead>
+                                                            <tr>
+                                                                <!-- <th>#</th> -->
+                                                                <th>Type of vehicle driven</th>
+                                                                <th>From</th>
+                                                                <th>To</th>
+                                                                <th>Approximate mileage driven</th>
+                                                                <th>Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="exp-tbody">
+                                                            <tr>
+                                                                <td><input class="form-control" name="vehicledriven" placeholder="Type of vehicle driven"/></td>
+                                                                <td>
+                                                                    <div class="has-search">
+                                                                        <div class="input-group">
+                                                                            <span class="far fa-calendar-alt form-control-feedback"></span><input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="has-search">
+                                                                        <div class="input-group">
+                                                                            <span class="far fa-calendar-alt form-control-feedback"></span><input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td><input class="form-control" name="vehicledriven" placeholder="Approximate mileage driven"/></td>
+                                                                <td><a class=" remove text-capitalize font-12 text-red"><i class="far fa-trash-alt" aria-hidden="true"></i></a></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" id="accidentDetails" name="question1" data-trigger="hidden_fields_two" class="trigger form-check-input">
+                                                    <label class="font-13 font-weight-400 mb-10" for="accidentDetails">All Accidents, last 3 years: (If yes please check)</label>
+                                                </div>
+                                                <div id="hidden_fields_two" class="hidden-check-data">
+                                                    <div class="mb-20 text-end"><a class="text-main font-14 font-weight-500" type="button" id="addAccident"><i class="far fa-plus"></i> Add</a></div>
+                                                    <div class="table-responsive mb-20">
+                                                        <table class="table table-bordered table-striped position-relative" id="productTable">
+                                                            <thead>
+                                                                <tr>
+                                                                    <!-- <th>#</th> -->
+                                                                    <th>Date</th>
+                                                                    <th>Describe</th>
+                                                                    <th>Fatalities</th>
+                                                                    <th>Injuries</th>
+                                                                    <th>Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class="accident-tbody">
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="has-search">
+                                                                            <div class="input-group">
+                                                                                <span class="far fa-calendar-alt form-control-feedback"></span><input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <textarea class="form-control" rows="2" placeholder="Describe"></textarea>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" class="form-control" name="fatalities" placeholder="Fatalities"/>
+                                                                    </td>
+                                                                    <td><input class="form-control" name="injuries" placeholder="Injuries"/></td>
+                                                                    <td><a class=" remove text-capitalize font-12 text-red"><i class="far fa-trash-alt" aria-hidden="true"></i></a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" id="tvDetails" name="question1" data-trigger="hidden_fields_three" class="trigger form-check-input">
+                                                    <label class="font-13 font-weight-400 mb-10" for="tvDetails">List all Traffic Violations Convictions, last 3 years: (If yes please check)</label>
+                                                </div>
+                                                <div id="hidden_fields_three" class="hidden-check-data">
+                                                    <div class="mb-20 text-end"><a class="text-main font-14 font-weight-500" type="button" id="addTV"><i class="far fa-plus"></i> Add</a></div>
+                                                    <div class="table-responsive mb-20">
+                                                        <table class="table table-bordered table-striped position-relative" id="productTable">
+                                                            <thead>
+                                                                <tr>
+                                                                    <!-- <th>#</th> -->
+                                                                    <th>Date</th>
+                                                                    <th>Violation</th>
+                                                                    <th>State</th>
+                                                                    <th>Commercial Vehicle</th>
+                                                                    <th>Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class="tv-tbody">
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="has-search">
+                                                                            <div class="input-group">
+                                                                                <span class="far fa-calendar-alt form-control-feedback"></span><input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" class="form-control" name="violation" placeholder="Violation"/>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" class="form-control" name="state" placeholder="State"/>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="checkbox" class="form-check-input d-inline-block" name="commercialvehicle"/>
+                                                                    </td>
+                                                                    <td><a class=" remove text-capitalize font-12 text-red"><i class="far fa-trash-alt" aria-hidden="true"></i></a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="form-group">
+                                                    <h4 class="text-capitalize font-15 font-weight-500 text-main"><i class="far fa-folder-open"></i> Have you ever had any driver license denied, suspended, revoked or canceled by any issuing state agency?</h4>
+                                                    <div class="form-check form-check-inline">
+                                                    <input type="checkbox" id="tvDetails" name="question1" data-trigger="hidden_fields_four" class="trigger form-check-input">
+                                                    <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                    <label class="form-check-label" for="inlineCheckbox1">No</label>
+                                                    </div>
+                                                    <div id="hidden_fields_four" class="hidden-check-data">
+                                                        <div class="form-group">
+                                                            <label class="font-12 font-weight-400 text-uppercase mb-10">State of issuance explanation</label>
+                                                            <textarea class="form-control" placeholder="Address" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12 mb-20">
+                                            <div class="form-group">
+                                                    <h4 class="text-capitalize font-15 font-weight-500 text-main"><i class="far fa-folder-open"></i> Employment History, last 10 years (383.35)—account for gaps between employers: (If owner/operator, list carriers leased to)</h4>
+                                            </div>
+                                            <div class="emp-exp-box">
+                                                <div class="row">
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group has-search">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">From</label>
+                                                                <div class="input-group">
+                                                                    <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                    <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group has-search">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">To</label>
+                                                                <div class="input-group">
+                                                                    <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                    <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Employer</label>
+                                                                <input type="text" class="form-control" name="employer" placeholder="Employer">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Supervisor</label>
+                                                                <input type="text" class="form-control" name="supervisor" placeholder="Supervisor">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Telephone</label>
+                                                                <input type="text" class="form-control" name="telephone" placeholder="Telephone">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">State</label>
+                                                                <input type="text" class="form-control" name="State" placeholder="State">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">City</label>
+                                                                <input type="text" class="form-control" name="city" placeholder="City">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Zip Code</label>
+                                                                <input type="text" class="form-control" name="zipcode" placeholder="Zip Code">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4 col-lg-6">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Address</label>
+                                                                <textarea class="form-control" rows="1" placeholder="Address"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6 col-lg-12">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Were you subject to the Federal Motor Carrier Safety Regulations during this period?</label>
+                                                                <textarea class="form-control" rows="3" placeholder="Write Here..."></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6 col-lg-12">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Were you subject to 49 CFR part 40 controlled substance and alcohol testing during this period?</label>
+                                                                <textarea class="form-control" rows="3" placeholder="Write Here..."></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-12 col-lg-12">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Reason for Leaving</label>
+                                                                <textarea class="form-control" rows="3" placeholder="Write Here..."></textarea>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-12 text-end"><a class="text-main font-14 font-weight-500" type="button" id="add-emp-exp"><i class="far fa-plus"></i> Add</a></div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <div class="d-flex justify-content-between mx-2 mt-2">
+                                        <div></div>
+                                        <div>
+                                            <button class="btn btn-primary rounded-5" style="padding-inline: 30px;" matStepperNext (click)="gotoTop()">Next <i class="fad fa-arrow-right ms-2"></i></button>
+                                        </div>
+                                    </div>
+                                </mat-step>
+                                <mat-step>
+                                    <h2 class="visually-hidden" id="step-2">Second Step</h2>
+                                    <section style="padding: 20px; margin-top: 8px;">
+                                        <div class="row">
+                                            <!-- <div class="col-xl-12">
+                                                <div class="form-group">
+                                                    <h4 class="text-uppercase font-20 font-weight-500 text-main">For driver applicants of commercial motor vehicles that require a Commercial Driver License (CDL) the applicant must disclose their controlled substance and alcohol status per the requirements of 49 CFR part 40.25(j).</h4>
+                                                    <p class="font-13 font-weight-400">As a prospective driver employee, you have the right to review information provided by previous employers. You have the right to have errors in the information corrected by the previous employer(s) and for that previous employer(s) to re-send the corrected information to the prospective employer; the right to have a rebuttal statement attached to the alleged erroneous information, if the previous employer and the driver cannot agree on the accuracy of the information.</p>
+                                                    <p class="font-13 font-weight-400">Driver employees who have previous Department of Transportation regulated employment history in the preceding three years, and wish to review previous employer provided investigative information, must submit a written request to the prospective employer, which may be done at anytime, including when applying or as late as thirty (30) days after being employed or being notified of denial of employment. The prospective employer must provide this information to the applicant within five (5) business days of receiving the written request. If the prospective employer has not yet received the requested information from the previous employer(s), then the five (5) business day deadlines will begin when the prospective employer receives the requested safety performance history information. If the driver has not arranged to pick up or receive the requested records within thirty (30) days of the prospective employer making them available, the prospective motor carrier may consider the driver to have waived their request to review the records.</p>
+                                                </div>
+                                            </div> -->
+                                            <div class="col-xl-12">
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" id="certification" name="question1" data-trigger="hidden_fields_five" class="trigger form-check-input">
+                                                    <label class="text-capitalize font-15 font-weight-500 text-main" for="certification">I certify that this application was completed by me, and that all entries on it and information in it are true and complete to the best of my knowledge.</label>
+                                                </div>
+                                                <div id="hidden_fields_five" class="hidden-check-data">
+                                                    <div class="row">
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Applicant’s Signature</label>
+                                                                <input type="text" class="form-control" name="applicantsignature" placeholder="Applicant’s Signature">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group has-search">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Date</label>
+                                                                <div class="input-group">
+                                                                    <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                    <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-12 col-lg-12">
+                                                            <div class="form-group">
+                                                                <label class="text-capitalize font-14 font-weight-400" for="certification">TO BE COMPLETED BY THE EMPLOYER</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xl-6 col-lg-12">
+                                                            <div class="row">
+                                                                <div class="col-xxl-12  col-xl-12 col-lg-12">
+                                                                    <div class="form-group">
+                                                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Application received by</label>
+                                                                        <input type="text" class="form-control" name="receivedby" placeholder="Received By">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xl-6 col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Name</label>
+                                                                        <input type="text" class="form-control" name="name" placeholder="Name">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xl-6 col-lg-6">
+                                                                    <div class="form-group has-search">
+                                                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Date</label>
+                                                                        <div class="input-group">
+                                                                            <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                            <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6 col-lg-12">
+                                                            <div class="row">
+                                                                <div class="col-xxl-12  col-xl-12 col-lg-12">
+                                                                    <div class="form-group">
+                                                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Application reviewed for completeness by</label>
+                                                                        <input type="text" class="form-control" name="completenessby" placeholder="Completeness By">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xl-6 col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Name</label>
+                                                                        <input type="text" class="form-control" name="name" placeholder="Name">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xl-6 col-lg-6">
+                                                                    <div class="form-group has-search">
+                                                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Date</label>
+                                                                        <div class="input-group">
+                                                                            <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                            <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xl-12">
+                                                            <div class="form-group">
+                                                                <label class="text-capitalize font-14 font-weight-400" for="certification">SIGNIFICANT DATES</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4 col-lg-6">
+                                                            <div class="form-group has-search">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Date of Hire</label>
+                                                                <div class="input-group">
+                                                                    <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                    <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4 col-lg-6">
+                                                            <div class="form-group has-search">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Time & Date of Pre-Employment CST</label>
+                                                                <div class="input-group">
+                                                                    <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                    <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4 col-lg-6">
+                                                            <div class="form-group has-search">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Time & Date of Pre-Employment CST Results Received</label>
+                                                                <div class="input-group">
+                                                                    <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                    <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4 col-lg-6">
+                                                            <div class="form-group has-search">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Date First Used in Safety Sensitive Position</label>
+                                                                <div class="input-group">
+                                                                    <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                    <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4 col-lg-6">
+                                                            <div class="form-group has-search">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Date of Termination</label>
+                                                                <div class="input-group">
+                                                                    <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                    <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" id="alcoholquestionnaire" name="question1" data-trigger="hidden_fields_six" class="trigger form-check-input">
+                                                    <label class="text-capitalize font-15 font-weight-500 text-main" for="alcoholquestionnaire">Commercial vehicle driver applicant controlled substance and alcohol questionnaire pursuant to 49 CFR part 40.25(j)</label>
+                                                </div>
+                                                <div id="hidden_fields_six" class="hidden-check-data">
+                                                    <div class="row">
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group has-search">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Date</label>
+                                                                <div class="input-group">
+                                                                    <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                    <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">First Name</label>
+                                                                <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Middle Name</label>
+                                                                <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Last Name</label>
+                                                                <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group has-search">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Date Of Birth</label>
+                                                                <div class="input-group">
+                                                                    <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                    <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">City</label>
+                                                                <input type="text" class="form-control" name="city" placeholder="City">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">State</label>
+                                                                <input type="text" class="form-control" name="state" placeholder="State">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Zip</label>
+                                                                <input type="text" class="form-control" name="zip" placeholder="Zip">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Cellular Telephone</label>
+                                                                <input type="text" class="form-control" name="telephone" placeholder="Cellular Telephone">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-2 col-lg-4">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Social Security Number</label>
+                                                                <input type="text" class="form-control" name="ssn" placeholder="Social Security Number">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4 col-lg-6">
+                                                            <div class="form-group">
+                                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Address</label>
+                                                                <textarea class="form-control" placeholder="Address" rows="1"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="form-group">
+                                                    <h4 class="text-capitalize font-15 font-weight-500 text-main"><i class="far fa-folder-open"></i> 49 CFR 40.25(j)</h4>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <div class="form-group form-check form-check-inline">
+                                                        <input type="checkbox" id="tvDetails" name="question1" class="form-check-input">
+                                                        <label class="form-check-label" for="inlineCheckbox1">Have you ever tested positive, or refused to test, on any pre -employment drug or alcohol test administered by an employer to which you applied for, but did not obtain, safety-sensitive transportation work covered by DOT agency drug and alcohol testing rules during the past two years? <span class="text-main font-13">(If yes please check)</span></label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <div class="form-group form-check form-check-inline">
+                                                        <input type="checkbox" id="tvDetails" name="question1" class="form-check-input">
+                                                        <label class="form-check-label" for="inlineCheckbox1">Have you successfully completed the return-to-duty process?<span class="text-main font-13">(If yes please check)</span></label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <div class="form-group form-check form-check-inline">
+                                                        <input type="checkbox" id="tvDetails" name="question1" class="form-check-input">
+                                                        <label class="form-check-label" for="inlineCheckbox1">Documentation must be provided before any safety-sensitive transportation function is performed.<span class="text-main font-13">(If yes please check)</span></label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xl-2 col-lg-4">
+                                                        <div class="form-group">
+                                                            <label class="font-12 font-weight-400 text-uppercase mb-10">Applicant’s Signature</label>
+                                                            <input type="text" class="form-control" name="applicantsignature" placeholder="Applicant’s Signature">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2 col-lg-4">
+                                                        <div class="form-group has-search">
+                                                            <label class="font-12 font-weight-400 text-uppercase mb-10">Date Signed</label>
+                                                            <div class="input-group">
+                                                                <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="form-group">
+                                                    <h4 class="text-capitalize font-15 font-weight-500 text-main"><i class="far fa-folder-open"></i> To be completed by employer</h4>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xl-6 col-lg-12">
+                                                        <div class="row">
+                                                            <div class="col-xxl-12  col-xl-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Received By</label>
+                                                                    <input type="text" class="form-control" name="receivedby" placeholder="Received By">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-6 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Title</label>
+                                                                    <input type="text" class="form-control" name="title" placeholder="Title">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-6 col-lg-6">
+                                                                <div class="form-group has-search">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Date</label>
+                                                                    <div class="input-group">
+                                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6 col-lg-12">
+                                                        <div class="row">
+                                                            <div class="col-xxl-12  col-xl-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Reviewed By</label>
+                                                                    <input type="text" class="form-control" name="completenessby" placeholder="Completeness By">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-6 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Title</label>
+                                                                    <input type="text" class="form-control" name="title" placeholder="Name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-6 col-lg-6">
+                                                                <div class="form-group has-search">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Date</label>
+                                                                    <div class="input-group">
+                                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="form-group">
+                                                    <h4 class="text-capitalize font-15 font-weight-500 text-main">The Federal Motor Carrier Safety Regulations require all previous employers of this applicant to respond to this request for information within 30 days. Failure to comply with this request is in violation of 49CFR 391.23 and 40.25, for which you may be prosecuted. Questions concerning the requirements of this regulation should be directed to the Minnesota Division Office of the Federal Motor Carrier Safety Administration at 651-291-6150, during business hours.</h4>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xl-9 col-lg-7">
+                                                        <div class="row">
+                                                            <div class="col-xl-12">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">To</label>
+                                                                    <textarea class="form-control" rows="3" placeholder="Write Here..."></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-3 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Telephone</label>
+                                                                    <input type="text" class="form-control" name="phone"  placeholder="Telephone"/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-3 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Fax</label>
+                                                                    <input type="text" class="form-control" name="fax"  placeholder="Fax"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-lg-5">
+                                                        <div class="form-group has-search">
+                                                            <label class="font-12 font-weight-400 text-uppercase mb-10">Date</label>
+                                                            <div class="input-group">
+                                                                <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xl-12">
+                                                        <div class="form-group">
+                                                            <p>I <input type="text" class="d-inline-block font-13" name="name" placeholder="Name" style="padding: 0 0.75rem; border: 1px solid #ccc;"> to release to all records of employment, including assessments of my job performance,ability, and fitness, including the dates of any and all alcohol or drug tests, with confirmed results, and/or my refusal to submit to any alcohol and drug tests and any rehabilitation completion under direction of Substance Abuse Professional (SAP) and/or Medical Review Officer (MRO) to each and every company (or their authorized agents) making such request in connection with my application for employment with said company. I, hereby, release the above named company, and its employees, officers, directors, and agents from any and all liability of any type as a result of providing the following information to the below mentioned person and/or company.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6 col-lg-12">
+                                                        <div class="row">
+                                                            <div class="col-xl-6 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Applicant’s Signature</label>
+                                                                    <input type="text" class="form-control" name="signature" placeholder="Applicant’s Signature">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-6 col-lg-6">
+                                                                <div class="form-group has-search">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Date</label>
+                                                                    <div class="input-group">
+                                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6 col-lg-12">
+                                                        <div class="row">
+                                                            <div class="col-xl-6 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Witness’s Signature</label>
+                                                                    <input type="text" class="form-control" name="signature" placeholder="Witness’s Signature">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-6 col-lg-6">
+                                                                <div class="form-group has-search">
+                                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Date</label>
+                                                                    <div class="input-group">
+                                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <div class="d-flex justify-content-between mx-2 mt-2">
+                                        <div>
+                                            <button class="btn rounded-5 border-0" style="padding-inline: 30px; background: #ccc; color: var(--color-gray);" matStepperPrevious (click)="gotoTop()"><i class="fad fa-arrow-left me-2 pe-1"></i>Prev</button>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-primary rounded-5" style="padding-inline: 30px;" matStepperNext (click)="gotoTop()">Next <i class="fad fa-arrow-right ms-2"></i></button>
+                                        </div>
+                                    </div>
+                                </mat-step>
+                                <mat-step>
+                                    <h2 class="visually-hidden" id="step-3">Third Step</h2>
+                                    <section style="padding:20px; margin-top: 8px; ">
+                                        <div class="form-group">
+                                            <h4 class="text-capitalize font-15 font-weight-500 text-main"><i class="far fa-folder-open"></i> Inquiry for alcohol and controlled substance information, preceding 2 years</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-4 col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10 d-block"><b>1.</b> Alcohol tests with a result of 0.04 or greater ? </label>
+                                                    <div class="form-check form-check-inline me-3">
+                                                        <input class="form-check-input" type="radio" name="alcoholtests" id="yescheck">
+                                                        <label class="font-12 font-weight-400 text-uppercase mb-10" for="yescheck">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline ms-1">
+                                                        <input class="form-check-input" type="radio" name="alcoholtests" id="nocheck">
+                                                        <label class="font-12 font-weight-400 text-uppercase mb-10" for="nocheck">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-6">
+                                                <div class="form-group has-search">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">If yes, please give date(s):</label>
+                                                    <div class="input-group">
+                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-4 col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10 d-block"><b>2.</b> Verified positive controlled substances test results?</label>
+                                                    <div class="form-check form-check-inline me-3">
+                                                        <input class="form-check-input" type="radio" name="alcoholtests1" id="yescheck1">
+                                                        <label class="font-12 font-weight-400 text-uppercase mb-10" for="yescheck1">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline ms-1">
+                                                        <input class="form-check-input" type="radio" name="alcoholtests1" id="nocheck1">
+                                                        <label class="font-12 font-weight-400 text-uppercase mb-10" for="nocheck1">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-6">
+                                                <div class="form-group has-search">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">If yes, please give date(s):</label>
+                                                    <div class="input-group">
+                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-4 col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10 d-block"><b>3.</b> Refusals to be tested?</label>
+                                                    <div class="form-check form-check-inline me-3">
+                                                        <input class="form-check-input" type="radio" name="alcoholtests2" id="yescheck2">
+                                                        <label class="font-12 font-weight-400 text-uppercase mb-10" for="yescheck2">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline ms-1">
+                                                        <input class="form-check-input" type="radio" name="alcoholtests2" id="nocheck2">
+                                                        <label class="font-12 font-weight-400 text-uppercase mb-10" for="nocheck2">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-6">
+                                                <div class="form-group has-search">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">If yes, please give date(s):</label>
+                                                    <div class="input-group">
+                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-4 col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10 d-block"><b>3.</b> Refusals to be tested?</label>
+                                                    <div class="form-check form-check-inline me-3">
+                                                        <input class="form-check-input" type="radio" name="alcoholtests3" id="yescheck3">
+                                                        <label class="font-12 font-weight-400 text-uppercase mb-10" for="yescheck3">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline ms-1">
+                                                        <input class="form-check-input" type="radio" name="alcoholtests3" id="nocheck3">
+                                                        <label class="font-12 font-weight-400 text-uppercase mb-10" for="nocheck3">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-6">
+                                                <div class="form-group has-search">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">If yes, please give date(s):</label>
+                                                    <div class="input-group">
+                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <h4 class="text-capitalize font-15 font-weight-500 text-main"><i class="far fa-folder-open"></i> Person providing the above information</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Name</label>
+                                                    <input type="text" class="form-control" name="name" placeholder="Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Title</label>
+                                                    <input type="text" class="form-control" name="title" placeholder="Title">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Company</label>
+                                                    <input type="text" class="form-control" name="company" placeholder="Company">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group has-search">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Date</label>
+                                                    <div class="input-group">
+                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Dear</label>
+                                                    <input type="text" class="form-control" name="dear" placeholder="Dear">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Driver's Name</label>
+                                                    <input type="text" class="form-control" name="dname" placeholder="Driver's Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Driver's Operators Lic. No</label>
+                                                    <input type="text" class="form-control" name="doperators" placeholder="Operators Lic. No">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Driver's Social Sec. No.</label>
+                                                    <input type="text" class="form-control" name="dsocial" placeholder="Social Sec. No.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <p>The above listed individual has made application with us for employment as a driver. Applicant has indicated that the above numbered operator's license or permit has been issued by your State to applicant and that it is in good standing.
+
+                                            In accordance with Section 391.23(a)(1) and (b) of the Federal Motor Carrier Safety Regulations, we are required to make inquiry into the driving record during the preceding 3 years of every State in which an applicant-driver has held a motor vehicle operator's license or permit during those 3 years.
+
+                                            Therefore, please certify to us what the individual's driving record is for the preceding 3 years, or certify that no record exists if that be the case.
+
+                                            In the event that this inquiry does not satisfy your requirements for making such inquiries, please send us such forms of yours as are necessary for us to complete our inquiry into the driving record of this individual.</p>
+                                        </div>
+                                        <div class="col-xl-2 col-lg-4">
+                                            <div class="form-group">
+                                                <label class="font-12 font-weight-400 text-uppercase mb-10">Respectfully yours</label>
+                                                <input type="text" class="form-control" name="ryours" placeholder="Respectfully yours">
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <div class="d-flex justify-content-between mx-2 mt-2">
+                                        <div>
+                                            <button class="btn rounded-5 border-0" style="padding-inline: 30px; background: #ccc; color: var(--color-gray);" matStepperPrevious (click)="gotoTop()"><i class="fad fa-arrow-left me-2 pe-1"></i>Prev</button>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-primary rounded-5" style="padding-inline: 30px;" (click)="gotoTop()">Submit <i class="fad fa-paper-plane ms-2"></i></button>
+                                        </div>
+                                    </div>
+                                </mat-step>
+                            </form>
+
+                        </mat-stepper>
+
+                    </div>
+                </div>
+            </div>
+        <!-- </div>
+    </div>
+        <app-footer></app-footer>
+</main> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    $(function (){
+        $("#wizard").steps({
+            headerTag: "h2",
+            bodyTag: "section",
+            transitionEffect: "slideLeft",
+            autoFocus: true,
+
+            labels: {
+              finish: "Submit <i class='fad fa-paper-plane ms-2'></i>",
+              next: "Next <i class='fad fa-arrow-right ms-2'></i>",
+              previous: "<i class='fad fa-arrow-left me-2'></i> Prev"
+            }
+        });
+    });
+
+    // $(function() {
+    //   $('.hidden-check-data').hide();
+      
+    //   $('.trigger').change(function() {  
+    //     var hiddenId = $(this).attr("data-trigger");
+    //     if ($(this).is(':checked')) {
+    //       $("#" + hiddenId).show();
+    //     } else {
+    //       $("#" + hiddenId).hide();
+    //     }
+    //   });
+    // });
+</script>
+<script>
+    // $(document).ready(function(){
+    
+    //    var html = '<tr><td><input class="form-control" name="vehicledriven" placeholder="Type of vehicle driven"/></td><td><div class="has-search"><div class="input-group"><span class="far fa-calendar-alt form-control-feedback"></span><input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy"></div></div></td><td><div class="has-search"><div class="input-group"><span class="far fa-calendar-alt form-control-feedback"></span><input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy"></div></div></td><td><input class="form-control" name="vehicledriven" placeholder="Approximate mileage driven"/></td><td><a class=" remove text-capitalize font-12 text-red"><i class="far fa-trash-alt" aria-hidden="true"></i></a></td></tr>'; 
+    //     $("#addExp").click(function(){
+    //         $('.exp-tbody').append(html);
+    //         });
+
+    //     var html1 = '<tr><td><div class="has-search"><div class="input-group"><span class="far fa-calendar-alt form-control-feedback"></span><input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy"></div></div></td><td><textarea class="form-control" rows="2" placeholder="Describe"></textarea></td><td><input type="text" class="form-control" name="fatalities" placeholder="Fatalities"/></td><td><input class="form-control" name="injuries" placeholder="Injuries"/></td><td><a class=" remove text-capitalize font-12 text-red"><i class="far fa-trash-alt" aria-hidden="true"></i></a></td></tr>'; 
+    //     $("#addAccident").click(function(){
+    //         $('.accident-tbody').append(html1);
+    //         });
+    //     var html2 = '<tr><td><div class="has-search"><div class="input-group"><span class="far fa-calendar-alt form-control-feedback"></span><input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy"></div></div></td><td><input type="text" class="form-control" name="violation" placeholder="Violation"/></td><td><input type="text" class="form-control" name="state" placeholder="State"/></td><td><input type="checkbox" class="form-check-input" name="commercialvehicle"/></td><td><a class=" remove text-capitalize font-12 text-red"><i class="far fa-trash-alt" aria-hidden="true"></i></a></td></tr>'; 
+    //     $("#addTV").click(function(){
+    //         $('.tv-tbody').append(html2);
+    //         });
+
+    //         $(document).on('click','.remove',function(){
+    //             $(this).parents('tr').remove();
+    //         });
+    //     });
+</script>
+<script>
+    $(document).ready(function(){
+    
+       var html = '<div class="row border-top-light border-top-dashed pt-2"><div class="col-xl-2 col-lg-4"><div class="form-group has-search"><label class="font-12 font-weight-400 text-uppercase mb-10">From</label><div class="input-group"><span class="far fa-calendar-alt form-control-feedback"></span><input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy"></div></div></div><div class="col-xl-2 col-lg-4"><div class="form-group has-search"><label class="font-12 font-weight-400 text-uppercase mb-10">To</label><div class="input-group"><span class="far fa-calendar-alt form-control-feedback"></span><input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy"></div></div></div><div class="col-xl-2 col-lg-4"><div class="form-group"><label class="font-12 font-weight-400 text-uppercase mb-10">Employer</label><input type="text" class="form-control" name="employer" placeholder="Employer"></div></div><div class="col-xl-2 col-lg-4"><div class="form-group"><label class="font-12 font-weight-400 text-uppercase mb-10">Supervisor</label><input type="text" class="form-control" name="supervisor" placeholder="Supervisor"></div></div><div class="col-xl-2 col-lg-4"><div class="form-group"><label class="font-12 font-weight-400 text-uppercase mb-10">Telephone</label><input type="text" class="form-control" name="telephone" placeholder="Telephone"></div></div><div class="col-xl-2 col-lg-4"><div class="form-group"><label class="font-12 font-weight-400 text-uppercase mb-10">State</label><input type="text" class="form-control" name="State" placeholder="State"></div></div><div class="col-xl-2 col-lg-4"><div class="form-group"><label class="font-12 font-weight-400 text-uppercase mb-10">City</label><input type="text" class="form-control" name="city" placeholder="City"></div></div><div class="col-xl-2 col-lg-4"><div class="form-group"><label class="font-12 font-weight-400 text-uppercase mb-10">Zip Code</label><input type="text" class="form-control" name="zipcode" placeholder="Zip Code"></div></div><div class="col-xl-4 col-lg-6"><div class="form-group"><label class="font-12 font-weight-400 text-uppercase mb-10">Address</label><textarea class="form-control" rows="1" placeholder="Address"></textarea></div></div><div class="col-xl-6 col-lg-12"><div class="form-group"><label class="font-12 font-weight-400 text-uppercase mb-10">Were you subject to the Federal Motor Carrier Safety Regulations during this period?</label><textarea class="form-control" rows="3" placeholder="Write Here..."></textarea></div></div><div class="col-xl-6 col-lg-12"><div class="form-group"><label class="font-12 font-weight-400 text-uppercase mb-10">Were you subject to 49 CFR part 40 controlled substance and alcohol testing during this period?</label><textarea class="form-control" rows="3" placeholder="Write Here..."></textarea></div></div><div class="col-xl-12 col-lg-12"><div class="form-group"><label class="font-12 font-weight-400 text-uppercase mb-10">Reason for Leaving</label><textarea class="form-control" rows="3" placeholder="Write Here..."></textarea></div></div></div>'; 
+        $("#add-emp-exp").click(function(){
+            $('.emp-exp-box').append(html);
+            });
+
+        });
+</script>
+
+

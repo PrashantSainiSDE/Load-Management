@@ -1,0 +1,1405 @@
+<!-- <main>
+    <div class="main-wrapper">
+        <div id="content">
+            <app-header></app-header> -->
+            <div class="main-area position-relative">
+                <!-- Top Search :: Start -->
+                <div class="collapse" id="collapseExample">
+                    <div class="top-search card card-body  border-0 rounded-0">
+                        <form class="form-inline">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="What are you looking for?" aria-label="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button"><i class="far fa-search font-14"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Top Search :: End -->
+                <div class="page-card bg-white">
+                    <div class="page-card-title d-flex align-items-center justify-content-between">
+                        <p class="font-15 font-weight-600 mb-0 text-capitalize">Amount Receivale v2</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="dropdown filter-dropdown">
+                                <span class="btn btn-sm btn-primary dropdown-toggle font-12 " type="button" id="dropdownMenuButton23" data-bs-toggle="dropdown" aria-expanded="true"><span class="text text-uppercase text-white">Pending</span> <i class="far fa-angle-down font-12 text-white"></i></span>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton23" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 36px);" data-popper-placement="bottom-start">
+                                    <p class="dropdown-item pending font-13 text-uppercase text-main mb-0 border-bottom">Filter</p>
+                                    <a class="dropdown-item pending font-13 text-capitalize" href="javascript:;">Pending</a>
+                                    <a class="dropdown-item pending font-13 text-capitalize" href="javascript:;">Sent</a>
+                                    <a class="dropdown-item pending font-13 text-capitalize" href="javascript:;">Paid</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-card-body">
+                        <!-- Table Result :: Start -->
+                        <div class="table-responsive p-20 pb-0">
+                            <table class="table table-bordered table-striped position-relative">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase whitespace-nowrap"></th>
+                                        <th class="text-uppercase whitespace-nowrap">Load ID</th>
+                                        <th class="text-uppercase whitespace-nowrap">Customer</th>
+                                        <th class="text-uppercase whitespace-nowrap">Refrence</th>
+                                        <th class="text-uppercase whitespace-nowrap">Invoice Status</th>
+                                        <th class="text-uppercase">Invoice Date</th>
+                                        <th class="text-uppercase">Due date</th>
+                                        <th class="text-uppercase">Amount Due</th>
+                                        <th class="text-uppercase">Amount Received</th>
+                                        <th class="text-uppercase">Over / Short Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample123" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample123">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample124" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample124">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample125" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample125">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample126" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample126">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample127" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample127">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample128" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample128">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample129" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample129">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample130" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample30">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample131" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample131">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample132" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample132">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample133" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample133">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample134" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample134">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample135" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample135">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample136" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample136">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample137" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample137">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample138" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample138">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample139" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample139">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample140" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample140">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample141" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap"><a href="javascript:;" class="text-main font-weight-500">15793</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">Rahul</td>
+                                        <td class="text-capitalize">1979</td>
+                                        <td class="text-capitalize whitespace-nowrap"><span class="text-warning font-weight-400">Pending</span></td>
+                                        <td class="text-capitalize">07/29/2023</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                        <td class="text-capitalize">$6,000.00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample141">
+                                        <td class="text-start" colspan="10">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td class="text-start align-top">
+                                                        <div class="d-flex gap-4">
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Send Invoice-</p>
+                                                                <a href="javascript:;" class="edit-text font-13 font-weight-400 mb-0 text-primary">Send</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Manage Documents-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary" data-bs-toggle="modal" data-bs-target="#addDocs">Manage</a>
+                                                           </div>
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Generate PDF-</p>
+                                                                <a href="javascript:;" class="font-weight-400 font-13 text-primary">PDF</a>
+                                                           </div> 
+                                                           <div>
+                                                               <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Receive Invoice-</p>
+                                                               <a href="javascript:;" class="font-weight-400 font-13 text-primary">Invoice</a>
+                                                           </div> 
+                                                       </div>
+                                                    </td>
+                                                    <td>
+                                                       <table class="table table-bordered mb-0">
+                                                           <thead>
+                                                               <tr>
+                                                                   <th class="text-uppercase whitespace-nowrap">Type</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Amount</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Note</th>
+                                                                   <th class="text-uppercase whitespace-nowrap">Date / Time</th>
+                                                               </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                               <tr>
+                                                                   <td class="text-capitalize">Line Haul</td>
+                                                                   <td class="text-capitalize">$6,000.00</td>
+                                                                   <td class="text-capitalize">It is a long established fact</td>
+                                                                   <td class="text-capitalize">7/6/2022</td>
+                                                               </tr>
+                                                           </tbody>
+                                                       </table> 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Table Result :: End -->
+                        <!-- Pagination :: Start -->
+                        <div class="row mt-30">
+                            <div class="col-xl-12">
+                                <nav aria-label="Page navigation example ms-auto me-auto">
+                                    <ul class="pagination justify-content-center gap-2">
+                                        <li class="page-item">
+                                            <a class="page-link font-22" href="javascript:;" aria-label="Previous"><i class="far fa-angle-left font-weight-300"></i></a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link font-14" href="javascript:;">1</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">2</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">3</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">4</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">5</a></li>
+                                        <li class="page-item"><a class="page-link font-22" href="javascript:;" aria-label="Next"><i class="far fa-angle-right font-weight-300"></i></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Pagination :: End -->
+                    </div>
+                </div>
+            </div>
+        <!-- </div>
+            <app-footer></app-footer>
+    </div>
+</main> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add Document :: Start -->
+<div class="modal fade" id="addDocs" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-capitalize font-18 mb-0" id="exampleModalLabel">Add Document</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row mb-20">
+            <div class="col-xl-6 col-lg-6">
+                <div class="form-group">
+                    <label class="text-uppercase font-weight-400 font-12 mb-10">Document Name</label>
+                    <select id="docs-name" class="js-states form-control form-select" aria-placeholder="Select Customer">
+                        <option></option>
+                        <option>Bill of Lading ( BOL)</option>
+                        <option>Proof of Delivery ( POD)</option>
+                        <option>Lumper Receipt</option>
+                        <option>Customer Confirmation</option>
+                        <option>Carrier Confirmation</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="form-group">
+                    <label class="text-uppercase font-weight-400 font-12 mb-10">Document Description</label>
+                    <input class="form-control" type="text" placeholder="Document Description"/>
+                </div>
+            </div>
+            <div class="col-xl-12 col-lg-12">
+                <div class="form-group">
+                    <label class="text-uppercase font-weight-400 font-12 mb-10">Attach Document</label>
+                    <input name="file1" type="file" class="dropify border-radius-6" data-height="100" />
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <button type="button" class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Add</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="border rounded border-dashed p-2 mb-10">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 me-3">
+                            <div class="avatar-sm">
+                                <div class="avatar-title bg-light text-secondary rounded font-18 text-main">
+                                    <i class="far fa-file-pdf"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 overflow-hidden">
+                            <h5 class="font-13 mb-1"><a href="javascript:;" class="text-body text-truncate d-block font-weight-500">App-pages.pdf</a></h5>
+                            <span class="text-muted font-13 font-weight-400 me-2">Document Description</span>
+                        </div>
+                        <div class="flex-shrink-0 ms-2">
+                            <div class="d-flex gap-1">
+                                <button type="button" class="btn btn-icon text-main btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="View" data-bs-original-title="View"><i class="far fa-eye"></i></button>
+                                <button type="button" class="btn btn-icon text-red btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"><i class="far fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border rounded border-dashed p-2 mb-10">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 me-3">
+                            <div class="avatar-sm">
+                                <div class="avatar-title bg-light text-secondary rounded font-18 text-main">
+                                    <i class="far fa-file-pdf"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 overflow-hidden">
+                            <h5 class="font-13 mb-1"><a href="javascript:;" class="text-body text-truncate d-block font-weight-500">App-pages.pdf</a></h5>
+                            <span class="text-muted font-13 font-weight-400 me-2">Document Description</span>
+                        </div>
+                        <div class="flex-shrink-0 ms-2">
+                            <div class="d-flex gap-1">
+                                <button type="button" class="btn btn-icon text-main btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="View" data-bs-original-title="View"><i class="far fa-eye"></i></button>
+                                <button type="button" class="btn btn-icon text-red btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"><i class="far fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border rounded border-dashed p-2 mb-10">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 me-3">
+                            <div class="avatar-sm">
+                                <div class="avatar-title bg-light text-secondary rounded font-18 text-main">
+                                    <i class="far fa-file-pdf"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 overflow-hidden">
+                            <h5 class="font-13 mb-1"><a href="javascript:;" class="text-body text-truncate d-block font-weight-500">App-pages.pdf</a></h5>
+                            <span class="text-muted font-13 font-weight-400 me-2">Document Description</span>
+                        </div>
+                        <div class="flex-shrink-0 ms-2">
+                            <div class="d-flex gap-1">
+                                <button type="button" class="btn btn-icon text-main btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="View" data-bs-original-title="View"><i class="far fa-eye"></i></button>
+                                <button type="button" class="btn btn-icon text-red btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"><i class="far fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Add Document :: End -->

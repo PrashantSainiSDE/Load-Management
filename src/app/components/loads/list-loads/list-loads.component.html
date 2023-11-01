@@ -1,0 +1,1590 @@
+<!-- <main>
+    <div class="main-wrapper">
+        <div id="content">
+            <app-header></app-header> -->
+            <div class="main-area position-relative">
+                <div class="page-card bg-white">
+                    <div class="page-card-title d-flex align-items-center justify-content-end">
+                        <!-- <p class="font-15 font-weight-600 mb-0 text-capitalize">Loads</p> -->
+                        <a href="javascript:;" class="btn btn-outline-info text-main text-uppercase text-center font-12 me-2" type="button" data-bs-toggle="modal" data-bs-target="#addLoad"><i class="far fa-plus"></i> Add Load</a>
+                        <a href="javascript:;" class="btn btn-outline-info text-main text-uppercase text-center font-12" type="button" data-bs-toggle="offcanvas"  data-bs-target="#addQuickLoad" role="button" aria-controls="offcanvasExample"><i class="far fa-plus"></i> Add Quick Load</a>
+                        <!-- <a href="add-loads.html" class="btn btn-outline-info text-main text-uppercase text-center font-12" type="button" ><i class="far fa-plus"></i> Add Load</a> -->
+                    </div>
+                    <div class="page-card-body">
+                        <!-- Search Box :: Start -->
+                            <div class="collapse" id="collapseExample">
+                            <div class="p-20" id="filter">
+                                <div class="search-by pb-0">
+                                    <form method="post">
+                                        <div class="row">
+                                            <div class="col-xxl-1 col-xl-1 col-lg-3">
+                                                <div class="form-group">
+                                                    <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Load ID</label>
+                                                    <select id="load-id" class="js-states form-control form-select" aria-placeholder="Select Customer">
+                                                        <option></option>
+                                                        <option>1530</option>
+                                                        <option>1253</option>
+                                                        <option>36968</option>
+                                                        <option>8956</option>
+                                                        <option>7412</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xxl-1 col-xl-2 col-lg-3">
+                                                <div class="form-group has-search">
+                                                    <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Customer</label>
+                                                    <span class="far fa-search form-control-feedback"></span>
+                                                    <input type="text" name="customer" class="form-control" placeholder="Customer" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xxl-1 col-xl-2 col-lg-3">
+                                                <div class="form-group has-search">
+                                                    <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Carrier</label>
+                                                    <span class="far fa-search form-control-feedback"></span>
+                                                    <input type="text" name="carrier" class="form-control" placeholder="Carrier" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xxl-2 col-xl-2 col-lg-3">
+                                                <div class="form-group has-search">
+                                                    <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Pickup Location</label>
+                                                    <span class="far fa-search form-control-feedback"></span>
+                                                    <input type="text" name="pickuplocation" class="form-control" placeholder="Enter a City, State or Facility" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xxl-2 col-xl-2 col-lg-3">
+                                                <div class="form-group has-search">
+                                                    <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Dropoff Location</label>
+                                                    <span class="far fa-search form-control-feedback"></span>
+                                                    <input type="text" name="dropofflocation" class="form-control" placeholder="Enter a City, State or Facility" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xxl-2 col-xl-2 col-lg-3">
+                                                <div class="form-group has-search">
+                                                    <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Pickup Date</label>
+                                                    <div class="input-group">
+                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                        <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xxl-2 col-xl-2 col-lg-3">
+                                                <div class="form-group has-search">
+                                                    <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Dropoff Date</label>
+                                                    <div class="input-group" id="dropoffdate-filter">
+                                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                                        <input type="date" class="form-control border-radius-6" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xxl-1 col-xl-1 col-lg-2">
+                                                <a href="javascript:;" class="font-12 font-weight-500 text-main mt-35 d-block text-decoration-underline">Clear All</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Search Box :: End -->
+                        <!-- Table Result :: Start -->
+                        <div class="tbl-filter p-20 pt-20 pb-0">
+                            <ul class="d-flex gap-4 align-items-center mb-0">
+                                <li *ngFor="let filterLoadStatus of allFilterLoadStatus"
+                                    [ngClass]="{'active': filterLoadStatus.name === activeLoadFilter}"
+                                    (click)="setActiveItem(filterLoadStatus.name)">
+                                    <a href="javascript:;" class="font-12 font-weight-400 text-black text-capitalize">
+                                        {{ filterLoadStatus.name }} 
+                                        <!-- <span class="count-highlight text-main font-weight-400">0</span> -->
+                                    </a>
+                                </li>
+
+                                <!-- <li class="active"><a href="javascript:;" class="font-12 font-weight-400 text-black text-capitalize">All</a></li>
+                                <li><a href="javascript:;" class="font-12 font-weight-400 text-black text-capitalize">Today <span class="count-highlight text-main font-weight-400">0</span></a></li>
+                                <li><a href="javascript:;" class="font-12 font-weight-400 text-black text-capitalize">Tommorow <span class="count-highlight text-main font-weight-400">0</span></a></li>
+                                <li><a href="javascript:;" class="font-12 font-weight-400 text-black text-capitalize">pending <span class="count-highlight text-main font-weight-400">0</span></a></li>
+                                <li><a href="javascript:;" class="font-12 font-weight-400 text-black text-capitalize">Ready for dispatch <span class="count-highlight text-main font-weight-400">0</span></a></li>
+                                <li><a href="javascript:;" class="font-12 font-weight-400 text-black text-capitalize">Active <span class="count-highlight text-main font-weight-400">0</span></a></li>
+                                <li><a href="javascript:;" class="font-12 font-weight-400 text-black text-capitalize">Delivered <span class="count-highlight text-main font-weight-400">0</span></a></li>
+                                <li><a href="javascript:;" class="font-12 font-weight-400 text-black text-capitalize">Received <span class="count-highlight text-main font-weight-400">0</span></a></li>
+                                <li><a href="javascript:;" class="font-12 font-weight-400 text-black text-capitalize">Payable <span class="count-highlight text-main font-weight-400">0</span></a></li>
+                                <li><a href="javascript:;" class="font-12 font-weight-400 text-black text-capitalize">Archived <span class="count-highlight text-main font-weight-400">0</span></a></li> -->
+                            </ul>
+                        </div>
+                        <div class="table-responsive p-20 pb-0">
+                            <table class="table table-bordered table-striped position-relative">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase whitespace-nowrap"></th>
+                                        <th class="text-uppercase whitespace-nowrap">Load ID</th>
+                                        <th class="text-uppercase">Customer</th>
+                                        <th class="text-uppercase">Picks</th>
+                                        <th class="text-uppercase whitespace-nowrap">Pick date</th>
+                                        <th class="text-uppercase">Drops</th>
+                                        <th class="text-uppercase whitespace-nowrap">Drop date</th>
+                                        <th class="text-uppercase">Carrier</th>
+                                        <th class="text-uppercase whitespace-nowrap">Last Contact</th>
+                                        <th class="text-uppercase">Mode</th>
+                                        <th class="text-uppercase">Status</th>
+                                        <th class="text-uppercase">Expense</th>
+                                        <th class="text-uppercase">Income</th>
+                                        <th class="text-uppercase">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <ng-container *ngIf="filteredData$ | async as loadlist; else loading">
+                                    <ng-container *ngFor="let record of loadlist?.records; let i=index">
+
+                                        <tr>
+                                            <td class="text-capitalize whitespace-nowrap">
+                                                <!-- <a data-bs-toggle="collapse" [href]="'#collapseExample'+i" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed">
+                                                    <i class="far fa-angle-down"></i>
+                                                </a> -->
+                                                <a data-bs-toggle="collapse" (click)="toggleCollapse(i)" [href]="'#collapseExample'+i" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed">
+                                                    <i [ngClass]="toggleStates[i] ? 'far fa-angle-up' : 'far fa-angle-down'"></i>
+                                                </a>
+                                                {{loadlist.records.length}}
+                                            </td>
+                                            <td><a [routerLink]="['/loads/view-load']" class="text-primary font-weight-500">{{ record?.base_load_id }}</a></td>
+                                            <td class="text-capitalize whitespace-nowrap" #CustomerName>{{ getCustomerName(record?.customer_id) }}</td>
+
+                                            <td class="text-capitalize whitespace-nowrap">
+                                                {{getLocation(record.pickups, true)}}
+                                            </td>
+                                            <td class="text-capitalize whitespace-nowrap">
+                                                {{getDate(record.pickups, true)}}
+                                            </td>
+
+                                            <td class="text-capitalize whitespace-nowrap">
+                                                {{getLocation(record.deliveries, false)}}
+                                            </td>
+                                            <td class="text-capitalize whitespace-nowrap">
+                                                {{getDate(record.deliveries, false)}}
+                                            </td>
+                                            
+                                            <td class="text-capitalize whitespace-nowrap" #CarrierName>{{ getCarrierName(record?.carrier_id) }}</td>
+                                            <td class="text-capitalize whitespace-nowrap">
+                                                {{getMoment(record.logCheckCalls)}}
+                                            </td>
+                                            <td class="text-capitalize">{{ record?.load_type }}</td>
+                                            <td class="text-capitalize">
+                                                <div class="dropdown">
+                                                    <select [class]="record?.status?.replace(' ', '-') + ' status'" style="outline: none;" (change)="onChangeStatusColor(loadStatusRef)" #loadStatusRef>
+                                                        <option *ngFor="let loadStatus of allLoadStatus" style="color: #212529;" [value]="loadStatus.name" [selected]="loadStatus.name === record?.status"> {{loadStatus.name}}</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td class="text-capitalize">{{record?.load_amount | currency}}</td>
+                                            <td class="text-capitalize">{{record?.leg_load_amount | currency}}</td>
+                                            <td class="text-capitalize whitespace-nowrap">
+                                                <a href="javascript:;" class="text-capitalize font-12 text-main" data-bs-toggle="offcanvas" data-bs-target="#quickView" aria-controls="offcanvasRight" ><i class="far fa-eye" data-bs-toggle="tooltip" title="Quick View"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse" [id]="'collapseExample'+i" #collapseExample+i>
+                                            <td colspan="15">
+                                                <div class="row">
+                                                    <div class="col-xl-4 col-lg-4 d-grid">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <ul>
+                                                                    <li class="d-flex align-items-center justify-content-between">
+                                                                        <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Customer-</span>
+                                                                        <span class="edit-text font-13 font-weight-400 mb-0">{{ CustomerName?.innerText }}</span>
+                                                                    </li>
+                                                                    <li class="d-flex align-items-center justify-content-between">
+                                                                        <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Number-</span>
+                                                                        <span class="edit-text font-13 font-weight-400 mb-0"> -- </span>
+                                                                    </li>
+                                                                    <li class="d-flex align-items-center justify-content-between">
+                                                                        <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Email-</span>
+                                                                        <span class="edit-text font-13 font-weight-400 mb-0"> -- </span>
+                                                                    </li>
+                                                                    <li class="d-flex align-items-center justify-content-between">
+                                                                        <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Customer Notes-</span>
+                                                                        <span class="edit-text font-13 font-weight-400 mb-0"> {{ record?.special_notes }} </span>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 col-lg-4 d-grid">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <ul>
+                                                                    <li class="d-flex align-items-center justify-content-between">
+                                                                        <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pickup Location-</span>
+                                                                        <div class="text-end">
+                                                                            <span class="edit-text font-13 font-weight-600 d-block">Walmart Supercenter-Colton, {{getState(record.pickups, true)}}</span>
+                                                                            <span class="edit-text font-13 font-weight-400 d-block mb-2">{{getAddress(record.pickups, true)}}</span>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="d-flex align-items-center justify-content-between">
+                                                                        <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Appointment-</span>
+                                                                        <span class="edit-text font-13 font-weight-400 mb-2">Mon 07/10, 09:00am 05:00pm POT</span>
+                                                                    </li>
+                                                                    <li class="d-flex align-items-center justify-content-between">
+                                                                        <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Commodity-</span>
+                                                                        <span class="text-end font-13 font-weight-400 mb-2">{{ record.pickups.at(0)?.stop_items?.at(0)?.stop_commodity || DefaultValue }}</span>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 col-lg-4 d-grid">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <ul>
+                                                                    <li class="d-flex align-items-center justify-content-between">
+                                                                        <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Dropoff Location-</span>
+                                                                        <div class="text-end">
+                                                                            <span class="edit-text font-13 font-weight-600 d-block">Walmart Supercenter-Colton, {{getState(record.deliveries, false)}}</span>
+                                                                            <span class="edit-text font-13 font-weight-400 d-block mb-2">{{getAddress(record.deliveries, false)}}</span>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="d-flex align-items-center justify-content-between">
+                                                                        <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Appointment-</span>
+                                                                        <span class="edit-text font-13 font-weight-400 mb-2">Mon 07/10, 09:00am 05:00pm POT</span>
+                                                                    </li>
+                                                                    <li class="d-flex align-items-center justify-content-between">
+                                                                        <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Commodity-</span>
+                                                                        <span class="text-end font-13 font-weight-400 mb-2">{{ record.deliveries.at(-1)?.stop_items?.at(0)?.stop_commodity || DefaultValue }}</span>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-12 col-lg-12 d-grid">
+                                                        <div class="table-responsive mt-10">
+                                                            <table class="table table-bordered table-striped position-relative mb-0">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td >
+                                                                            <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pickup Number</p>
+                                                                            <p class="font-13 font-weight-400 mb-0">{{ record.pickups.at(0)?.stop_items?.at(0)?.stop_item }}</p>
+                                                                            
+                                                                            <!-- <p class="font-13 font-weight-400 mb-0">{{ record.pickups[0]?.stop_items[0]?.stop_item | json }}</p> -->
+                                                                        </td>
+                                                                        <td >
+                                                                            <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">References</p>
+                                                                            <p class="font-13 font-weight-400 mb-0"> -- </p>
+                                                                        </td>
+                                                                        <td >
+                                                                            <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Weight</p>
+                                                                            <p class="font-13 font-weight-400 mb-0">{{ record.pickups.at(0)?.stop_items?.at(0)?.stop_weight }}</p>
+                                                                        </td>
+                                                                        <td >
+                                                                            <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pieces</p>
+                                                                            <p class="font-13 font-weight-400 mb-0">{{ record.pickups.at(0)?.stop_items?.at(0)?.stop_piece_count }}</p>
+                                                                        </td>
+                                                                        <td >
+                                                                            <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pallets</p>
+                                                                            <p class="font-13 font-weight-400 mb-0">{{ record.pickups.at(0)?.stop_items?.at(0)?.stop_pallets }}</p>
+                                                                        </td>
+                                                                        <td >
+                                                                            <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Commodity</p>
+                                                                            <p class="font-13 font-weight-400 mb-0">{{ record.pickups.at(0)?.stop_items?.at(0)?.stop_commodity }}</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        
+                                    </ng-container>
+                                    </ng-container>                                        
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Table Result :: End -->
+                        <!-- Pagination :: Start -->
+                        <div class="row mt-30">
+                            <div class="col-xl-12">
+                                <nav aria-label="Page navigation example ms-auto me-auto">
+                                    <ul class="pagination justify-content-center gap-2">
+                                        <li class="page-item">
+                                            <a class="page-link font-22" href="javascript:;" aria-label="Previous"><i class="far fa-angle-left font-weight-300"></i></a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link font-14" href="javascript:;">1</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">2</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">3</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">4</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">5</a></li>
+                                        <li class="page-item"><a class="page-link font-22" href="javascript:;" aria-label="Next"><i class="far fa-angle-right font-weight-300"></i></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Pagination :: End -->
+                    </div>
+                </div>
+            </div>
+        <!-- </div>
+        <app-footer></app-footer>
+    </div>
+</main> -->
+
+
+
+
+<ng-template #loading>
+    <p>loading...</p>
+    <!-- <app-loading-spinner /> -->
+</ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Quickview Offcanvas :: Start -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="quickView" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel" class="font-15 font-weight-600 mb-0 text-capitalize">Quick View</h5>
+        <div>
+            <a href="javascript:;" class="font-14 me-3" title="Edit"><i class="far fa-edit"></i></a>
+            <a class="btn-close text-reset font-14" data-bs-dismiss="offcanvas" aria-label="Close"></a>
+        </div>
+    </div>
+    <div class="offcanvas-body view-load p-0 position-relative">
+        <ul class="nav nav-pills detail-tab" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active font-12 font-weight-600 text-uppercase" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#LoadDetails" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Load Details</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link font-12 font-weight-600 text-uppercase" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#Tracking" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Tracking</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link font-12 font-weight-600 text-uppercase" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#Documents" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Documents <span class="count-highlight font-12 font-weight-600 text-main">4</span></button>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="LoadDetails" role="tabpanel"
+                aria-labelledby="pills-home-tab">
+                <div class="border-bottom-light p-20 load-location">
+                    <div class="row">
+                        <div class="col-xl-6 col-xl-6">
+                            <div class="detail-card w-100 border-radius-10">
+                                <div class="detail-card-header p-10">
+                                    <p class="text-uppercase font-13 font-weight-500 mb-0"><i class="far fa-user me-1 text-main"></i> Customer</p>
+                                </div>
+                                <div class="detail-card-body p-10">
+                                    <div class="mb-10">
+                                        <p class="text-muted font-13 font-weight-400 mb-1">Name-</p>
+                                        <p class="font-14 font-weight-400 mb-0">Mussetter Distributingt</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <p class="text-muted font-13 font-weight-400 mb-1">Income-</p>
+                                            <p class="font-14 font-weight-400 mb-0">$25,000</p>
+                                        </div>
+                                        <!-- <div>
+                                            <p class="text-muted font-13 font-weight-400 mb-1">Expense-</p>
+                                            <p class="font-14 font-weight-400 mb-0">$14,523</p>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="detail-card w-100 border-radius-10">
+                                <div class="detail-card-header p-10">
+                                    <p class="text-uppercase font-13 font-weight-500 mb-0"><i class="far fa-truck me-1 text-main"></i> Carrier</p>
+                                </div>
+                                <div class="detail-card-body p-10">
+                                    <div class="mb-10">
+                                        <p class="text-muted font-13 font-weight-400 mb-1">Name-</p>
+                                        <p class="font-14 font-weight-400 mb-0">Mussetter Distributingt</p>
+                                    </div>
+                                    <div class="mb-0">
+                                        <p class="text-muted font-13 font-weight-400 mb-1">Expense-</p>
+                                        <p class="font-14 font-weight-400 mb-0">$14,523</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-20">
+                    <div class="col-xl-12">
+                        <div class="card border-radius-10 mb-20">
+                            <div class="card-body p-20 pickup-content1">
+                                <div class="heading mb-20 d-flex align-items-center justify-content-between">
+                                    <p class="font-15 font-weight-600 mb-0"><span>P</span> Pickup</p>
+                                    <a href="javascript:;" class="sendButton update-pickup-content1 font-14 font-weight-500 text-uppercase text-main text-decoration-underline" style="display:none">Update</a>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-4">
+                                        <p class="text-capitalize text-muted font-13 font-weight-400">Pickup Location</p>
+                                    </div>
+                                    <div class="col-xl-8">
+                                        <h6 class="edit-text text-black font-13 mb-1">Walmart Supercenter-Colton, CA</h6>
+                                        <p class="edit-text font-13 font-weight-400">1120 S Mount Vemon Ave Colton, CA 92324</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-4">
+                                        <p class="text-capitalize text-muted font-13 font-weight-400">Appointment</p>
+                                    </div>
+                                    <div class="col-xl-8">
+                                        <p class="edit-text font-13 font-weight-400">Mon 07/10, 09:00am 05:00pm POT</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-4">
+                                        <p class="text-capitalize text-muted font-13 font-weight-400">Pickup Details</p>
+                                    </div>
+                                    <div class="col-xl-8">
+                                        <p class="font-13 font-weight-400 mb-10">Comodity# --</p>
+                                        <p class="edit-text font-13 font-weight-400 mb-0">Mix 42,000 lbs  900 cases Appointment# 1254 Pickup number# 3544</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12">
+                        <div class="card border-radius-10 mb-20">
+                            <div class="card-body p-20 dropoff-content1">
+                                <div class="heading mb-20 d-flex align-items-center justify-content-between">
+                                    <p class="font-15 font-weight-600 mb-0"><span>D</span> Dropoff</p>
+                                    <a href="javascript:;" class="sendButton update-dropoff-content1 font-14 font-weight-500 text-uppercase text-main text-decoration-underline" style="display:none">Update</a>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-4">
+                                        <p class="edit-text text-capitalize text-muted font-13 font-weight-400">Dropoff Location</p>
+                                    </div>
+                                    <div class="col-xl-8">
+                                        <h6 class="edit-text text-black font-13 mb-1">Walmart Supercenter-Colton, CA</h6>
+                                        <p class="edit-text font-13 font-weight-400">1120 S Mount Vemon Ave Colton, CA 92324</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-4">
+                                        <p class="text-capitalize text-muted font-13 font-weight-400">Appointment</p>
+                                    </div>
+                                    <div class="col-xl-8">
+                                        <p class="edit-text font-13 font-weight-400">Mon 07/10, 09:00am 05:00pm POT</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-4">
+                                        <p class="text-capitalize text-muted font-14 font-weight-400">Dropoff Details</p>
+                                    </div>
+                                    <div class="col-xl-8">
+                                        <p class="edit-text font-13 font-weight-400 mb-10">Comodity# --</p>
+                                        <p class="edit-text font-13 font-weight-400 mb-0">Mix 42,000 lbs  900 cases Appointment# 1254 Pickup number# 3544</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="Tracking" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="p-20">
+                    <div class="row">
+                        <div class="col-xxl-12 col-xl-12 mb-10">
+                            <div class="detail-card w-100 border-radius-10">
+                                <div class="detail-card-body p-10">
+                                    <a class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <img src="assets/images/icon/checkin.png" alt="" class="avatar-xs rounded-circle opacity-8">
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="font-13 font-weight-500 mb-1">28595 Mary's Ct, Easton, MD 21601, USA</h6>
+                                            <span class="text-green font-13 font-weight-400 me-2"><i class="fas fa-circle font-10 me-1"></i>Checkin</span>
+                                            <span class="text-muted mb-0 font-13 font-weight-400">Updated By - Nutan Singh</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="border-top border-top-dashed">
+                                    <div class="detail-card-body p-10">
+                                        <ul class="list-unstyled d-flex justify-content-between gap-2 mb-0">
+                                            <li>
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">ETA-</p>
+                                                        <p class="font-14 font-weight-400 mb-0">7/12/2023 6:00:00 PM</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">Updated At-</p>
+                                                        <p class="font-14 font-weight-400 mb-0">8/12/2023 6:00:00 AM</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-12 col-xl-12 mb-10">
+                            <div class="detail-card w-100 border-radius-10">
+                                <div class="detail-card-body p-10">
+                                    <a class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <img src="assets/images/icon/absent.png" alt="" class="avatar-xs rounded-circle opacity-8">
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="font-13 font-weight-500 mb-1">28595 Mary's Ct, Easton, MD 21601, USA</h6>
+                                            <span class="text-red font-13 font-weight-400 me-2"><i class="fas fa-circle font-10 me-1"></i>Absent</span>
+                                            <span class="text-muted mb-0 font-13 font-weight-400">Updated By - Nutan Singh</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="border-top border-top-dashed">
+                                    <div class="detail-card-body p-10">
+                                        <ul class="list-unstyled d-flex justify-content-between gap-2 mb-0">
+                                            <li>
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">ETA-</p>
+                                                        <p class="font-14 font-weight-400 mb-0">7/12/2023 6:00:00 PM</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">Updated At-</p>
+                                                        <p class="font-14 font-weight-400 mb-0">8/12/2023 6:00:00 AM</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-12 col-xl-12 mb-10">
+                            <div class="detail-card w-100 border-radius-10">
+                                <div class="detail-card-body p-10">
+                                    <a class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <img src="assets/images/icon/checkin.png" alt="" class="avatar-xs rounded-circle opacity-8">
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="font-13 font-weight-500 mb-1">28595 Mary's Ct, Easton, MD 21601, USA</h6>
+                                            <span class="text-green font-13 font-weight-400 me-2"><i class="fas fa-circle font-10 me-1"></i>Checkin</span>
+                                            <span class="text-muted mb-0 font-13 font-weight-400">Updated By - Nutan Singh</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="border-top border-top-dashed">
+                                    <div class="detail-card-body p-10">
+                                        <ul class="list-unstyled d-flex justify-content-between gap-2 mb-0">
+                                            <li>
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">ETA-</p>
+                                                        <p class="font-14 font-weight-400 mb-0">7/12/2023 6:00:00 PM</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">Updated At-</p>
+                                                        <p class="font-14 font-weight-400 mb-0">8/12/2023 6:00:00 AM</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="Documents" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div class="p-20">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="border rounded border-dashed p-2 mb-10">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-sm">
+                                            <div class="avatar-title bg-light text-secondary rounded font-18 text-main">
+                                                <i class="far fa-file-pdf"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <h5 class="font-13 mb-1"><a href="javascript:;" class="text-body text-truncate d-block font-weight-500">App-pages.pdf</a></h5>
+                                        <span class="text-muted font-13 font-weight-400 me-2">2.2MB</span>
+                                        <span class="text-muted font-13 font-weight-400 me-2"><i class="far fa-calendar-alt font-10"></i> 13/07/2023</span>
+                                        <span class="text-muted font-13 font-weight-400"><i class="far fa-user font-10"></i> Ashish</span>
+                                    </div>
+                                    <div class="flex-shrink-0 ms-2">
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-icon text-main btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="View"><i class="far fa-eye"></i></button>
+                                            <button type="button" class="btn btn-icon text-info btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="Download"><i class="far fa-arrow-down"></i></button>
+                                            <button type="button" class="btn btn-icon text-red btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border rounded border-dashed p-2 mb-10">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-sm">
+                                            <div class="avatar-title bg-light text-secondary rounded font-18 text-main">
+                                                <i class="far fa-file-image"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <h5 class="font-13 mb-1"><a href="javascript:;" class="text-body text-truncate d-block font-weight-500">App-pages.jpg</a></h5>
+                                        <span class="text-muted font-13 font-weight-400 me-2">3.2MB</span>
+                                        <span class="text-muted font-13 font-weight-400 me-2"><i class="far fa-calendar-alt font-10"></i> 13/07/2023</span>
+                                        <span class="text-muted font-13 font-weight-400"><i class="far fa-user font-10"></i> Ashish</span>
+                                    </div>
+                                    <div class="flex-shrink-0 ms-2">
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-icon text-main btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="View"><i class="far fa-eye"></i></button>
+                                            <button type="button" class="btn btn-icon text-info btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="Download"><i class="far fa-arrow-down"></i></button>
+                                            <button type="button" class="btn btn-icon text-red btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border rounded border-dashed p-2 mb-10">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-sm">
+                                            <div class="avatar-title bg-light text-secondary rounded font-18 text-main">
+                                                <i class="far fa-file-excel"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <h5 class="font-13 mb-1"><a href="javascript:;" class="text-body text-truncate d-block font-weight-500">App-pages.xls</a></h5>
+                                        <span class="text-muted font-13 font-weight-400 me-2">2.2MB</span>
+                                        <span class="text-muted font-13 font-weight-400 me-2"><i class="far fa-calendar-alt font-10"></i> 13/07/2023</span>
+                                        <span class="text-muted font-13 font-weight-400"><i class="far fa-user font-10"></i> Ashish</span>
+                                    </div>
+                                    <div class="flex-shrink-0 ms-2">
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-icon text-main btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="View"><i class="far fa-eye"></i></button>
+                                            <button type="button" class="btn btn-icon text-info btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="Download"><i class="far fa-arrow-down"></i></button>
+                                            <button type="button" class="btn btn-icon text-red btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border rounded border-dashed p-2 mb-10">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-sm">
+                                            <div class="avatar-title bg-light text-secondary rounded font-18 text-main">
+                                                <i class="far fa-file-pdf"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <h5 class="font-13 mb-1"><a href="javascript:;" class="text-body text-truncate d-block font-weight-500">App-pages.pdf</a></h5>
+                                        <span class="text-muted font-13 font-weight-400 me-2">2.2MB</span>
+                                        <span class="text-muted font-13 font-weight-400 me-2"><i class="far fa-calendar-alt font-10"></i> 13/07/2023</span>
+                                        <span class="text-muted font-13 font-weight-400"><i class="far fa-user font-10"></i> Ashish</span>
+                                    </div>
+                                    <div class="flex-shrink-0 ms-2">
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-icon text-main btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="View"><i class="far fa-eye"></i></button>
+                                            <button type="button" class="btn btn-icon text-info btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="Download"><i class="far fa-arrow-down"></i></button>
+                                            <button type="button" class="btn btn-icon text-red btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-footer text-center">
+            <p class="font-14 font-weight-500 text-capitalize mb-0">Load Full view <a [routerLink]="['/loads/view-load']" class="font-14 font-weight-500 text-main text-uppercase ps-2">     Click here</a>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Quickview Offcanvas :: End -->
+<!-- Add Quick Load Offcanvas :: Start -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="addQuickLoad" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel" class="font-15 font-weight-600 mb-0 text-capitalize">Add Quick Load</h5>
+        <div>
+            <a class="btn-close text-reset font-14" data-bs-dismiss="offcanvas" aria-label="Close"></a>
+        </div>
+    </div>
+    <div class="offcanvas-body p-20 position-relative">
+        <div class="load-card mb-20 border-0">
+            <div class="load-card-body">
+                <div class="load-card-title mb-20 d-flex align-items-center gap-2">
+                    <span class="border-radius-6 d-block font-weight-400 text-white">P</span>
+                    <h3 class="text-capitalize font-18 mb-0">Pickup</h3>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Facility<span class="requried ms-1">*</span></label>
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-map-marker-alt"></i></span>
+                                <select id="facility-list6" class="js-states form-control form-select" aria-placeholder="Select Truck">
+                                    <option></option>
+                                    <option>Facility 1</option>
+                                    <option>Facility 2</option>
+                                    <option>Facility 3</option>
+                                    <option>Facility 4</option>
+                                    <option>Facility 5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-clock"></i></span>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="pickupradio1" id="pickupAppt1" onclick="ToCalendarPickup1()" checked>
+                                    <label class="btn btn-outline-primary text-uppercase" for="pickupAppt1">Appt</label>
+                                    
+                                    <input type="radio" class="btn-check" name="pickupradio1" id="pickupfcfs1" onclick="ToCalendarPickup1()">
+                                    <label class="btn btn-outline-primary text-uppercase" for="pickupfcfs1">Fcfs</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="datetime-local" class="form-control" placeholder="MM/DD/YYYY hh:mm:ss"/>
+                                <span class="input-group-text border-0 border-radius-6" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12" id="toCalandarBoxpickup1" style="display: none;">
+                        <div class="form-group d-flex align-items-center gap-2">
+                            <div>
+                                <label for="inputPassword6" class="col-form-label">to</label>
+                            </div>
+                            <div>
+                                <div class="input-group position-relative">
+                                    <input type="datetime-local" class="form-control position-relative" placeholder="MM/DD/YYYY hh:mm:ss"/>
+                                    <span class="input-group-text border-0 border-radius-6" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Appointment Number</label>
+                            <div class="input-group">
+                                <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-hashtag"></i></span>
+                                <input type="text" class="form-control" placeholder="Enter Appointment" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10">Pickup Number</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter Pickup Number" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Commodity</label>
+                            <div class="input-group">
+                                <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-briefcase"></i></span>
+                                <input type="text" class="form-control" placeholder="Enter Commodity" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="ps-27">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Weight (LBS)</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Enter Weight" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Pallets Count</label>
+                                        <input type="text" class="form-control" id="palletscount" placeholder="Pallets Count" />
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Case Count</label>
+                                        <input type="text" class="form-control" id="casecount" placeholder="Case Count"/>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Pickup Instructions</label>
+                                        <textarea class="form-control" rows="5" placeholder="Write Something..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="load-card mb-60 border-0">
+            <div class="load-card-body">
+                <div class="load-card-title mb-20 d-flex align-items-center gap-2">
+                    <span class="border-radius-6 d-block font-weight-400 text-white">D</span>
+                    <h3 class="text-capitalize font-18 mb-0">Dropoff</h3>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Facility<span class="requried ms-1">*</span></label>
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-map-marker-alt"></i></span>
+                                <select id="facility-list5" class="js-states form-control form-select" aria-placeholder="Select Truck">
+                                    <option></option>
+                                    <option>Facility 1</option>
+                                    <option>Facility 2</option>
+                                    <option>Facility 3</option>
+                                    <option>Facility 4</option>
+                                    <option>Facility 5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-clock"></i></span>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="dropoffradio1" id="dropoffAppt1" onclick="ToCalendarDropoff1()" checked>
+                                    <label class="btn btn-outline-primary text-uppercase" for="dropoffAppt1">Appt</label>
+                                    
+                                    <input type="radio" class="btn-check" name="dropoffradio1" id="dropofffcfs1" onclick="ToCalendarDropoff1()">
+                                    <label class="btn btn-outline-primary text-uppercase" for="dropofffcfs1">Fcfs</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="datetime-local" class="form-control" placeholder="MM/DD/YYYY hh:mm:ss A"/>
+                                <span class="input-group-text border-0 border-radius-6" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12" id="toCalandarBoxdropoff1" style="display: none;">
+                        <div class="form-group d-flex align-items-center gap-2">
+                            <div>
+                                <label for="inputPassword6" class="col-form-label">to</label>
+                            </div>
+                            <div>
+                                <div class="input-group">
+                                    <input type="datetime-local" class="form-control" placeholder="MM/DD/YYYY hh:mm:ss A"/>
+                                    <span class="input-group-text border-0 border-radius-6" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Appointment Number</label>
+                            <div class="input-group">
+                                <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-hashtag"></i></span>
+                                <input type="text" class="form-control" placeholder="Enter Appointment" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10">Pickup Number</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter Pickup Number" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse" id="collapseExample1">
+                        <div class="row">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Commodity</label>
+                                <div class="input-group">
+                                    <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-briefcase"></i></span>
+                                    <input type="text" class="form-control" placeholder="Enter Commodity" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="ps-27">
+                                <div class="row">
+                                    <div class="col-xl-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label class="text-uppercase font-weight-400 font-12 mb-10">Weight (LBS)</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Enter Weight" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label class="text-uppercase font-weight-400 font-12 mb-10">Quantity</label>
+                                                <input type="text" class="form-control" placeholder="Enter Quantity" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label class="text-uppercase font-weight-400 font-12 mb-10">Unit Type</label>
+                                            <select class="form-select">
+                                                <option value="1">Select one</option>
+                                                <option value="2">1</option>
+                                                <option value="3">2</option>
+                                                <option value="4">3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label class="text-uppercase font-weight-400 font-12 mb-10">PO Number</label>
+                                            <input type="number" class="form-control" placeholder="Enter PO Number" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label class="text-uppercase font-weight-400 font-12 mb-10">BOL #</label>
+                                            <input type="text" class="form-control" placeholder="Enter BOL" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12">
+                                        <div class="form-group">
+                                            <label class="text-uppercase font-weight-400 font-12 mb-10">Pickup Instructions</label>
+                                            <textarea class="form-control" rows="5" placeholder="Write Something..."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+                <div class="load-card-footer font-12 ps-27">
+                    <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-ellipsis-h"></i> Add <span class="text-main text-uppercase font-weight-400">Dropoff</span> notes and <span class="text-main text-uppercase font-weight-400">Commodity</span> Details.</a>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-footer text-center">
+            <p class="font-14 font-weight-500 text-capitalize mb-0">Load Full view <a [routerLink]="['/loads/view-load']" class="font-14 font-weight-500 text-main text-uppercase ps-2">Save & Next</a>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Add Quick Load Offcanvas :: End -->
+<!-- Add load modal :: End -->
+<div class="modal fade" id="addLoad" aria-labelledby="addLoadModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title text-capitalize font-18 mb-0" id="staticBackdropLabel">Add Load</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <div class="row justify-content-md-center">
+            <div class="col-xl-5 col-lg-5">
+                <div class="load-card border-radius-10 bg-white mb-20">
+                    <div class="load-card-body p-20">
+                        <div class="load-card-title mb-20">
+                            <h3 class="text-capitalize font-18 mb-0">Load Details</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="form-group mb-10 select-search">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Customer</label>
+                                    <select id="add-customer" class="js-states form-control form-select" aria-placeholder="Select Customer">
+                                        <option></option>
+                                        <option>Customer 1</option>
+                                        <option>Customer 2</option>
+                                        <option>Customer 3</option>
+                                        <option>Customer 4</option>
+                                        <option>Customer 5</option>
+                                    </select>
+                                    <a href="javascript:;" class="text-primary text-uppercase font-weight-400 font-12" data-bs-toggle="modal" data-bs-target="#addnewCustomer">+ Add new Customer</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="form-group mb-10 select-search">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Customer Branch</label>
+                                    <select id="customer-branch" class="js-states form-control form-select" aria-placeholder="Customer Branch">
+                                        <option></option>
+                                        <option>Transfix</option>
+                                        <option>Branch 2</option>
+                                        <option>Branch 3</option>
+                                        <option>Branch 4</option>
+                                        <option>Branch 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="transfix main-bg-color p-10 mb-20 border-radius-6">
+                            <div class="title mb-20 d-flex align-items-center justify-content-between">
+                                <h6 class="font-16 mb-0">Transfix</h6>
+                                <a href="javascript:;" class="text-main font-14"><i class="far fa-edit"></i></a>
+                            </div>
+                            <div class="content">
+                                <p class="font-12 font-weight-500">Customer Contact</p>
+                                <p class="font-12">No Contact Name</p>
+                                <p class="font-12">No Email - No Phone Number</p>
+                                <p class="font-12 font-weight-500">Customer Notes</p>
+                                <p class="font-12 mb-0">...</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Income</label>
+                                    <input type="text" class="form-control" name="income" id="income" placeholder="Income" />
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">PO Number</label>
+                                    <input type="number" class="form-control" name="rate" id="rate" placeholder="PO Number" />
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="form-group form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="hotload" checked>
+                                    <label class="form-check-label font-12 font-weight-400 text-uppercase" for="hotload">
+                                        Hot Load
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="load-card-title mb-20">
+                            <h3 class="text-capitalize font-18 mb-0">Equipment</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-4">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Load Type</label>
+                                    <select id="load-type" class="js-states form-control form-select" aria-placeholder="Select Load Type">
+                                        <option></option>
+                                        <option>53'Reefer</option>
+                                        <option>53'Reefer W/Team</option>
+                                        <option>53'Van or Reefer</option>
+                                        <option>53'Van</option>
+                                        <option>FlatBed</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Total Weight</label>
+                                    <input type="number" class="form-control" name="totalweight" id="totalweight" placeholder="Weight"/>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Total Miles</label>
+                                    <input type="number" class="form-control" name="totalmiles" id="totalmiles" placeholder="Miles"/>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Declared Value</label>
+                                    <input type="number" class="form-control" name=">declaredvalue" id=">declaredvalue" placeholder="Value"/>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Target MIN.</label>
+                                    <input type="number" class="form-control" name=">targetmin" id=">targetmin" placeholder="MIN"/>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Target MAX.</label>
+                                    <input type="number" class="form-control" name=">targetmax" id=">targetmax" placeholder="MAX"/>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Offer Price</label>
+                                    <input type="number" class="form-control" name=">carrierofferprice" id=">carrierofferprice" placeholder="Price"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapseNote">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Carrier Notes</label>
+                                        <textarea class="form-control" rows="5" name="carriernotes" placeholder="Write something..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Customer Notes</label>
+                                        <textarea class="form-control" rows="5" name="customernotes" placeholder="Write something..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="load-card-footer font-12">
+                            <a data-bs-toggle="collapse" href="#collapseNote" role="button" aria-expanded="false" aria-controls="collapseNote"><i class="fas fa-ellipsis-h"></i> Add <span class="text-main text-uppercase font-weight-400">Carrier Notes</span> and <span class="text-main text-uppercase font-weight-400">Customer Notes</span> Details.</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="load-card border-radius-10 bg-white mb-20">
+                    <div class="load-card-body p-20">
+                        <div class="load-card-title mb-20 d-flex align-items-center gap-2">
+                            <span class="border-radius-6 d-block font-weight-400 text-white">P</span>
+                            <h3 class="text-capitalize font-18 mb-0">Pickup</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Facility<span class="requried ms-1">*</span></label>
+                                    <div class="input-group flex-nowrap">
+                                        <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-map-marker-alt"></i></span>
+                                        <select id="facility-list4" class="js-states form-control form-select" aria-placeholder="Select Truck">
+                                            <option></option>
+                                            <option>Facility 1</option>
+                                            <option>Facility 2</option>
+                                            <option>Facility 3</option>
+                                            <option>Facility 4</option>
+                                            <option>Facility 5</option>
+                                        </select>
+                                    </div>
+                                    <a href="javascript:;" class="text-primary text-uppercase font-weight-400 font-12 ps-27" data-bs-toggle="modal" data-bs-target="#addnewFacility">+ Add new facility</a>
+                                </div>
+
+                            </div>
+                            <div class="col-3">
+                                <div class="form-group">
+                                    <div class="input-group flex-nowrap">
+                                        <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-clock"></i></span>
+                                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic radio toggle button group">
+                                            <input type="radio" class="btn-check" name="pickupradio" id="pickupAppt" onclick="ToCalendarPickup()" checked>
+                                            <label class="btn btn-outline-primary text-uppercase" for="pickupAppt">Appt</label>
+                                            
+                                            <input type="radio" class="btn-check" name="pickupradio" id="pickupfcfs" onclick="ToCalendarPickup()">
+                                            <label class="btn btn-outline-primary text-uppercase" for="pickupfcfs">Fcfs</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="datetime-local" class="form-control" placeholder="MM/DD/YYYY hh:mm:ss"/>
+                                        <span class="input-group-text border-0 border-radius-6" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5" id="toCalandarBoxpickup" style="display: none;">
+                                <div class="form-group d-flex align-items-center gap-2">
+                                    <div>
+                                        <label for="inputPassword6" class="col-form-label">to</label>
+                                    </div>
+                                    <div>
+                                        <div class="input-group position-relative">
+                                            <input type="datetime-local" class="form-control position-relative" placeholder="MM/DD/YYYY hh:mm:ss"/>
+                                            <span class="input-group-text border-0 border-radius-6" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="form-group">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Appointment Number</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-hashtag"></i></span>
+                                        <input type="text" class="form-control" placeholder="Enter Appointment" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="form-group">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Pickup Number</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter Pickup Number" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 col-lg-12">
+                                <div class="form-group">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Commodity</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-briefcase"></i></span>
+                                        <input type="text" class="form-control" placeholder="Enter Commodity" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 col-lg-12">
+                                <div class="ps-27">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="form-group">
+                                                <label class="text-uppercase font-weight-400 font-12 mb-10">Weight (LBS)</label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="Enter Weight" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="form-group">
+                                                <label class="text-uppercase font-weight-400 font-12 mb-10">Pallets Count</label>
+                                                <input type="text" class="form-control" id="palletscount" placeholder="Pallets Count" />
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4">
+                                            <div class="form-group">
+                                                <label class="text-uppercase font-weight-400 font-12 mb-10">Case Count</label>
+                                                <input type="text" class="form-control" id="casecount" placeholder="Case Count"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12">
+                                            <div class="form-group">
+                                                <label class="text-uppercase font-weight-400 font-12 mb-10">Pickup Instructions</label>
+                                                <textarea class="form-control" rows="5" placeholder="Write Something..."></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-20">
+                    <div class="col-12">
+                        <button class="btn btn-primary font-weight-400 font-12 pe-3 ps-3">+ Add Pickup 2</button>
+                    </div>
+                </div>
+                <div class="load-card border-radius-10 bg-white mb-20">
+                    <div class="load-card-body p-20">
+                        <div class="load-card-title mb-20 d-flex align-items-center gap-2">
+                            <span class="border-radius-6 d-block font-weight-400 text-white">D</span>
+                            <h3 class="text-capitalize font-18 mb-0">Dropoff</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Facility<span class="requried ms-1">*</span></label>
+                                    <div class="input-group flex-nowrap">
+                                        <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-map-marker-alt"></i></span>
+                                        <select id="facility-list5" class="js-states form-control form-select" aria-placeholder="Select Truck">
+                                            <option></option>
+                                            <option>Facility 1</option>
+                                            <option>Facility 2</option>
+                                            <option>Facility 3</option>
+                                            <option>Facility 4</option>
+                                            <option>Facility 5</option>
+                                        </select>
+                                    </div>
+                                    <a href="javascript:;" class="text-primary text-uppercase font-weight-400 font-12 ps-27" data-bs-toggle="modal" data-bs-target="#addnewFacility">+ Add new facility</a>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="form-group">
+                                    <div class="input-group flex-nowrap">
+                                        <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-clock"></i></span>
+                                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic radio toggle button group">
+                                            <input type="radio" class="btn-check" name="dropoffradio" id="dropoffAppt" onclick="ToCalendarDropoff()" checked>
+                                            <label class="btn btn-outline-primary text-uppercase" for="dropoffAppt">Appt</label>
+                                            
+                                            <input type="radio" class="btn-check" name="dropoffradio" id="dropofffcfs" onclick="ToCalendarDropoff()">
+                                            <label class="btn btn-outline-primary text-uppercase" for="dropofffcfs">Fcfs</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="datetime-local" class="form-control" placeholder="MM/DD/YYYY hh:mm:ss A"/>
+                                        <span class="input-group-text border-0 border-radius-6" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5" id="toCalandarBoxdropoff" style="display: none;">
+                                <div class="form-group d-flex align-items-center gap-2">
+                                    <div>
+                                        <label for="inputPassword6" class="col-form-label">to</label>
+                                    </div>
+                                    <div>
+                                        <div class="input-group">
+                                            <input type="datetime-local" class="form-control" placeholder="MM/DD/YYYY hh:mm:ss A"/>
+                                            <span class="input-group-text border-0 border-radius-6" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="col">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="time" id="time" value="7:30am"/>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="form-group">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Appointment Number</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-hashtag"></i></span>
+                                        <input type="text" class="form-control" placeholder="Enter Appointment" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="form-group">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Pickup Number</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Enter Pickup Number" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapseExample">
+                                <div class="row">
+                                <div class="col-xl-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Commodity</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-briefcase"></i></span>
+                                            <input type="text" class="form-control" placeholder="Enter Commodity" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12">
+                                    <div class="ps-27">
+                                        <div class="row">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Weight (LBS)</label>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Enter Weight" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Quantity</label>
+                                                        <input type="text" class="form-control" placeholder="Enter Quantity" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Unit Type</label>
+                                                    <select class="form-select">
+                                                        <option value="1">Select one</option>
+                                                        <option value="2">1</option>
+                                                        <option value="3">2</option>
+                                                        <option value="4">3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="text-uppercase font-weight-400 font-12 mb-10">PO Number</label>
+                                                    <input type="number" class="form-control" placeholder="Enter PO Number" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="text-uppercase font-weight-400 font-12 mb-10">BOL #</label>
+                                                    <input type="text" class="form-control" placeholder="Enter BOL" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12 col-lg-12">
+                                                <div class="form-group">
+                                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Pickup Instructions</label>
+                                                    <textarea class="form-control" rows="5" placeholder="Write Something..."></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                        <div class="load-card-footer font-12 ps-27">
+                            <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-ellipsis-h"></i> Add <span class="text-main text-uppercase font-weight-400">Dropoff</span> notes and <span class="text-main text-uppercase font-weight-400">Commodity</span> Details.</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-20">
+                    <div class="col-12">
+                        <button class="btn btn-primary font-weight-400 font-12 pe-3 ps-3">+ Add Dropoff 2</button>
+                    </div>
+                </div>
+                <div class="load-card border-radius-10 bg-white mb-20">
+                    <div class="load-card-body p-20">
+                        <div class="load-card-title mb-20">
+                            <h3 class="text-capitalize font-18 mb-0">Basics</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Carrier<span class="requried ms-1">*</span></label>
+                                        <input type="text" class="form-control" placeholder="Username" value="Mann Trans Inc" />
+                                </div>
+                            </div>
+                            <div class="col-xl-5 col-lg-5">
+                                <div class="form-group select-driver">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Driver</label>
+                                    <select id="add-driver" class="js-states form-control form-select" aria-placeholder="Select Driver">
+                                        <option></option>
+                                        <option>Driver 1</option>
+                                        <option>Driver 2</option>
+                                        <option>Driver 3</option>
+                                        <option>Driver 4</option>
+                                        <option>Driver 5</option>
+                                    </select>
+                                    <a href="javascript:;" class="text-primary text-uppercase font-weight-400 font-12" data-bs-toggle="modal" data-bs-target="#addDriver">+ Add new driver</a>
+                                </div>
+                            </div>
+                            <div class="col-1 addriver-icon">
+                                <div class="add-driver mt-30 mb-0 cursor-pointer text-main" data-bs-toggle="tooltip" title="Add Driver 2"><i class="far fa-users"></i></div>
+                            </div>
+                            <div class="col-xl-5 col-lg-5 select-driver-2 position-relative" style="visibility: hidden;">
+                                <div class="form-group select-driver" >
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Driver2</label>
+                                    <select id="add-driver-2" class="js-states form-control form-select" aria-placeholder="Select Driver">
+                                        <option></option>
+                                        <option>Driver 1</option>
+                                        <option>Driver 2</option>
+                                        <option>Driver 3</option>
+                                        <option>Driver 4</option>
+                                        <option>Driver 5</option>
+                                    </select>
+                                    <a href="javascript:;" class="text-primary text-uppercase font-weight-400 font-12" data-bs-toggle="modal" data-bs-target="#addDriver">+ Add new driver</a>
+                                    <span class="del-adddriver text-red font-14 cursor-pointer del-driver" data-bs-toggle="tooltip" title="Delete Driver 2"><i class="far fa-trash-alt"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="form-group select-search">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Truck</label>
+                                    <select id="add-truck" class="js-states form-control form-select" aria-placeholder="Select Truck">
+                                        <option></option>
+                                        <option>Truck 1</option>
+                                        <option>Truck 2</option>
+                                        <option>Truck 3</option>
+                                        <option>Truck 4</option>
+                                        <option>Truck 5</option>
+                                    </select>
+                                    <a href="javascript:;" class="text-primary text-uppercase font-weight-400 font-12" data-bs-toggle="modal" data-bs-target="#addTruck">+ Add new Truck</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="form-group select-search">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Trailer</label>
+                                    <select id="add-trailer" class="js-states form-control form-select" aria-placeholder="Select Trailer">
+                                        <option></option>
+                                        <option>Trailer 1</option>
+                                        <option>Trailer 2</option>
+                                        <option>Trailer 3</option>
+                                        <option>Trailer 4</option>
+                                        <option>Trailer 5</option>
+                                    </select>
+                                    <a href="javascript:;" class="text-primary text-uppercase font-weight-400 font-12" data-bs-toggle="modal" data-bs-target="#addTrailer">+ Add new Trailer</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked/>
+                                        <label class="font-12 font-weight-400" for="flexCheckDefault">
+                                        I’m the Dispatcher for this load
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" value="KTS Dispatch" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="load-card border-radius-10 bg-white mb-20">
+                    <div class="load-card-body p-20">
+                        <div class="load-card-title mb-20">
+                            <h3 class="text-capitalize font-18 mb-0">Attachments</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <input name="file1" type="file" class="dropify border-radius-6" data-height="100" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="modal-footer text-center">
+        <a type="button" class="font-weight-400 font-12 me-3" data-bs-dismiss="modal">Cancel</a>
+        <button type="button" class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Send</button>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- Add load modal :: End -->
+<!-- Go to chat :: Start -->
+<div class="go-to-chat">
+    <a [routerLink]="['/chatbot']" ><img src="assets/images/icon/chatbot.png"></a>
+</div>
+<!-- Go to chat :: End -->

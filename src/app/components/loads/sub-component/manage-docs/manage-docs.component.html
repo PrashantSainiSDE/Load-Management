@@ -1,0 +1,553 @@
+<!-- <main>
+    <div class="main-wrapper">
+        <div id="content">
+            <app-header></app-header> -->
+            <div class="main-area position-relative">
+                <!-- Top Search :: Start -->
+                <div class="collapse" id="collapseExample">
+                    <div class="top-search card card-body  border-0 rounded-0">
+                        <form class="form-inline">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="What are you looking for?" aria-label="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button"><i class="far fa-search font-14"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Top Search :: End -->
+                <div class="page-card bg-white">
+                    <div class="page-card-title d-flex align-items-center justify-content-between">
+                        <p class="font-15 font-weight-600 mb-0 text-capitalize">Add Documents</p>
+                        <a [routerLink]="['/loads/view-load']" class="text-main text-uppercase text-center font-12 font-weight-600 me-2"><i class="far fa-arrow-left"></i> Back</a>
+                    </div>
+                    <div class="page-card-body p-20">
+                        <div class="row">
+                            <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Document Name</label>
+                                    <select name="driver" class="form-control form-select">
+                                        <option>Select Document Name</option>
+                                        <option>Document Name 1</option>
+                                        <option>Document Name 2</option>
+                                        <option>Document Name 3</option>
+                                        <option>Document Name 4</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xxl-4 col-xl-4 col-lg-4">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Document Description</label>
+                                    <textarea class="form-control" rows="5" placeholder="Document Description"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 col-lg-4">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Attachments</label>
+                                    <input name="file1" type="file" class="dropify border-radius-6" data-height="100" />
+                                </div>
+                            </div>
+                            <div class="col-xxl-12 col-xl-12 col-lg-12">
+                                <button class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Submit</button>
+                            </div>
+                        </div>
+                        <div class="mt-20">
+                            <div class="row">
+                                <div class="col-xl-2 col-lg-4">
+                                    <div class="detail-card w-100 border-radius-10">
+                                        <div class="detail-card-body p-20 text-center">
+                                            <img src="assets/images/icon/aadhar-card.png" class="avatar-sm rounded d-inline-block">
+                                                <p class="text-capitalize font-14 font-weight-600 mt-10 mb-10">Aadhar Card</p>
+                                                <p class="font-13 font-weight-400 mb-10">It is a long established fact that a reader will be distracted</p>
+                                                <div>
+                                                    <a class="text-main font-12 me-2" data-bs-toggle="tooltip" title="View"><i class="far fa-eye"></i></a>
+                                                    <a class="text-danger font-12" data-bs-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-lg-4">
+                                    <div class="detail-card w-100 border-radius-10">
+                                        <div class="detail-card-body p-20 text-center">
+                                            <img src="assets/images/icon/pan-card.png" class="avatar-sm rounded d-inline-block">
+                                                <p class="text-capitalize font-14 font-weight-600 mt-10 mb-10">Pan Card</p>
+                                                <p class="font-13 font-weight-400 mb-10">It is a long established fact that a reader will be distracted</p>
+                                                <div>
+                                                    <a class="text-main font-12 me-2" data-bs-toggle="tooltip" title="View"><i class="far fa-eye"></i></a>
+                                                    <a class="text-danger font-12" data-bs-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive mt-20">
+                                <table class="table table-bordered table-striped position-relative">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-uppercase whitespace-nowrap text-start">Document</th>
+                                            <th class="text-uppercase whitespace-nowrap">Document Name</th>
+                                            <th class="text-uppercase whitespace-nowrap">Document Description</th>
+                                            <th class="text-uppercase whitespace-nowrap">Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="tbl-doc border-radius-6"></div>
+                                            </td>
+                                            <td class="text-capitalize">Aadhar Card</td>
+                                            <td class="text-capitalize">Document Details</td>
+                                            <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        <!-- </div>
+        <app-footer></app-footer>
+    </div>
+</main> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Quickview Offcanvas :: Start -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="quickView" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel" class="font-15 font-weight-600 mb-0 text-capitalize">Quick View</h5>
+        <div>
+            <a href="javascript:;" class="font-14 me-3" title="Edit"><i class="far fa-edit"></i></a>
+            <a class="btn-close text-reset font-14" data-bs-dismiss="offcanvas" aria-label="Close"></a>
+        </div>
+    </div>
+    <div class="offcanvas-body view-load p-0 position-relative">
+        <ul class="nav nav-pills detail-tab" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active font-12 font-weight-600 text-uppercase" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#LoadDetails" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Load Details</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link font-12 font-weight-600 text-uppercase" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#Tracking" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Tracking</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link font-12 font-weight-600 text-uppercase" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#Documents" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Documents <span class="count-highlight font-12 font-weight-600 text-main">4</span></button>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="LoadDetails" role="tabpanel"
+                aria-labelledby="pills-home-tab">
+                <div class="border-bottom-light p-20 load-location">
+                    <div class="row">
+                        <div class="col-xl-6 col-xl-6">
+                            <div class="detail-card w-100 border-radius-10">
+                                <div class="detail-card-header p-10">
+                                    <p class="text-uppercase font-13 font-weight-500 mb-0"><i class="far fa-user me-1 text-main"></i> Customer</p>
+                                </div>
+                                <div class="detail-card-body p-10">
+                                    <div class="mb-10">
+                                        <p class="text-muted font-13 font-weight-400 mb-1">Name-</p>
+                                        <p class="font-14 font-weight-400 mb-0">Mussetter Distributingt</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <p class="text-muted font-13 font-weight-400 mb-1">Income-</p>
+                                            <p class="font-14 font-weight-400 mb-0">$25,000</p>
+                                        </div>
+                                        <!-- <div>
+                                            <p class="text-muted font-13 font-weight-400 mb-1">Expense-</p>
+                                            <p class="font-14 font-weight-400 mb-0">$14,523</p>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="detail-card w-100 border-radius-10">
+                                <div class="detail-card-header p-10">
+                                    <p class="text-uppercase font-13 font-weight-500 mb-0"><i class="far fa-truck me-1 text-main"></i> Carrier</p>
+                                </div>
+                                <div class="detail-card-body p-10">
+                                    <div class="mb-10">
+                                        <p class="text-muted font-13 font-weight-400 mb-1">Name-</p>
+                                        <p class="font-14 font-weight-400 mb-0">Mussetter Distributingt</p>
+                                    </div>
+                                    <div class="mb-0">
+                                        <p class="text-muted font-13 font-weight-400 mb-1">Expense-</p>
+                                        <p class="font-14 font-weight-400 mb-0">$14,523</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-20">
+                    <div class="col-xl-12">
+                        <div class="card border-radius-10 mb-20">
+                            <div class="card-body p-20 pickup-content1">
+                                <div class="heading mb-20 d-flex align-items-center justify-content-between">
+                                    <p class="font-15 font-weight-600 mb-0"><span>P</span> Pickup</p>
+                                    <a href="javascript:;" class="sendButton update-pickup-content1 font-14 font-weight-500 text-uppercase text-main text-decoration-underline" style="display:none">Update</a>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-4">
+                                        <p class="text-capitalize text-muted font-13 font-weight-400">Pickup Location</p>
+                                    </div>
+                                    <div class="col-xl-8">
+                                        <h6 class="edit-text text-black font-13 mb-1">Walmart Supercenter-Colton, CA</h6>
+                                        <p class="edit-text font-13 font-weight-400">1120 S Mount Vemon Ave Colton, CA 92324</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-4">
+                                        <p class="text-capitalize text-muted font-13 font-weight-400">Appointment</p>
+                                    </div>
+                                    <div class="col-xl-8">
+                                        <p class="edit-text font-13 font-weight-400">Mon 07/10, 09:00am 05:00pm POT</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-4">
+                                        <p class="text-capitalize text-muted font-13 font-weight-400">Pickup Details</p>
+                                    </div>
+                                    <div class="col-xl-8">
+                                        <p class="font-13 font-weight-400 mb-10">Comodity# ---</p>
+                                        <p class="edit-text font-13 font-weight-400 mb-0">Mix 42,000 lbs  900 cases Appointment# 1254 Pickup number# 3544</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12">
+                        <div class="card border-radius-10 mb-20">
+                            <div class="card-body p-20 dropoff-content1">
+                                <div class="heading mb-20 d-flex align-items-center justify-content-between">
+                                    <p class="font-15 font-weight-600 mb-0"><span>D</span> Dropoff</p>
+                                    <a href="javascript:;" class="sendButton update-dropoff-content1 font-14 font-weight-500 text-uppercase text-main text-decoration-underline" style="display:none">Update</a>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-4">
+                                        <p class="edit-text text-capitalize text-muted font-13 font-weight-400">Dropoff Location</p>
+                                    </div>
+                                    <div class="col-xl-8">
+                                        <h6 class="edit-text text-black font-13 mb-1">Walmart Supercenter-Colton, CA</h6>
+                                        <p class="edit-text font-13 font-weight-400">1120 S Mount Vemon Ave Colton, CA 92324</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-4">
+                                        <p class="text-capitalize text-muted font-13 font-weight-400">Appointment</p>
+                                    </div>
+                                    <div class="col-xl-8">
+                                        <p class="edit-text font-13 font-weight-400">Mon 07/10, 09:00am 05:00pm POT</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-4">
+                                        <p class="text-capitalize text-muted font-14 font-weight-400">Dropoff Details</p>
+                                    </div>
+                                    <div class="col-xl-8">
+                                        <p class="edit-text font-13 font-weight-400 mb-10">Comodity# ---</p>
+                                        <p class="edit-text font-13 font-weight-400 mb-0">Mix 42,000 lbs  900 cases Appointment# 1254 Pickup number# 3544</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="Tracking" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="p-20">
+                    <div class="row">
+                        <div class="col-xxl-12 col-xl-12 mb-10">
+                            <div class="detail-card w-100 border-radius-10">
+                                <div class="detail-card-body p-10">
+                                    <a class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <img src="assets/images/icon/checkin.png" alt="" class="avatar-xs rounded-circle opacity-8">
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="font-13 font-weight-500 mb-1">28595 Mary's Ct, Easton, MD 21601, USA</h6>
+                                            <span class="text-green font-13 font-weight-400 me-2"><i class="fas fa-circle font-10 me-1"></i>Checkin</span>
+                                            <span class="text-muted mb-0 font-13 font-weight-400">Updated By - Nutan Singh</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="border-top border-top-dashed">
+                                    <div class="detail-card-body p-10">
+                                        <ul class="list-unstyled d-flex justify-content-between gap-2 mb-0">
+                                            <li>
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">ETA-</p>
+                                                        <p class="font-14 font-weight-400 mb-0">7/12/2023 6:00:00 PM</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">Updated At-</p>
+                                                        <p class="font-14 font-weight-400 mb-0">8/12/2023 6:00:00 AM</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-12 col-xl-12 mb-10">
+                            <div class="detail-card w-100 border-radius-10">
+                                <div class="detail-card-body p-10">
+                                    <a class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <img src="assets/images/icon/absent.png" alt="" class="avatar-xs rounded-circle opacity-8">
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="font-13 font-weight-500 mb-1">28595 Mary's Ct, Easton, MD 21601, USA</h6>
+                                            <span class="text-red font-13 font-weight-400 me-2"><i class="fas fa-circle font-10 me-1"></i>Absent</span>
+                                            <span class="text-muted mb-0 font-13 font-weight-400">Updated By - Nutan Singh</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="border-top border-top-dashed">
+                                    <div class="detail-card-body p-10">
+                                        <ul class="list-unstyled d-flex justify-content-between gap-2 mb-0">
+                                            <li>
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">ETA-</p>
+                                                        <p class="font-14 font-weight-400 mb-0">7/12/2023 6:00:00 PM</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">Updated At-</p>
+                                                        <p class="font-14 font-weight-400 mb-0">8/12/2023 6:00:00 AM</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-12 col-xl-12 mb-10">
+                            <div class="detail-card w-100 border-radius-10">
+                                <div class="detail-card-body p-10">
+                                    <a class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <img src="assets/images/icon/checkin.png" alt="" class="avatar-xs rounded-circle opacity-8">
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="font-13 font-weight-500 mb-1">28595 Mary's Ct, Easton, MD 21601, USA</h6>
+                                            <span class="text-green font-13 font-weight-400 me-2"><i class="fas fa-circle font-10 me-1"></i>Checkin</span>
+                                            <span class="text-muted mb-0 font-13 font-weight-400">Updated By - Nutan Singh</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="border-top border-top-dashed">
+                                    <div class="detail-card-body p-10">
+                                        <ul class="list-unstyled d-flex justify-content-between gap-2 mb-0">
+                                            <li>
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">ETA-</p>
+                                                        <p class="font-14 font-weight-400 mb-0">7/12/2023 6:00:00 PM</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">Updated At-</p>
+                                                        <p class="font-14 font-weight-400 mb-0">8/12/2023 6:00:00 AM</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="Documents" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div class="p-20">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="border rounded border-dashed p-2 mb-10">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-sm">
+                                            <div class="avatar-title bg-light text-secondary rounded font-18 text-main">
+                                                <i class="far fa-file-pdf"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <h5 class="font-13 mb-1"><a href="javascript:;" class="text-body text-truncate d-block font-weight-500">App-pages.pdf</a></h5>
+                                        <span class="text-muted font-13 font-weight-400 me-2">2.2MB</span>
+                                        <span class="text-muted font-13 font-weight-400 me-2"><i class="far fa-calendar-alt font-10"></i> 13/07/2023</span>
+                                        <span class="text-muted font-13 font-weight-400"><i class="far fa-user font-10"></i> Ashish</span>
+                                    </div>
+                                    <div class="flex-shrink-0 ms-2">
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-icon text-main btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="View"><i class="far fa-eye"></i></button>
+                                            <button type="button" class="btn btn-icon text-info btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="Download"><i class="far fa-arrow-down"></i></button>
+                                            <button type="button" class="btn btn-icon text-red btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border rounded border-dashed p-2 mb-10">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-sm">
+                                            <div class="avatar-title bg-light text-secondary rounded font-18 text-main">
+                                                <i class="far fa-file-image"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <h5 class="font-13 mb-1"><a href="javascript:;" class="text-body text-truncate d-block font-weight-500">App-pages.jpg</a></h5>
+                                        <span class="text-muted font-13 font-weight-400 me-2">3.2MB</span>
+                                        <span class="text-muted font-13 font-weight-400 me-2"><i class="far fa-calendar-alt font-10"></i> 13/07/2023</span>
+                                        <span class="text-muted font-13 font-weight-400"><i class="far fa-user font-10"></i> Ashish</span>
+                                    </div>
+                                    <div class="flex-shrink-0 ms-2">
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-icon text-main btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="View"><i class="far fa-eye"></i></button>
+                                            <button type="button" class="btn btn-icon text-info btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="Download"><i class="far fa-arrow-down"></i></button>
+                                            <button type="button" class="btn btn-icon text-red btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border rounded border-dashed p-2 mb-10">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-sm">
+                                            <div class="avatar-title bg-light text-secondary rounded font-18 text-main">
+                                                <i class="far fa-file-excel"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <h5 class="font-13 mb-1"><a href="javascript:;" class="text-body text-truncate d-block font-weight-500">App-pages.xls</a></h5>
+                                        <span class="text-muted font-13 font-weight-400 me-2">2.2MB</span>
+                                        <span class="text-muted font-13 font-weight-400 me-2"><i class="far fa-calendar-alt font-10"></i> 13/07/2023</span>
+                                        <span class="text-muted font-13 font-weight-400"><i class="far fa-user font-10"></i> Ashish</span>
+                                    </div>
+                                    <div class="flex-shrink-0 ms-2">
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-icon text-main btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="View"><i class="far fa-eye"></i></button>
+                                            <button type="button" class="btn btn-icon text-info btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="Download"><i class="far fa-arrow-down"></i></button>
+                                            <button type="button" class="btn btn-icon text-red btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border rounded border-dashed p-2 mb-10">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-sm">
+                                            <div class="avatar-title bg-light text-secondary rounded font-18 text-main">
+                                                <i class="far fa-file-pdf"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <h5 class="font-13 mb-1"><a href="javascript:;" class="text-body text-truncate d-block font-weight-500">App-pages.pdf</a></h5>
+                                        <span class="text-muted font-13 font-weight-400 me-2">2.2MB</span>
+                                        <span class="text-muted font-13 font-weight-400 me-2"><i class="far fa-calendar-alt font-10"></i> 13/07/2023</span>
+                                        <span class="text-muted font-13 font-weight-400"><i class="far fa-user font-10"></i> Ashish</span>
+                                    </div>
+                                    <div class="flex-shrink-0 ms-2">
+                                        <div class="d-flex gap-1">
+                                            <button type="button" class="btn btn-icon text-main btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="View"><i class="far fa-eye"></i></button>
+                                            <button type="button" class="btn btn-icon text-info btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="Download"><i class="far fa-arrow-down"></i></button>
+                                            <button type="button" class="btn btn-icon text-red btn-sm font-14 shadow-none" data-bs-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-footer text-center">
+            <p class="font-14 font-weight-500 text-capitalize mb-0">Load Full view <a [routerLink]="['/loads/view-load']" class="font-14 font-weight-500 text-main text-uppercase ps-2">     Click here</a>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Quickview Offcanvas :: End -->
+<!-- Add load modal :: End -->
+<div class="modal fade" id="addLoad" aria-labelledby="addLoadModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Add load modal :: End -->

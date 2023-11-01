@@ -1,0 +1,522 @@
+<!-- <main>
+    <div class="main-wrapper">
+        <div id="content">
+            <app-header></app-header> -->
+            <div class="main-area position-relative">
+                <!-- Top Search :: Start -->
+                <div class="collapse" id="collapseExample">
+                    <div class="top-search card card-body  border-0 rounded-0">
+                        <form class="form-inline">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="What are you looking for?"/>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button"><i class="far fa-search font-14"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Top Search :: End -->
+                <div class="page-card bg-white">
+                    <div class="page-card-title d-flex align-items-center justify-content-between">
+                        <p class="font-15 font-weight-600 mb-0 text-capitalize">Daily Rates</p>
+                        <a href="javascript:;" class="btn btn-outline-info text-main text-uppercase text-center font-12" type="button" data-bs-toggle="offcanvas" data-bs-target="#addDailyRates" aria-controls="offcanvasRight"><i class="far fa-plus"></i> Add daily Rates</a>
+                    </div>
+                    <div class="page-card-body">
+                        <!-- Table Result :: Start -->
+                        <div class="table-responsive p-20 pb-0">
+                            <table class="table table-bordered table-striped position-relative">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase whitespace-nowrap text-start">Origin</th>
+                                        <th class="text-uppercase whitespace-nowrap">Destination</th>
+                                        <th class="text-uppercase whitespace-nowrap">Low</th>
+                                        <th class="text-uppercase whitespace-nowrap">Mid</th>
+                                        <th class="text-uppercase whitespace-nowrap">High</th>
+                                        <th class="text-uppercase whitespace-nowrap">DAT Spot Rate</th>
+                                        <th class="text-uppercase whitespace-nowrap">Loads</th>
+                                        <th class="text-uppercase whitespace-nowrap">Trucks</th>
+                                        <th class="text-uppercase whitespace-nowrap">Stop</th>
+                                        <th class="text-uppercase whitespace-nowrap">Added On</th>
+                                        <th class="text-uppercase whitespace-nowrap">Added By</th>
+                                        <th class="text-uppercase whitespace-nowrap">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Dallas , TX</td>
+                                        <td class="text-capitalize">CA , US</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$10.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">$100.00</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">10</td>
+                                        <td class="text-capitalize whitespace-nowrap">1 Pick 1 Drop</td>
+                                        <td class="text-capitalize whitespace-nowrap">7/7/22, 3:00 AM</td>
+                                        <td class="text-capitalize whitespace-nowrap">Hi Tech India</td>
+                                        <td class="text-capitalize whitespace-nowrap"> 
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3" ><i class="far fa-edit" data-bs-toggle="tooltip" title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Table Result :: End -->
+                        <!-- Pagination :: Start -->
+                        <div class="row mt-30">
+                            <div class="col-xl-12">
+                                <nav aria-label="Page navigation example ms-auto me-auto">
+                                    <ul class="pagination justify-content-center gap-2">
+                                        <li class="page-item">
+                                            <a class="page-link font-22" href="javascript:;" aria-label="Previous"><i class="far fa-angle-left font-weight-300"></i></a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link font-14" href="javascript:;">1</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">2</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">3</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">4</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">5</a></li>
+                                        <li class="page-item"><a class="page-link font-22" href="javascript:;" aria-label="Next"><i class="far fa-angle-right font-weight-300"></i></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Pagination :: End -->
+                    </div>
+                </div>
+            </div>
+        <!-- </div>
+            <app-footer></app-footer>
+    </div>
+</main> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- addLocation Offcanvas :: Start -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="addDailyRates" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel" class="font-15 font-weight-600 mb-0 text-capitalize">Add Rate</h5>
+        <a class="btn-close text-reset font-14" data-bs-dismiss="offcanvas" aria-label="Close"></a>
+    </div>
+    <div class="offcanvas-body view-load position-relative">
+        <div class="card border-radius-10 mb-20 toggle-block">
+            <div class="card-header bg-transparent border-0">
+                <div class="heading d-flex align-items-center justify-content-between">
+                    <p class="font-13 font-weight-600 mb-0">Rate Details</p>
+                    <a class="font-14 font-weight-500 text-main toggle-trigger"><i class="far fa-angle-down"></i></a>
+                </div>
+            </div>
+            <div class="card-body p-20 toggle-able detail-body">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Origin</label>
+                            <input type="text" name="Origin" class="form-control" placeholder="Origin"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Destination</label>
+                            <input type="text" name="destination" class="form-control" placeholder="Destination"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Available Loads</label>
+                            <input type="text" name="availableloads" class="form-control" placeholder="Available Loads"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Stop Type</label>
+                            <select class="form-control form-select">
+                                <option>1 Pick 1 Drop</option>
+                                <option>Multi Stop</option>
+                                <option>Not Sure</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Lowest Rate</label>
+                            <input type="text" name="lowestrate" class="form-control" placeholder="Lowest Rate"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Midest Rate</label>
+                            <input type="text" name="midestrate" class="form-control" placeholder="Midest Rate"/>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Highest Rate</label>
+                            <input type="text" name="highestrate" class="form-control" placeholder="Highest Rate"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Broker To Carrier DAT Spot Rate</label>
+                            <input type="text" name="state" class="form-control" placeholder="State"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Attachment</label>
+                            <input name="file1" type="file" class="dropify border-radius-6" data-height="100" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-footer text-center">
+            <a href="javascript:;" class="font-weight-400 font-12 me-2">Cancel</a>
+            <button class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Submit</button>
+        </div>
+    </div>
+</div>
+<!-- addLocation Offcanvas :: End -->

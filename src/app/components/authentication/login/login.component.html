@@ -1,0 +1,59 @@
+<main class="account login-area position-relative">
+	<div class="container-fluid">
+		<div class="row gx-5">
+			<div class="col-xxl-5 col-xl-5 col-lg-3 col-md-12 bg-img display-md-none">
+				<div class="left-panel">
+					<div class="logo-area">
+						<img src="assets/images/logo.png" class="img-fluid position-relative"/>
+					</div>
+					<div class="login-img">
+						<img src="assets/images/bg/login-bg.png" class="img-fluid position-relative"/>
+					</div>
+					<div class="content position-relative">
+						<h2 class="text-capitalize text">A big logistics solutions</h2>
+					</div>
+				</div>
+			</div>
+			<div class="col-xxl-7 col-xl-7 col-lg-9 col-md-12">
+				<div class="right-panel">
+					<img src="assets/images/logo-dark.png" class="img-fluid position-relative display-md-block right-logo"/>
+					<h1 class="welcome-text text-center">Welcome to 3PLTEK</h1>
+					<div class="form-area">
+						<div class="form-text">
+							<p>Sign In to Admin</p>
+							<span>Enter your details to login to your account:</span>
+						</div>
+						<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+							<div class="form-group">
+								<input type="email" class="form-control" formControlName="email" placeholder="Enter User ID"/>
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" formControlName="password" placeholder="Enter Password"/>
+							</div>
+							<div class="row">
+								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+									<div class="form-group form-check mb-0">
+									  <input class="form-check-input" type="checkbox" id="flexCheckDefault">     <!-- formControlName="rememberMe" -->
+									  <label class="font-weight-400" for="flexCheckDefault">Remember me</label>
+									</div>
+								</div>
+								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 text-end">
+									<a href="javascript::" class="font-weight-400">Forgot Password?</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-12 col-lg-12 d-grid submit-btn">
+									<button type="submit" class="btn btn-primary d-block" [disabled]="loginForm.invalid">Login</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="copyright text-center">
+						<span>New to 3PLTEK?</span>
+						<a href="javascript:;" class="text-main" style="margin-left: 4px;">Create an account</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>

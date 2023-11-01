@@ -1,0 +1,379 @@
+<!-- <main>
+    <div class="main-wrapper">
+        <div id="content">
+            <app-header></app-header> -->
+            <div class="main-area position-relative">
+                <!-- Top Search :: Start -->
+                <div class="collapse" id="collapseExample">
+                    <div class="top-search card card-body  border-0 rounded-0">
+                        <form class="form-inline">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="What are you looking for?" aria-label="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button"><i class="far fa-search font-14"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>  
+                </div>
+                <!-- Top Search :: End -->
+                <div class="page-card bg-white">
+                    <div class="page-card-title d-flex align-items-center justify-content-between">
+                        <p class="font-15 font-weight-600 mb-0 text-capitalize">Log Check Calls</p>
+                        <a [routerLink]="['/loads/view-load']" class="text-main text-uppercase text-center font-12 font-weight-600 me-2"><i class="far fa-arrow-left"></i> Back</a>
+                    </div>
+                    <div class="page-card-body p-20">
+                        <div class="row view-load-location">
+                            <div class="col-xl-12">
+                                <div class="load-location d-flex gap-3 mb-20">
+                                    <div class="pickup-location pickup-location-width">
+                                        <div class="location-top p-10"><p class="text-uppercase font-14 font-weight-500 mb-0">1. pickup</p></div>
+                                        <div class="p-10">
+                                            <p class="font-13 mt-2 mb-2">2 Towns Cider House</p>
+                                            <h5 class="font-14 mb-1">Lake Havasu City, AZ</h5>
+                                            <span class="font-13">APT 8/4/2022 05:45 AM</span>
+                                        </div>
+                                    </div>
+                                    <div class="dropoff-location dropoff-location-width">
+                                        <div class="location-top p-10"><p class="text-uppercase font-14 font-weight-500 mb-0">2. Dropoff</p></div>
+                                        <div class="p-10">
+                                            <p class="font-13 mt-2 mb-2">Mussetter Distributingt</p>
+                                            <h5 class="font-14 mb-1">Auburn, CA</h5>
+                                            <span class="font-13">APT 8/9/2022 03:15 PM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Driver</label>
+                                    <select name="driver" class="form-control form-select">
+                                        <option>Select Driver</option>
+                                        <option>Driver 1</option>
+                                        <option>Driver 2</option>
+                                        <option>Driver 3</option>
+                                        <option>Driver 4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Phone</label>
+                                    <input type="text" name="phone" class="form-control" placeholder="Phone"/>
+                                </div>
+                            </div>
+                            <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Load Status</label>
+                                    <select id="logStatus" name="status" class="form-control form-select">
+                                        <option>Select Status</option>
+                                        <option value="One">In Transit</option>
+                                        <option value="Two">ETA to Pickup</option>
+                                        <option value="">Check In</option>
+                                        <option value="One">Check Out</option>
+                                        <option value="Two">ETA To Second Pickup</option>
+                                        <option value="">ETA To Second Delivery</option>
+                                        <option value="">ETA To Final Delivery</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Current Location</label>
+                                    <input type="text" name="location" class="form-control" placeholder="Current Location"/>
+                                </div>
+                            </div>
+                            <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Load Stops</label>
+                                    <select name="status" class="form-control form-select">
+                                        <option>Select Load Stops</option>
+                                        <option>Ingevity DeRidder Plant - DeRidder, LA</option>
+                                        <option>DeRidder Plant - DeRidder, LA</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Miles</label>
+                                    <input type="text" name="location" class="form-control" placeholder="Miles"/>
+                                </div>
+                            </div>
+                            <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                <div class="form-group has-search">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Date</label>
+                                    <div class="input-group">
+                                        <span class="far fa-calendar-alt form-control-feedback"></span>
+                                        <input type="datetime-local" class="form-control border-radius-6" placeholder="MM/DD/YYYY hh:mm:ss">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Load Running Status</label>
+                                    <select name="status" class="form-control form-select">
+                                        <option>Select Load Running Statuss</option>
+                                        <option>On Time</option>
+                                        <option>At Risk</option>
+                                        <option>Running Late</option>
+                                        <option>Stop 4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Call Details</label>
+                                    <textarea class="form-control" rows="2" placeholder="Call Details"></textarea>
+                                </div>
+                            </div>
+                            <!-- ETA To Pickup Div :: Start -->
+                            <div id="showTwo" class="log-status-div col-xxl-2 col-xl-2 col-lg-2">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10">Team Driver</label>
+                                    <select name="status" class="form-control form-select">
+                                        <option>Select Option</option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- ETA To Pickup Div :: End -->
+                        </div>
+                        <!-- In Transit Div :: Start -->
+                        <div class="log-status-div" id="showOne">
+                            <div class="row">
+                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Seal No.</label>
+                                        <input type="text" name="sealno" class="form-control" placeholder="Seal No."/>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Reefer Mode</label>
+                                        <select name="status" class="form-control form-select">
+                                            <option>Select Mode</option>
+                                            <option>Auto Mode</option>
+                                            <option>Continue Mode</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Reefer Temp</label>
+                                        <input type="text" name="Reefertemp" class="form-control" placeholder="Reefer Temp"/>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Received Picture Of Temp, Seal And Bill?</label>
+                                        <select name="status" class="form-control form-select">
+                                            <option>Select Option</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Pallets</label>
+                                        <input type="text" name="pallets" class="form-control" placeholder="Pallets"/>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Piece Count</label>
+                                        <input type="text" name="piececount" class="form-control" placeholder="Piece Count"/>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">On Time Pickup?</label>
+                                        <select name="status" class="form-control form-select">
+                                            <option>Select Option</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Pallets & Piece Count Note</label>
+                                        <textarea class="form-control" rows="2" placeholder="Pallets & Piece Count Note..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-2 col-xl-2 col-lg-2">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">On Time Pickup Note</label>
+                                        <textarea class="form-control" rows="2" placeholder="On Time Pickup Note..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- In Transit Div :: End -->
+                        <div class="row">
+                            <div class="col-xxl-12 col-xl-12 col-lg-12">
+                                <div class="form-group">
+                                    <label class="font-12 font-weight-400 text-uppercase mb-10 d-block">Pending Task List</label>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1"/>
+                                      <label class="form-check-label font-12 font-weight-400 text-capitalize" for="inlineCheckbox1">Pick up Address Confirmed</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="checkbox" id="inlineCheckbox2"/>
+                                      <label class="form-check-label font-12 font-weight-400 text-capitalize" for="inlineCheckbox2">Appt or FCFS/ Hours</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="checkbox" id="inlineCheckbox3"/>
+                                      <label class="form-check-label font-12 font-weight-400 text-capitalize" for="inlineCheckbox3">ashishs</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <button class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Submit</button>
+                            </div>
+                        </div>
+                        <div class="table-responsive mt-20">
+                            <table class="table table-bordered table-striped position-relative">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase whitespace-nowrap"></th>
+                                        <th class="text-uppercase whitespace-nowrap">Status</th>
+                                        <th class="text-uppercase whitespace-nowrap">Location</th>
+                                        <th class="text-uppercase whitespace-nowrap">Call Details</th>
+                                        <th class="text-uppercase whitespace-nowrap">Driver</th>
+                                        <th class="text-uppercase whitespace-nowrap">Updated By</th>
+                                        <th class="text-uppercase whitespace-nowrap">ETA</th>
+                                        <th class="text-uppercase whitespace-nowrap">Updated At</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample123" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Check In</span></td>
+                                        <td class="text-capitalize">105 Buffalo Way, Jackson, WY 83001, USA</td>
+                                        <td class="text-capitalize">Picked load</td>
+                                        <td class="text-capitalize">Abhi</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize">8/4/2022 17:30:00</td>
+                                        <td class="text-capitalize">7/29/22, 4:06 AM 17:30:00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample123">
+                                        <td class="text-start" colspan="8">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Seal No.-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Team-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">E/ GE-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Mode-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Picture-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pallets-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pallets Count-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pallets Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Task-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample124" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Check In</span></td>
+                                        <td class="text-capitalize">105 Buffalo Way, Jackson, WY 83001, USA</td>
+                                        <td class="text-capitalize">Picked load</td>
+                                        <td class="text-capitalize">Abhi</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize">8/4/2022 17:30:00</td>
+                                        <td class="text-capitalize">7/29/22, 4:06 AM 17:30:00</td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample124">
+                                        <td class="text-start" colspan="8">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Seal No.-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Team-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">E/ GE-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Mode-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Picture-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pallets-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pallets Count-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pallets Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Task-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- </div>
+            <app-footer></app-footer>
+    </div>
+</main> -->

@@ -1,0 +1,1247 @@
+<!-- <main>
+    <div class="main-wrapper">
+        <div id="content">
+            <app-header></app-header> -->
+            <div class="main-area position-relative">
+                <!-- Top Search :: Start -->
+                <div class="collapse" id="collapseExample">
+                    <div class="top-search card card-body  border-0 rounded-0">
+                        <form class="form-inline">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="What are you looking for?" aria-label="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button"><i class="far fa-search font-14"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Top Search :: End -->
+                <div class="page-card bg-white">
+                    <div class="page-card-title d-flex align-items-center justify-content-between">
+                        <p class="font-15 font-weight-600 mb-0 text-capitalize">Add Load To Board</p>
+                        <a href="javascript:;" class="btn btn-outline-info text-main text-uppercase text-center font-12" type="button" data-bs-toggle="offcanvas" data-bs-target="#addLoadBoard" aria-controls="offcanvasRight"><i class="far fa-plus"></i> Add Load to Board</a>
+                    </div>
+                    <div class="page-card-body">
+                        <!-- Table Result :: Start -->
+                        <div class="table-responsive p-20 pb-0">
+                            <table class="table table-bordered table-striped position-relative">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase whitespace-nowrap"></th>
+                                        <th class="text-uppercase whitespace-nowrap">Load ID</th>
+                                        <th class="text-uppercase whitespace-nowrap">Load Type</th>
+                                        <th class="text-uppercase whitespace-nowrap">Pickup Location</th>
+                                        <th class="text-uppercase whitespace-nowrap">Pickup Date</th>
+                                        <th class="text-uppercase">Dropoff Location</th>
+                                        <th class="text-uppercase">Dropoff date</th>
+                                        <th class="text-uppercase">Load Status</th>
+                                        <th class="text-uppercase">Load Booking</th>
+                                        <th class="text-uppercase">Move Load</th>
+                                        <th class="text-uppercase">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample123" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO foodservice Ventura</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-capitalize"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample123">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample124" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO foodservice Ventura</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-capitalize"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample124">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample125" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO foodservice Ventura</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-capitalize"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample125">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample126" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO FOODSERVICE VENTURA</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample126">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample127" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO foodservice Ventura</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-capitalize"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample127">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample128" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO foodservice Ventura</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-capitalize"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample128">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample129" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO foodservice Ventura</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-capitalize"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample129">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample130" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO foodservice Ventura</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample30">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample131" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO foodservice Ventura</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-capitalize"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample131">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample132" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO foodservice Ventura</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-capitalize"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample132">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample133" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO foodservice Ventura</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-capitalize"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample133">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample134" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO foodservice Ventura</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-capitalize"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample134">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample135" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO foodservice Ventura</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-capitalize"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample135">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample136" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO foodservice Ventura</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-capitalize"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample136">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample137" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO foodservice Ventura</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-capitalize"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample137">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample138" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO foodservice Ventura</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-capitalize"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample138">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample139" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO FOODSERVICE VENTURA</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample139">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample140" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO FOODSERVICE VENTURA</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample140">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-capitalize whitespace-nowrap">
+                                            <a data-bs-toggle="collapse" href="#collapseExample141" role="button" aria-expanded="false" aria-controls="collapseExample" class="collapsed"><i class="far fa-angle-down"></i></a>
+                                        </td>
+                                        <td class="text-capitalize whitespace-nowrap">15793</td>
+                                        <td class="text-capitalize whitespace-nowrap">Load Board Template 1</td>
+                                        <td class="text-capitalize">1979 Monterey Rd-San Jose CA 95112</td>
+                                        <td class="text-capitalize whitespace-nowrap">09/05/2022</td>
+                                        <td class="text-capitalize">3100 Sturgis YSCO FOODSERVICE VENTURA</td>
+                                        <td class="text-capitalize">09/11/2022</td>
+                                        <td class="text-uppercase"><span class="text-red font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Not-Delivered</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-main font-weight-400" data-bs-toggle="offcanvas" data-bs-target="#loadBooking" aria-controls="offcanvasRight">Load Booking</a></td>
+                                        <td class="text-capitalize text-main"><a href="javascript:;" class="text-main font-weight-400">Move To Load Board</a></td>
+                                        <td class="text-capitalize"><a class="text-danger font-12" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="delete"><i class="far fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    <tr class="collapse" id="collapseExample141">
+                                        <td class="text-start" colspan="11">
+                                            <div class="d-flex gap-4">
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">53' Reefer W/Team</p>
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Reefer Temp-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">38 ℃</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Type-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Type Here</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Address-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">3100 Sturgis YSCO</p> 
+                                               </div> 
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">APT/ FCFS-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">FCFS</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Stop Note-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">Note Here</p> 
+                                               </div>
+                                               <div>
+                                                   <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Date / Time-</p>
+                                                    <p class="edit-text font-13 font-weight-400 mb-0">12/12/2023</p> 
+                                               </div>
+                                           </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Table Result :: End -->
+                        <!-- Pagination :: Start -->
+                        <div class="row mt-30">
+                            <div class="col-xl-12">
+                                <nav aria-label="Page navigation example ms-auto me-auto">
+                                    <ul class="pagination justify-content-center gap-2">
+                                        <li class="page-item">
+                                            <a class="page-link font-22" href="javascript:;" aria-label="Previous"><i class="far fa-angle-left font-weight-300"></i></a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link font-14" href="javascript:;">1</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">2</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">3</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">4</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">5</a></li>
+                                        <li class="page-item"><a class="page-link font-22" href="javascript:;" aria-label="Next"><i class="far fa-angle-right font-weight-300"></i></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Pagination :: End -->
+                    </div>
+                </div>
+            </div>
+        <!-- </div>
+            <app-footer></app-footer>
+    </div>
+</main> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- addLoadBoard Offcanvas :: Start -->
+<div class="offcanvas offcanvas-end add-customer" tabindex="-1" id="addLoadBoard" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel" class="font-15 font-weight-600 mb-0 text-capitalize">Add Load to Board </h5>
+        <a class="btn-close text-reset font-14" data-bs-dismiss="offcanvas" aria-label="Close"></a>
+    </div>
+    <div class="offcanvas-body view-load position-relative">
+        <div class="card border-radius-10 mb-20 toggle-block">
+            <div class="card-header bg-transparent border-0">
+                <div class="heading d-flex align-items-center justify-content-between">
+                    <p class="font-13 font-weight-600 mb-0">Work Order</p>
+                    <a class="font-14 font-weight-500 text-main toggle-trigger"><i class="far fa-angle-down"></i></a>
+                </div>
+            </div>
+            <div class="card-body p-20 toggle-able detail-body">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group has-search">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Load Quote Name</label>
+                            <span class="far fa-search form-control-feedback"></span>
+                            <input type="text" name="loadquotename" class="form-control" placeholder="Load Quote Name"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Customer</label>
+                            <input type="text" name="customer" class="form-control" placeholder="Customer"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Load Type</label>
+                            <select id="load-type" class="js-states form-control form-select" aria-placeholder="Load Type">
+                                <option></option>
+                                <option>53' Reefer</option>
+                                <option>53' Reefer W/Team</option>
+                                <option>53' Van Or Reefer</option>
+                                <option>53' Van</option>
+                                <option>FlatBed</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="form-group mb-0">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Special Notes</label>
+                            <textarea class="form-control" name="privatenotes" rows="5" placeholder="Special Notes"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card border-radius-10 mb-60 toggle-block ">
+            <div class="card-header bg-transparent border-0">
+                <div class="heading d-flex align-items-center justify-content-between">
+                    <p class="font-13 font-weight-600 mb-0">Stop</p>
+                    <a class="edit-text font-14 font-weight-500 text-main toggle-trigger"><i class="far fa-angle-down"></i></a>
+                </div>
+            </div>
+            <div class="card-body p-20 toggle-able detail-body">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Stop Type</label>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="stopType" id="PickUp">
+                              <label class="form-check-label font-weight-400 font-12" for="PickUp">PickUp</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="stopType" id="Delivery">
+                              <label class="form-check-label font-weight-400 font-12" for="Delivery">Delivery</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Stop Address</label>
+                            <input type="text" name="locationname" class="form-control" placeholder="Location Name"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="reqType" id="FCFS">
+                              <label class="form-check-label font-weight-400 font-12" for="FCFS">FCFS</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="reqType" id="Aptreq">
+                              <label class="form-check-label font-weight-400 font-12" for="Aptreq">Apt Req.</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <div class="form-group has-search">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Date</label>
+                                <div class="input-group">
+                                    <span class="far fa-calendar-alt form-control-feedback"></span>
+                                    <input type="date" class="form-control border-radius-6" placeholder="mm/dd/yyyy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="form-group mb-0">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Notes</label>
+                            <div class="input-group">
+                                <textarea class="form-control" name="privatenotes" rows="5" placeholder="Notes"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Table Content :: End -->
+            </div>
+        </div>
+        <div class="fixed-footer text-center">
+            <a href="javascript:;" class="font-weight-400 font-12 me-3">Cancel</a>
+            <button class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Submit</button>
+        </div>
+    </div>
+</div>
+<!-- addLoadBoard Offcanvas :: End -->
+<!-- Load Booking System Offcanvas :: Start -->
+<div class="offcanvas offcanvas-end add-customer" tabindex="-1" id="loadBooking" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel" class="font-15 font-weight-600 mb-0 text-capitalize">Load Booking System</h5>
+        <a class="btn-close text-reset font-14" data-bs-dismiss="offcanvas" aria-label="Close"></a>
+    </div>
+    <div class="offcanvas-body view-load position-relative">
+        <div class="card border-radius-10 mb-20 toggle-block">
+            <div class="card-header bg-transparent border-0">
+                <div class="heading d-flex align-items-center justify-content-between">
+                    <p class="font-13 font-weight-600 mb-0">Booking Details</p>
+                    <a class="font-14 font-weight-500 text-main toggle-trigger"><i class="far fa-angle-down"></i></a>
+                </div>
+            </div>
+            <div class="card-body p-20 toggle-able detail-body">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group has-search">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Load Quote Name</label>
+                            <span class="far fa-search form-control-feedback"></span>
+                            <input type="text" name="loadquotename" class="form-control" placeholder="Load Quote Name"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Customer</label>
+                            <input type="text" name="customer" class="form-control" placeholder="Customer"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="form-group">
+                            <button class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Search FMCSA</button>
+                        </div>
+                    </div>
+                     <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Truck Location</label>
+                            <input type="text" name="truckloocation" class="form-control" placeholder="Truck Location"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Available Date And Time</label>
+                            <input type="text" name="datetime" class="form-control" placeholder="Available Date And Time"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Truck Status</label>
+                            <select id="load-type" class="js-states form-control form-select" aria-placeholder="Load Type">
+                                <option>Select Status</option>
+                                <option>Empty</option>
+                                <option>Getting Empty</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Call Back Number</label>
+                            <input type="text" name="datetime" class="form-control" placeholder="Call Back Number"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-12">
+                        <div class="form-check form-group">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          <label class="form-check-label text-uppercase font-weight-400 font-12" for="flexCheckDefault">Add Carrier To Dont Use List</label>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="form-group">
+                            <button class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Add Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-footer text-center">
+            <a href="javascript:;" class="font-weight-400 font-12 me-3">Cancel</a>
+            <button class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Submit</button>
+        </div>
+    </div>
+</div>
+<!-- Load Booking System Offcanvas :: End -->

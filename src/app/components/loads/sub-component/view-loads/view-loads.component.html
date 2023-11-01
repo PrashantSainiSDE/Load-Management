@@ -1,0 +1,1814 @@
+<!-- <main>
+    <div class="main-wrapper">
+        <div id="content">
+            <app-header></app-header> -->
+            <div class="main-area position-relative">
+                <!-- Top Search :: Start -->
+                <div class="collapse" id="collapseExample">
+                    <div class="top-search card card-body  border-0 rounded-0">
+                        <form class="form-inline">
+                            <div class="input-group">
+                            <input type="text" class="form-control" placeholder="What are you looking for?" aria-label="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="button"><i class="far fa-search font-14"></i></button>
+                            </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Top Search :: End -->
+
+                <div class="page-card bg-white">
+                    <div class="page-card-title d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-3">
+                            <p class="font-15 font-weight-600 mb-0 text-capitalize">View Loads <span class="font-14 font-weight-500 text-main"  data-bs-toggle="tooltip" title="Load ID : 15793">(15793#)</span></p>
+                            <button type="button" class="btn btn-primary font-weight-400 font-12 pe-3 ps-3 pt-1 pb-1 text-uppercase" data-bs-toggle="modal" data-bs-target="#sendModal">Send</button>
+                            <div class="dropdown filter-dropdown d-inline-block">
+                                <span class="btn btn-primary font-weight-400 font-12 pe-3 ps-3 pt-1 pb-1 text-uppercase" type="button" id="dropdownMenuButton23" data-bs-toggle="dropdown" aria-expanded="false"><span class="text text-uppercase text-white">Status</span> <i class="far fa-angle-down font-12 text-white"></i></span>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton23">
+                                    <a class="dropdown-item pending font-13 text-capitalize" href="javascript:;">Quote</a>
+                                    <a class="dropdown-item pending font-13 text-capitalize" href="javascript:;">Pending</a>
+                                    <a class="dropdown-item pending font-13 text-capitalize" href="javascript:;">Confirmed</a>
+                                    <a class="dropdown-item pending font-13 text-capitalize" href="javascript:;">Assigned</a>
+                                    <a class="dropdown-item pending font-13 text-capitalize" href="javascript:;">Need Carrier</a>
+                                    <a class="dropdown-item pending font-13 text-capitalize" href="javascript:;" data-bs-toggle="modal" data-bs-target="#dispatchModal">Dispatch</a>
+                                    <a class="dropdown-item pending font-13 text-capitalize" href="javascript:;">In Transit</a>
+                                    <a class="dropdown-item pending font-13 text-capitalize" href="javascript:;" data-bs-toggle="modal" data-bs-target="#deliveredModal">Delivered</a>
+                                    <a class="dropdown-item pending font-13 text-capitalize" href="javascript:;">Possible Claim</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a [routerLink]="['/loads/loads-list']" class="text-main text-uppercase text-center font-12 font-weight-600 me-2"><i class="far fa-arrow-left me-1"></i> Back</a>
+                            <a [routerLink]="['/loads/log-check-call']" class="btn btn-outline-info text-main text-uppercase text-center font-12 me-2"><i class="far fa-mobile me-1"></i> Log Check All</a>
+                            <a [routerLink]="['/loads/manage-docs']" class="btn btn-outline-info text-main text-uppercase text-center font-12 me-2"><i class="far fa-file me-1"></i> Manage Docs</a>
+                        </div>
+                    </div>
+                    <div class="page-card-body p-20">
+                        <div class="view-load view-load-area">
+                            <div class="row view-full-area">
+                                <div class="col-xxl-4 col-xl-5 col-lg-5 left-side">
+                                    <h3 class="font-13 font-weight-500 text-uppercase p-10 border-bottom-light mb-3">Customer Details</h3>
+                                    <ul>
+                                        <li class="d-flex align-items-center justify-content-between">
+                                            <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Customer-</span>
+                                            <span class="edit-text font-13 font-weight-400 mb-0">Customer Name</span>
+                                        </li>
+                                        <li class="d-flex align-items-center justify-content-between">
+                                            <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Number-</span>
+                                            <span class="edit-text font-13 font-weight-400 mb-0">(+91) 8524125336</span>
+                                        </li>
+                                        <li class="d-flex align-items-center justify-content-between">
+                                            <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Email-</span>
+                                            <span class="edit-text font-13 font-weight-400 mb-0">customeremail@gmail.com</span>
+                                        </li>
+                                        <li>
+                                            <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Customer Notes-</span>
+                                            <p class="edit-text font-13 font-weight-400 mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                        </li>
+                                    </ul>
+                                    <div class="row">
+                                        <div class="col-xxl-6 col-xl-6 col-lg-12 mb-10">
+                                            <div class="p-2 border border-dashed rounded">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar-sm">
+                                                        <div class="avatar-title rounded bg-transparent text-success font-16">
+                                                            <i class="far fa-check-circle"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">Income-</p>
+                                                        <p class="edit-text font-13 font-weight-500 mb-0">52425</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xxl-6 col-xl-6 col-lg-12 mb-10">
+                                            <div class="p-2 border border-dashed rounded">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar-sm">
+                                                        <div class="avatar-title rounded bg-transparent text-success font-16">
+                                                            <i class="far fa-check-circle"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">PO Num-</p>
+                                                        <p class="edit-text font-13 font-weight-500 mb-0">98632</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="hotload" checked="">
+                                                <label class="form-check-label font-12 font-weight-400 text-uppercase" for="hotload">
+                                                    Hot Load
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <h4 class="font-13 font-weight-500 mb-3">Equipment-</h4>
+                                        <div class="col-xl-4 col-lg-6">
+                                            <div class="mb-10">
+                                                <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Load Type-</span>
+                                                <p class="edit-text font-13 font-weight-400 mb-0">Type 1</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-6">
+                                            <div class="mb-10">
+                                                <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Total Weight-</span>
+                                                <p class="edit-text font-13 font-weight-400 mb-0">1000KG</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-6">
+                                            <div class="mb-10">
+                                                <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Total Miles-</span>
+                                                <p class="edit-text font-13 font-weight-400 mb-0">563</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-6">
+                                            <div class="mb-10">
+                                                <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Declared Vlaue-</span>
+                                                <p class="edit-text font-13 font-weight-400 mb-0">56</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-6">
+                                            <div class="mb-10">
+                                                <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Target Min.-</span>
+                                                <p class="edit-text font-13 font-weight-400 mb-0">963</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-6">
+                                            <div class="mb-10">
+                                                <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Target Max-</span>
+                                                <p class="edit-text font-13 font-weight-400 mb-0">1000</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-6">
+                                            <div class="mb-10">
+                                                <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Offer Price-</span>
+                                                <p class="edit-text font-13 font-weight-400 mb-0">$5636</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12">
+                                            <div class="mb-10">
+                                                <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Carrier Notes-</span>
+                                                <p class="edit-text font-13 font-weight-400 mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12">
+                                            <div class="mb-10">
+                                                <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Customer Notes-</span>
+                                                <p class="edit-text font-13 font-weight-400 mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="font-13 font-weight-500 text-uppercase p-10 border-bottom-light mb-3">Basics</h3>
+                                    <div class="row">
+                                        <div class="col-xl-12 col-lg-12">
+                                            <div class="mb-10">
+                                                <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Carrier-</span>
+                                                <p class="edit-text font-13 font-weight-400 mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-6">
+                                            <div class="mb-10">
+                                                <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Driver-</span>
+                                                <p class="edit-text font-13 font-weight-400 mb-0">Unassigned</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-6">
+                                            <div class="mb-10">
+                                                <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Truck-</span>
+                                                <p class="edit-text font-13 font-weight-400 mb-0">Truck Details</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-6">
+                                            <div class="mb-10">
+                                                <span class="text-capitalize text-muted font-13 font-weight-400 mb-2">Trailer-</span>
+                                                <p class="edit-text font-13 font-weight-400 mb-0">Trailer Details</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="dispatcher" checked="">
+                                                <label class="form-check-label font-12 font-weight-400 text-uppercase" for="dispatcher">
+                                                    I’m the Dispatcher for this load
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col left-side">
+                                    <!-- Tab Menu :: Start -->
+                                    <div class="w-100 position-relative">
+                                        <ul class="nav nav-pills mb-3 detail-tab" id="pills-tab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active font-13 font-weight-500 text-uppercase" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Load Details</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link font-13 font-weight-500 text-uppercase" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Document <span class="count-highlight font-weight-500">3</span></button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link font-13 font-weight-500 text-uppercase" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Load Booking System</button>
+                                            </li>
+                                        </ul>
+                                        <a class="hide-tracking d-inline-block avatar-xxs bg-light border text-center border-radius-6" href="javascript:;" title="Expand"><i class="far fa-expand"></i></a>
+                                    </div>
+                                    <!-- Tab Menu :: End -->
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                            <div class="row">
+                                                <div class="col-xl-12 col-lg-12">
+                                                    <div class="card border-radius-10 mb-20 edit-content">
+                                                        <div class="card-header bg-transparent border-bottom-dashed">
+                                                            <div class="heading d-flex align-items-center justify-content-between">
+                                                                <p class="font-15 font-weight-600 mb-0"><span>P</span> Pickup</p>
+                                                                <div class="d-flex align-items-center gap-3">
+                                                                    <a href="javascript:;" class="sendButton update-content font-14 font-weight-500 text-uppercase text-main text-decoration-underline" style="display:none">Update</a>
+                                                                    <div class="mb-0">
+                                                                        <span class="text-capitalize text-muted font-13 font-weight-400">Pickup-</span>
+                                                                        <span class="edit-text font-13 font-weight-500 text-main">#253658</span>
+                                                                    </div>
+                                                                    <div class="mb-0">
+                                                                        <span class="text-capitalize text-muted font-13 font-weight-400">Appoinment-</span>
+                                                                        <span class="edit-text font-13 font-weight-500 text-main">#989582</span>
+                                                                    </div>
+                                                                    <div class="mb-0">
+                                                                        <a href="javascript:;" class="text-info font-13 font-weight-600" title="Edit Pickup" data-bs-toggle="modal" data-bs-target="#editPickupModal"><i class="far fa-edit"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body p-20">
+                                                            <div class="row">
+                                                                <div class="col-xxl-4 col-xl-6 col-lg-6">
+                                                                    <div class="mb-10">
+                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pickup Location-</p>
+                                                                        <h6 class="edit-text text-black font-13 mb-1">Walmart Supercenter-Colton, CA</h6>
+                                                                        <p class="edit-text font-13 font-weight-400 mb-0">1120 S Mount Vemon Ave Colton, CA 92324</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xxl-4 col-xl-6 col-lg-6">
+                                                                    <div class="mb-10">
+                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Appointment-</p>
+                                                                        <p class="edit-text font-13 font-weight-400 mb-0">Mon 07/10, 09:00am 05:00pm POT</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xxl-4 col-xl-12 col-lg-12">
+                                                                    <div class="mb-10">
+                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Commodity-</p>
+                                                                        <p class="edit-text font-13 font-weight-400 mb-0">Mix 42,000 lbs  900 cases Appointment #1254 Pickup number# 3544</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-xxl-12 col-xl-12 col-lg-12">
+                                                                    <div class="table-responsive mb-10">
+                                                                        <table class="w-100">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td class="text-start p-0">
+                                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pickup Number</p>
+                                                                                        <p class="font-13 font-weight-400 mb-0">4554788, 34574568</p>
+                                                                                    </td>
+                                                                                    <td class="text-start p-0">
+                                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">References</p>
+                                                                                        <p class="font-13 font-weight-400 mb-0">73448, 029004</p>
+                                                                                    </td>
+                                                                                    <td class="text-start p-0">
+                                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Weight</p>
+                                                                                        <p class="font-13 font-weight-400 mb-0">8,000lb</p>
+                                                                                    </td>
+                                                                                    <td class="text-start p-0">
+                                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pieces</p>
+                                                                                        <p class="font-13 font-weight-400 mb-0">5</p>
+                                                                                    </td>
+                                                                                    <td class="text-start p-0">
+                                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pallets</p>
+                                                                                        <p class="font-13 font-weight-400 mb-0">20</p>
+                                                                                    </td>
+                                                                                    <td class="text-start p-0">
+                                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Commodity</p>
+                                                                                        <p class="font-13 font-weight-400 mb-0">General Freight</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xxl-12 col-xl-12 col-lg-12">
+                                                                    <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pickup Instructions-</p>
+                                                                    <p class="edit-text font-13 font-weight-400 mb-0">
+                                                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="javascript:;" class="text-capitalize mt-10 mb-20 d-block font-13 text-main font-weight-400">+ Add Pickup Stop</a>
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12">
+                                                    <div class="card border-radius-10 mb-20 edit-content">
+                                                        <div class="card-header bg-transparent border-bottom-dashed">
+                                                            <div class="heading d-flex align-items-center justify-content-between">
+                                                                <p class="font-15 font-weight-600 mb-0"><span>D</span> Dropoff</p>
+                                                                <div class="d-flex align-items-center gap-3">
+                                                                    <a href="javascript:;" class="sendButton update-content font-14 font-weight-500 text-uppercase text-main text-decoration-underline" style="display:none">Update</a>
+                                                                    <div class="mb-0">
+                                                                        <span class="text-capitalize text-muted font-13 font-weight-400">Pickup-</span>
+                                                                        <span class="edit-text font-13 font-weight-500 text-main">#253658</span>
+                                                                    </div>
+                                                                    <div class="mb-0">
+                                                                        <span class="text-capitalize text-muted font-13 font-weight-400">Appoinment-</span>
+                                                                        <span class="edit-text font-13 font-weight-500 text-main">#989582</span>
+                                                                    </div>
+                                                                    <div class="mb-0">
+                                                                        <a href="javascript:;" class="text-info font-13 font-weight-600" title="Edit Pickup" data-bs-toggle="modal" data-bs-target="#editDropoffModal"><i class="far fa-edit"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body p-20">
+                                                            <div class="row">
+                                                                <div class="col-xl-12">
+                                                                    <div class="d-flex align-items-center gap-3 flex-wrap">
+                                                                        <div class="mb-10">
+                                                                            <span class="text-capitalize text-muted font-13 font-weight-400">PO-</span>
+                                                                            <span class="edit-text font-13 font-weight-500 text-main">#253658</span>
+                                                                        </div>
+                                                                        <div class="mb-10">
+                                                                            <span class="text-capitalize text-muted font-13 font-weight-400">BOL-</span>
+                                                                            <span class="edit-text font-13 font-weight-500 text-main">#989582</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xxl-4 col-xl-6 col-lg-6">
+                                                                    <div class="mb-10">
+                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pickup Location-</p>
+                                                                        <h6 class="edit-text text-black font-13 mb-1">Walmart Supercenter-Colton, CA</h6>
+                                                                        <p class="edit-text font-13 font-weight-400 mb-0">1120 S Mount Vemon Ave Colton, CA 92324</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xxl-4 col-xl-6 col-lg-6">
+                                                                    <div class="mb-10">
+                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Appointment-</p>
+                                                                        <p class="edit-text font-13 font-weight-400 mb-0">Mon 07/10, 09:00am 05:00pm POT</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xxl-4 col-xl-6 col-lg-6">
+                                                                    <div class="mb-10">
+                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Commodity-</p>
+                                                                        <p class="edit-text font-13 font-weight-400 mb-0">Mix 42,000 lbs  900 cases Appointment#<br/>1254 Pickup number# 3544</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-xxl-12 col-xl-12 col-lg-12">
+                                                                    <div class="table-responsive mb-10">
+                                                                        <table class="w-100">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td class="text-start p-0">
+                                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pickup Number</p>
+                                                                                        <p class="font-13 font-weight-400 mb-0">4554788, 34574568</p>
+                                                                                    </td>
+                                                                                    <td class="text-start p-0">
+                                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">References</p>
+                                                                                        <p class="font-13 font-weight-400 mb-0">73448, 029004</p>
+                                                                                    </td>
+                                                                                    <td class="text-start p-0">
+                                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Weight</p>
+                                                                                        <p class="font-13 font-weight-400 mb-0">8,000lb</p>
+                                                                                    </td>
+                                                                                    <td class="text-start p-0">
+                                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pieces</p>
+                                                                                        <p class="font-13 font-weight-400 mb-0">5</p>
+                                                                                    </td>
+                                                                                    <td class="text-start p-0">
+                                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pallets</p>
+                                                                                        <p class="font-13 font-weight-400 mb-0">20</p>
+                                                                                    </td>
+                                                                                    <td class="text-start p-0">
+                                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Commodity</p>
+                                                                                        <p class="font-13 font-weight-400 mb-0">General Freight</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xxl-12 col-xl-12 col-lg-12">
+                                                                    <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Pickup Instructions-</p>
+                                                                    <p class="edit-text font-13 font-weight-400 mb-0">
+                                                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="javascript:;" class="text-capitalize mt-10 mb-20 d-block font-13 text-main font-weight-400">+ Add Dropoff Stop</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                            <div class="row">
+                                                <div class="col-xl-12">
+                                                    <div class="load-location d-flex gap-3 mb-20">
+                                                        <div class="pickup-location pickup-location-width">
+                                                            <div class="location-top p-10"><p class="text-uppercase font-14 font-weight-500 mb-0">1. pickup</p></div>
+                                                            <div class="p-10">
+                                                                <p class="font-13 mt-2 mb-2">2 Towns Cider House</p>
+                                                                <h5 class="font-14 mb-1">Lake Havasu City, AZ</h5>
+                                                                <span class="font-13">22 June, 2023</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dropoff-location dropoff-location-width">
+                                                            <div class="location-top p-10"><p class="text-uppercase font-14 font-weight-500 mb-0">2. Dropoff</p></div>
+                                                            <div class="p-10">
+                                                                <p class="font-13 mt-2 mb-2">Mussetter Distributingt</p>
+                                                                <h5 class="font-14 mb-1">Auburn, CA</h5>
+                                                                <span class="font-13">22 June, 2023</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <div class="form-group">
+                                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Attachment</label>
+                                                        <input name="file1" type="file" class="dropify border-radius-6" data-height="100" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <div class="border rounded border-dashed p-2 mb-10">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0 me-3">
+                                                                <div class="avatar-sm">
+                                                                    <div class="avatar-title bg-light text-secondary rounded font-18 text-main">
+                                                                        <i class="far fa-file-pdf"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-grow-1 overflow-hidden">
+                                                                <h5 class="font-13 mb-1"><a href="javascript:;" class="text-body text-truncate d-block font-weight-500">App-pages.pdf</a></h5>
+                                                                <span class="text-muted font-13 font-weight-400 me-2">2.2MB</span>
+                                                                <span class="text-muted font-13 font-weight-400 me-2"><i class="far fa-calendar-alt font-10"></i> 13/07/2023</span>
+                                                                <span class="text-muted font-13 font-weight-400"><i class="far fa-user font-10"></i> Ashish</span>
+                                                            </div>
+                                                            <div class="flex-shrink-0 ms-2">
+                                                                <div class="d-flex gap-1">
+                                                                    <button type="button" class="btn btn-icon text-main btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="View" data-bs-original-title="View"><i class="far fa-eye"></i></button>
+                                                                    <button type="button" class="btn btn-icon text-info btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="Download" data-bs-original-title="Download"><i class="far fa-arrow-down"></i></button>
+                                                                    <button type="button" class="btn btn-icon text-red btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"><i class="far fa-trash-alt"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="border rounded border-dashed p-2 mb-10">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0 me-3">
+                                                                <div class="avatar-sm">
+                                                                    <div class="avatar-title bg-light text-secondary rounded font-18 text-main">
+                                                                        <i class="far fa-file-pdf"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-grow-1 overflow-hidden">
+                                                                <h5 class="font-13 mb-1"><a href="javascript:;" class="text-body text-truncate d-block font-weight-500">App-pages.pdf</a></h5>
+                                                                <span class="text-muted font-13 font-weight-400 me-2">2.2MB</span>
+                                                                <span class="text-muted font-13 font-weight-400 me-2"><i class="far fa-calendar-alt font-10"></i> 13/07/2023</span>
+                                                                <span class="text-muted font-13 font-weight-400"><i class="far fa-user font-10"></i> Ashish</span>
+                                                            </div>
+                                                            <div class="flex-shrink-0 ms-2">
+                                                                <div class="d-flex gap-1">
+                                                                    <button type="button" class="btn btn-icon text-main btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="View" data-bs-original-title="View"><i class="far fa-eye"></i></button>
+                                                                    <button type="button" class="btn btn-icon text-info btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="Download" data-bs-original-title="Download"><i class="far fa-arrow-down"></i></button>
+                                                                    <button type="button" class="btn btn-icon text-red btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"><i class="far fa-trash-alt"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="border rounded border-dashed p-2 mb-10">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0 me-3">
+                                                                <div class="avatar-sm">
+                                                                    <div class="avatar-title bg-light text-secondary rounded font-18 text-main">
+                                                                        <i class="far fa-file-pdf"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-grow-1 overflow-hidden">
+                                                                <h5 class="font-13 mb-1"><a href="javascript:;" class="text-body text-truncate d-block font-weight-500">App-pages.pdf</a></h5>
+                                                                <span class="text-muted font-13 font-weight-400 me-2">2.2MB</span>
+                                                                <span class="text-muted font-13 font-weight-400 me-2"><i class="far fa-calendar-alt font-10"></i> 13/07/2023</span>
+                                                                <span class="text-muted font-13 font-weight-400"><i class="far fa-user font-10"></i> Ashish</span>
+                                                            </div>
+                                                            <div class="flex-shrink-0 ms-2">
+                                                                <div class="d-flex gap-1">
+                                                                    <button type="button" class="btn btn-icon text-main btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="View" data-bs-original-title="View"><i class="far fa-eye"></i></button>
+                                                                    <button type="button" class="btn btn-icon text-info btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="Download" data-bs-original-title="Download"><i class="far fa-arrow-down"></i></button>
+                                                                    <button type="button" class="btn btn-icon text-red btn-sm font-14 shadow-none" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"><i class="far fa-trash-alt"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                            <div class="row">
+                                                <div class="col-xl-12">
+                                                    <div class="load-location d-flex gap-3 mb-20">
+                                                        <div class="pickup-location pickup-location-width">
+                                                            <div class="location-top p-10"><p class="text-uppercase font-14 font-weight-500 mb-0">1. pickup</p></div>
+                                                            <div class="p-10">
+                                                                <p class="font-13 mt-2 mb-2">2 Towns Cider House</p>
+                                                                <h5 class="font-14 mb-1">Lake Havasu City, AZ</h5>
+                                                                <span class="font-13">22 June, 2023</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dropoff-location dropoff-location-width">
+                                                            <div class="location-top p-10"><p class="text-uppercase font-14 font-weight-500 mb-0">2. Dropoff</p></div>
+                                                            <div class="p-10">
+                                                                <p class="font-13 mt-2 mb-2">Mussetter Distributingt</p>
+                                                                <h5 class="font-14 mb-1">Auburn, CA</h5>
+                                                                <span class="font-13">22 June, 2023</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <form method="post" method="post">
+                                                <div class="row">
+                                                    <div class="col-xxl-5 col-xl-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <div class="input-group align-items-end flex-nowrap">
+                                                                <div class="me-1">
+                                                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Carrier</label>
+                                                                    <input type="text" class="form-control" placeholder="Carrier" name="carrier"/>
+                                                                </div>
+                                                                <span class="input-group-text border-radius-6 pt-0 pb-0 input-group-text-height border-0 bg-white">to</span>
+                                                                <div class="ms-1">
+                                                                    <label class="text-uppercase font-weight-400 font-12 mb-10">DOT no.</label>
+                                                                    <input type="text" class="form-control" placeholder="DOT No." name="dotno"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-lg-3 d-flex align-items-end">
+                                                        <button class="btn btn-info text-uppercase text-white font-weight-400 font-12 pe-3 ps-3 mb-20">search FMCSA</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xl-4">
+                                                        <div class="form-group">
+                                                            <label class="text-uppercase font-weight-400 font-12 mb-10">Truck location</label>
+                                                            <input type="text" class="form-control" placeholder="Carrier" name="trucklocation"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4">
+                                                        <div class="form-group select-search">
+                                                            <label class="text-uppercase font-weight-400 font-12 mb-10">Truck Status</label>
+                                                            <select id="truckstatus" class="js-states form-control form-select" aria-placeholder="Truckstatus">
+                                                                <option></option>
+                                                                <option>Truck Status 1</option>
+                                                                <option>Truck Status 2</option>
+                                                                <option>Truck Status 3</option>
+                                                                <option>Truck Status 4</option>
+                                                                <option>Truck Status 5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4">
+                                                        <div class="form-group">
+                                                            <label class="text-uppercase font-weight-400 font-12 mb-10">Bid rate</label>
+                                                            <input type="text" class="form-control" placeholder="Bid Rate" name="bigrate"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4">
+                                                        <div class="form-group">
+                                                            <label class="text-uppercase font-weight-400 font-12 mb-10">Call Back Number</label>
+                                                            <input type="text" class="form-control" placeholder="Call Back Number" name="banknumber"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4">
+                                                        <div class="form-group">
+                                                            <label class="text-uppercase font-weight-400 font-12 mb-10">Call Details</label>
+                                                            <input type="text" class="form-control" placeholder="Call Details" name="calldetails"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4">
+                                                        <div class="form-group">
+                                                            <label class="text-uppercase font-weight-400 font-12 mb-10">Available Date / Time</label>
+                                                        <div class="input-group">
+                                                            <input type="datetime-local" class="form-control" placeholder="MM/DD/YYYY hh:mm:ss"/>
+                                                        <span class="input-group-text border-0 border-radius-6" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-3 col-xl-5">
+                                                        <div class="form-group form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="hotload" checked/>
+                                                            <label class="form-check-label font-12 font-weight-400 text-uppercase" for="hotload">Add Carrier To Dont Use List</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-5">
+                                                        <button class="btn btn-primary font-weight-400 font-12 pe-3 ps-3">Add Details</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="row mt-20">
+                                                <div class="col-xl-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered table-striped position-relative"> 
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="text-uppercase whitespace-nowrap"></th>
+                                                                    <th class="text-uppercase whitespace-nowrap">Bid rate</th>
+                                                                    <th class="text-uppercase">Customer</th>
+                                                                    <th class="text-uppercase whitespace-nowrap">Dot no.</th>
+                                                                    <th class="text-uppercase hitespace-nowrap">Truck location</th>
+                                                                    <th class="text-uppercase whitespace-nowrap">Date time</th>
+                                                                    <th class="text-uppercase hitespace-nowrap">Truck status</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><a data-bs-toggle="collapse" href="#collapseExample123" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="far fa-angle-down"></i></a>
+                                                                    </td>
+                                                                    <td class="text-capitalize whitespace-nowrap">15793</td>
+                                                                    <td class="text-capitalize whitespace-nowrap">James Smith</td>
+                                                                    <td class="text-capitalize whitespace-nowrap">4521</td>
+                                                                    <td class="text-capitalize">Lake Havasu City, CA</td>
+                                                                    <td class="text-capitalize">10/5/2022 12:00 PM</td>
+                                                                    <td class="text-capitalize">
+                                                                        <div class="dropdown">
+                                                                            <span class="status status-info dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"><span class="text">Empty</span> <i class="far fa-angle-down font-12"></i></span>
+                                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                                                <a class="dropdown-item pending font-14" href="javascript:;" onclick="dropdownevent('dropdownMenuButton2', 'pending')">pending</a>
+                                                                                <a class="dropdown-item dispatch font-14" href="javascript:;" onclick="dropdownevent('dropdownMenuButton2', 'dispatch')">dispatch</a>
+                                                                                <a class="dropdown-item assiened font-14" href="javascript:;" onclick="dropdownevent('dropdownMenuButton2', 'assigned')">Assigned</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="collapse" id="collapseExample123">
+                                                                    <td colspan="7">
+                                                                        <table>
+                                                                            <tr>
+                                                                                <td class="text-start">
+                                                                                <div class="d-flex gap-3">
+                                                                                    <div>
+                                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Carrier-</p>
+                                                                                            <p class="edit-text font-13 font-weight-400 mb-0">It is a long established fact</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Call Back Number-</p>
+                                                                                            <p class="edit-text font-13 font-weight-400 mb-0">(+91) 8951253698</p> 
+                                                                                    </div> 
+                                                                                </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="text-start">
+                                                                                    <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Call Details-</p>
+                                                                                    <p class="edit-text font-13 font-weight-400 mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p> 
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><a data-bs-toggle="collapse" href="#collapseExample124" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="far fa-angle-down"></i></a>
+                                                                    </td>
+                                                                    <td class="text-capitalize whitespace-nowrap">15793</td>
+                                                                    <td class="text-capitalize whitespace-nowrap">James Smith</td>
+                                                                    <td class="text-capitalize whitespace-nowrap">4521</td>
+                                                                    <td class="text-capitalize">Lake Havasu City, CA</td>
+                                                                    <td class="text-capitalize">10/5/2022 12:00 PM</td>
+                                                                    <td class="text-capitalize">
+                                                                        <div class="dropdown">
+                                                                            <span class="status status-info dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"><span class="text">Empty</span> <i class="far fa-angle-down font-12"></i></span>
+                                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                                                <a class="dropdown-item pending font-14" href="javascript:;" onclick="dropdownevent('dropdownMenuButton2', 'pending')">pending</a>
+                                                                                <a class="dropdown-item dispatch font-14" href="javascript:;" onclick="dropdownevent('dropdownMenuButton2', 'dispatch')">dispatch</a>
+                                                                                <a class="dropdown-item assiened font-14" href="javascript:;" onclick="dropdownevent('dropdownMenuButton2', 'assigned')">Assigned</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="collapse" id="collapseExample124">
+                                                                    <td colspan="7">
+                                                                        <table>
+                                                                            <tr>
+                                                                                <td class="text-start">
+                                                                                <div class="d-flex gap-3">
+                                                                                    <div>
+                                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Carrier-</p>
+                                                                                            <p class="edit-text font-13 font-weight-400 mb-0">It is a long established fact</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Call Back Number-</p>
+                                                                                            <p class="edit-text font-13 font-weight-400 mb-0">(+91) 8951253698</p> 
+                                                                                    </div> 
+                                                                                </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="text-start">
+                                                                                    <p class="text-capitalize text-muted font-13 font-weight-400 mb-2">Call Details-</p>
+                                                                                    <p class="edit-text font-13 font-weight-400 mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p> 
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tracking sidebar :: Start -->
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="view-side-area left-side box ps-4">
+                                        <h3 class="font-13 font-weight-500 text-uppercase p-10 border-bottom-light mb-3">Tracking</h3>
+                                        <div>
+                                            <div class="detail-card w-100 border-radius-10 mb-10">
+                                                <div class="detail-card-body p-10">
+                                                    <a class="d-flex align-items-center" data-bs-toggle="collapse" href="#checkin1" role="button" aria-expanded="true" aria-controls="checkin1">
+                                                        <div class="flex-shrink-0">
+                                                            <img src="assets/images/icon/checkin.png" alt="" class="avatar-xs rounded-circle opacity-8">
+                                                        </div>
+                                                        <div class="flex-grow-1 ms-3">
+                                                            <h6 class="font-13 font-weight-500 mb-1">28595 Mary's Ct, Easton, MD 21601, USA</h6>
+                                                            <span class="text-green font-13 font-weight-400 me-2"><i class="fas fa-circle font-10 me-1"></i>Checkin</span>
+                                                            <span class="text-muted mb-0 font-13 font-weight-400">Updated By - Nutan Singh</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="border-top border-top-dashed collapse" id="checkin1">
+                                                    <div class="detail-card-body p-10">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">Call Details <small class="badge bg-danger-subtle text-danger">7 Days</small></p>
+                                                        <p class="font-14 font-weight-400 mb-10">As a company grows however, you find it's not as easy to shout across</p>
+                                                        <ul class="list-unstyled vstack gap-2 mb-0">
+                                                            <li class="mb-10">
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-user "></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">Driver-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0 text-capitalize">Anshuman Sharma</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="mb-10">
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-calendar-alt"></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">ETA-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0">7/12/2023 6:00:00 PM</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-calendar-alt"></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">Updated At-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0">8/12/2023 6:00:00 AM</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="detail-card w-100 border-radius-10 mb-10">
+                                                <div class="detail-card-body p-10">
+                                                    <a class="d-flex align-items-center" data-bs-toggle="collapse" href="#absent1" role="button" aria-expanded="true" aria-controls="absent1">
+                                                        <div class="flex-shrink-0">
+                                                            <img src="assets/images/icon/absent.png" alt="" class="avatar-xs rounded-circle opacity-8">
+                                                        </div>
+                                                        <div class="flex-grow-1 ms-3">
+                                                            <h6 class="font-13 font-weight-500 mb-1">28595 Mary's Ct, Easton, MD 21601, USA</h6>
+                                                            <span class="text-red font-13 font-weight-400 me-2"><i class="fas fa-circle font-10 me-1"></i>Absent</span>
+                                                            <span class="text-muted mb-0 font-13 font-weight-400">Updated By - Nutan Singh</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="border-top border-top-dashed collapse" id="absent1" >
+                                                    <div class="detail-card-body p-10">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">Call Details <small class="badge bg-danger-subtle text-danger">7 Days</small></p>
+                                                        <p class="font-14 font-weight-400 mb-10">As a company grows however, you find it's not as easy to shout across</p>
+                                                        <ul class="list-unstyled vstack gap-2 mb-0">
+                                                            <li class="mb-10">
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-user "></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">Driver-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0 text-capitalize">Anshuman Sharma</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="mb-10">
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-calendar-alt"></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">ETA-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0">7/12/2023 6:00:00 PM</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-calendar-alt"></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">Updated At-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0">8/12/2023 6:00:00 AM</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="detail-card w-100 border-radius-10 mb-10">
+                                                <div class="detail-card-body p-10">
+                                                    <a class="d-flex align-items-center" data-bs-toggle="collapse" href="#checkin2" role="button" aria-expanded="true" aria-controls="checkin2">
+                                                        <div class="flex-shrink-0">
+                                                            <img src="assets/images/icon/checkin.png" alt="" class="avatar-xs rounded-circle opacity-8">
+                                                        </div>
+                                                        <div class="flex-grow-1 ms-3">
+                                                            <h6 class="font-13 font-weight-400 mb-1">28595 Mary's Ct, Easton, MD 21601, USA</h6>
+                                                            <span class="text-green font-13 font-weight-400 me-2"><i class="fas fa-circle font-10 me-1"></i>Checkin</span>
+                                                            <span class="text-muted mb-0 font-13 font-weight-400">Updated By - Nutan Singh</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="border-top border-top-dashed collapse" id="checkin2" >
+                                                    <div class="detail-card-body p-10">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">Call Details <small class="badge bg-danger-subtle text-danger">7 Days</small></p>
+                                                        <p class="font-14 font-weight-400 mb-10">As a company grows however, you find it's not as easy to shout across</p>
+                                                        <ul class="list-unstyled vstack gap-2 mb-0">
+                                                            <li class="mb-10">
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-user "></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">Driver-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0 text-capitalize">Anshuman Sharma</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="mb-10">
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-calendar-alt"></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">ETA-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0">7/12/2023 6:00:00 PM</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-calendar-alt"></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">Updated At-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0">8/12/2023 6:00:00 AM</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="detail-card w-100 border-radius-10 mb-10">
+                                                <div class="detail-card-body p-10">
+                                                    <a class="d-flex align-items-center" data-bs-toggle="collapse" href="#checkin3" role="button" aria-expanded="true" aria-controls="checkin3">
+                                                        <div class="flex-shrink-0">
+                                                            <img src="assets/images/icon/checkin.png" alt="" class="avatar-xs rounded-circle opacity-8">
+                                                        </div>
+                                                        <div class="flex-grow-1 ms-3">
+                                                            <h6 class="font-13 font-weight-500 mb-1">28595 Mary's Ct, Easton, MD 21601, USA</h6>
+                                                            <span class="text-green font-13 font-weight-400 me-2"><i class="fas fa-circle font-10 me-1"></i>Checkin</span>
+                                                            <span class="text-muted mb-0 font-13 font-weight-400">Updated By - Nutan Singh</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="border-top border-top-dashed collapse" id="checkin3" >
+                                                    <div class="detail-card-body p-10">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">Call Details <small class="badge bg-danger-subtle text-danger">7 Days</small></p>
+                                                        <p class="font-14 font-weight-400 mb-10">As a company grows however, you find it's not as easy to shout across</p>
+                                                        <ul class="list-unstyled vstack gap-2 mb-0">
+                                                            <li class="mb-10">
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-user "></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">Driver-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0 text-capitalize">Anshuman Sharma</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="mb-10">
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-calendar-alt"></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">ETA-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0">7/12/2023 6:00:00 PM</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-calendar-alt"></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">Updated At-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0">8/12/2023 6:00:00 AM</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="detail-card w-100 border-radius-10 mb-10">
+                                                <div class="detail-card-body p-10">
+                                                    <a class="d-flex align-items-center" data-bs-toggle="collapse" href="#checkin4" role="button" aria-expanded="true" aria-controls="checkin4">
+                                                        <div class="flex-shrink-0">
+                                                            <img src="assets/images/icon/checkin.png" alt="" class="avatar-xs rounded-circle opacity-8">
+                                                        </div>
+                                                        <div class="flex-grow-1 ms-3">
+                                                            <h6 class="font-13 font-weight-500 mb-1">28595 Mary's Ct, Easton, MD 21601, USA</h6>
+                                                            <span class="text-green font-13 font-weight-400 me-2"><i class="fas fa-circle font-10 me-1"></i>Checkin</span>
+                                                            <span class="text-muted mb-0 font-13 font-weight-400">Updated By - Nutan Singh</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="border-top border-top-dashed collapse" id="checkin4" >
+                                                    <div class="detail-card-body p-10">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">Call Details <small class="badge bg-danger-subtle text-danger">7 Days</small></p>
+                                                        <p class="font-14 font-weight-400 mb-10">As a company grows however, you find it's not as easy to shout across</p>
+                                                        <ul class="list-unstyled vstack gap-2 mb-0">
+                                                            <li class="mb-10">
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-user "></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">Driver-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0 text-capitalize">Anshuman Sharma</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="mb-10">
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-calendar-alt"></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">ETA-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0">7/12/2023 6:00:00 PM</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-calendar-alt"></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">Updated At-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0">8/12/2023 6:00:00 AM</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="detail-card w-100 border-radius-10 mb-10">
+                                                <div class="detail-card-body p-10">
+                                                    <a class="d-flex align-items-center" data-bs-toggle="collapse" href="#absent2" role="button" aria-expanded="true" aria-controls="absent2">
+                                                        <div class="flex-shrink-0">
+                                                            <img src="assets/images/icon/absent.png" alt="" class="avatar-xs rounded-circle opacity-8">
+                                                        </div>
+                                                        <div class="flex-grow-1 ms-3">
+                                                            <h6 class="font-13 font-weight-500 mb-1">28595 Mary's Ct, Easton, MD 21601, USA</h6>
+                                                            <span class="text-red font-13 font-weight-400 me-2"><i class="fas fa-circle font-10 me-1"></i>Absent</span>
+                                                            <span class="text-muted mb-0 font-13 font-weight-400">Updated By - Nutan Singh</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="border-top border-top-dashed collapse" id="absent2" >
+                                                    <div class="detail-card-body p-10">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">Call Details <small class="badge bg-danger-subtle text-danger">7 Days</small></p>
+                                                        <p class="font-14 font-weight-400 mb-10">As a company grows however, you find it's not as easy to shout across</p>
+                                                        <ul class="list-unstyled vstack gap-2 mb-0">
+                                                            <li class="mb-10">
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-user "></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">Driver-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0 text-capitalize">Anshuman Sharma</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="mb-10">
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-calendar-alt"></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">ETA-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0">7/12/2023 6:00:00 PM</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-calendar-alt"></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">Updated At-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0">8/12/2023 6:00:00 AM</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="detail-card w-100 border-radius-10 mb-10">
+                                                <div class="detail-card-body p-10">
+                                                    <a class="d-flex align-items-center" data-bs-toggle="collapse" href="#checkin5" role="button" aria-expanded="true" aria-controls="checkin5">
+                                                        <div class="flex-shrink-0">
+                                                            <img src="assets/images/icon/checkin.png" alt="" class="avatar-xs rounded-circle opacity-8">
+                                                        </div>
+                                                        <div class="flex-grow-1 ms-3">
+                                                            <h6 class="font-13 font-weight-500 mb-1">28595 Mary's Ct, Easton, MD 21601, USA</h6>
+                                                            <span class="text-green font-13 font-weight-400 me-2"><i class="fas fa-circle font-10 me-1"></i>Checkin</span>
+                                                            <span class="text-muted mb-0 font-13 font-weight-400">Updated By - Nutan Singh</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="border-top border-top-dashed collapse" id="checkin5" >
+                                                    <div class="detail-card-body p-10">
+                                                        <p class="text-muted font-13 font-weight-400 mb-1">Call Details <small class="badge bg-danger-subtle text-danger">7 Days</small></p>
+                                                        <p class="font-14 font-weight-400 mb-10">As a company grows however, you find it's not as easy to shout across</p>
+                                                        <ul class="list-unstyled vstack gap-2 mb-0">
+                                                            <li class="mb-10">
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-user "></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">Driver-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0 text-capitalize">Anshuman Sharma</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="mb-10">
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-calendar-alt"></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">ETA-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0">7/12/2023 6:00:00 PM</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="d-flex">
+                                                                    <div class="flex-shrink-0 avatar-xxs text-muted font-13">
+                                                                        <i class="far fa-calendar-alt"></i>
+                                                                    </div>
+                                                                    <div class="flex-grow-1">
+                                                                        <p class="text-muted font-13 font-weight-400 mb-1">Updated At-</p>
+                                                                        <p class="font-14 font-weight-400 mb-0">8/12/2023 6:00:00 AM</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tracking sidebar :: end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- </div>
+        <app-footer></app-footer>
+    </div>
+</main> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Update Successfully alert :: Start -->
+<div class="toast fade show" role="alert">
+<div class="toast-header">
+    <img src="assets/images/icon/check-icon.png" class="rounded me-2">
+    <strong class="me-auto text-capitalize font-14">Update Successfully</strong>
+    <small>11 mins ago</small>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+</div>
+</div>
+<!-- Update Successfully alert :: End -->
+
+<!-- Send popup :: Start -->
+<div class="modal fade" id="sendModal" aria-labelledby="sendModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title text-capitalize font-18 mb-0" id="staticBackdropLabel">Send Message</h5>
+    <button type="button" class="btn-close font-14" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row mb-10">
+        <div class="col-xl-12 mb-20">
+            <div class="d-flex align-items-center justify-content-end text-decoration-underline">
+                <p class="text-capitalize font-12 font-weight-400 mb-0">Invoice Amount-</p>
+                <p class="text-main font-12 font-weight-600 mb-0"> $1500.00</p>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="d-flex align-items-center justify-content-start mb-10">
+                <p class="text-capitalize font-12 font-weight-400 mb-0">Customer Name-</p>
+                <p class="text-main font-12 font-weight-600 mb-0"> Wallmart</p>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="d-flex align-items-center justify-content-end mb-10">
+                <p class="text-capitalize font-12 font-weight-400 mb-0">Branch-</p>
+                <p class="text-main font-13 font-weight-600 mb-0"> Branch Name</p>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="d-flex align-items-center justify-content-start mb-10">
+                <p class="text-capitalize font-12 font-weight-400 mb-0">Load Number-</p>
+                <p class="text-main font-12 font-weight-600 mb-0"> 125558</p>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="d-flex align-items-center justify-content-end mb-10">
+                <p class="text-capitalize font-12 font-weight-400 mb-0">Customer Refrence Number-</p>
+                <p class="text-main font-12 font-weight-600 mb-0"> 125558</p>
+            </div>
+        </div>
+    </div>
+    <form method="post">
+        <div class="form-group">
+            <div class="row">
+                <label for="email_address" class="col-md-4 text-uppercase font-weight-400 font-12 mb-10 text-md-right">To</label>
+                <div class="col-xl-8">
+                    <div class="has-search">
+                        <span class="far fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Enter Here"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="email_address" class="col-md-4 text-uppercase font-weight-400 font-12 mb-10 text-md-right">Subject</label>
+            <div class="col-xl-8">
+                <select id="message-subject" class="js-states form-control form-select" aria-placeholder="Select Customer">
+                    <option></option>
+                    <option>Subject 1</option>
+                    <option>Subject 2</option>
+                    <option>Subject 3</option>
+                    <option>Subject 4</option>
+                    <option>Subject 5</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="email_address" class="col-md-4 text-uppercase font-weight-400 font-12 mb-10 text-md-right">Templates</label>
+            <div class="col-xl-8">
+                <input type="text" class="form-control" name="templates" placeholder="Enter Here"/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="email_address" class="col-md-4 text-uppercase font-weight-400 font-12 mb-10 text-md-right">Body</label>
+            <div class="col-xl-8">
+                <textarea rows="5" class="form-control" name="customernotes" placeholder="Enter Here"></textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="email_address" class="col-md-4 text-uppercase font-weight-400 font-12 mb-10 text-md-right">Attachments</label>
+            <div class="col-xl-8">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped position-relative mb-0">
+                        <thead>
+                            <tr>
+                                <th class="text-uppercase whitespace-nowrap text-start">Document name</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-capitalize whitespace-nowrap text-start">Carrier Confirmation</td>
+                                <td class="text-capitalize whitespace-nowrap">
+                                    <a href="javascript:;" class="text-capitalize font-12 text-main me-3"><i class="far fa-eye" data-bs-toggle="tooltip" title="View"></i></a>
+                                    <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-capitalize whitespace-nowrap text-start">Carrier Confirmation(POD)</td>
+                                <td class="text-capitalize whitespace-nowrap">
+                                    <a href="javascript:;" class="text-capitalize font-12 text-main me-3"><i class="far fa-eye" data-bs-toggle="tooltip" title="View"></i></a>
+                                    <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" title="Delete"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </form>
+  </div>
+  <div class="modal-footer text-center">
+    <a type="button" class="font-weight-400 font-12 me-3" data-bs-dismiss="modal">Cancel</a>
+    <button type="button" class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Send</button>
+  </div>
+</div>
+</div>
+</div>
+<!-- Send popup :: End -->
+<!-- Dispatch Modal :: Start -->
+<div class="modal fade" id="dispatchModal" aria-labelledby="sendModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-md modal-dialog-scrollable modal-dialog-centered">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title text-capitalize font-18 mb-0" id="staticBackdropLabel">Dispatch Info</h5>
+    <button type="button" class="btn-close font-14" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="form-group has-search">
+                <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">ETA Date & Time</label>
+                <div class="input-group">
+                    <span class="far fa-calendar-alt form-control-feedback"></span>
+                    <input type="datetime-local" class="form-control border-radius-6" placeholder="MM/DD/YYYY hh:mm:ss">
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="form-group">
+                <label class="text-uppercase font-weight-400 font-12 mb-10">Search Location</label>
+                <input type="text" class="form-control" placeholder="Search Location" name="searchlocation">
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="form-group">
+                <label class="text-uppercase font-weight-400 font-12 mb-10">Truck Current Location</label>
+                <input type="text" class="form-control" placeholder="Truck Current Location" name="truckcurrentlocation">
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="form-group">
+                <label class="text-uppercase font-weight-400 font-12 mb-10">Empty Or Getting Empty</label>
+                <select class="form-control form-select" name="emptygettingempty">
+                    <option>Select Option</option>
+                    <option>Empty</option>
+                    <option>Getting Empty</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="form-group">
+                <label class="text-uppercase font-weight-400 font-12 mb-10">Team Or Solo Driver</label>
+                <select class="form-control form-select" name="emptygettingempty">
+                    <option>Select Option</option>
+                    <option>Team Driver</option>
+                    <option>Solo Driver</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xl-12 col-lg-12">
+            <div class="form-group">
+                <label class="text-uppercase font-weight-400 font-12 mb-10">Note</label>
+                <textarea class="form-control" rows="4" placeholder="Note..."></textarea>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="modal-footer text-center">
+    <a type="button" class="font-weight-400 font-12 me-3" data-bs-dismiss="modal">Cancel</a>
+    <button type="button" class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Submit</button>
+  </div>
+</div>
+</div>
+</div>
+<!-- Dispatch Modal :: End -->
+<!-- Delivered Modal :: Start -->
+<div class="modal fade" id="deliveredModal" aria-labelledby="sendModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-md modal-dialog-scrollable modal-dialog-centered">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title text-capitalize font-18 mb-0" id="staticBackdropLabel">Carrier Rating</h5>
+    <button type="button" class="btn-close font-14" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12">
+            <div class="rating-stars text-center mb-10">
+                <label class="text-uppercase font-weight-400 font-12 mb-10">Overall Rating</label>
+                <ul class="stars">
+                  <li class="star" title="Poor" data-value="1">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="Fair" data-value="2">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="Good" data-value="3">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="Excellent" data-value="4">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="WOW!!!" data-value="5">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="rating-stars text-center mb-10">
+                <label class="text-uppercase font-weight-400 font-12 mb-10">Tracking</label>
+                <ul class="stars">
+                  <li class="star" title="Poor" data-value="1">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="Fair" data-value="2">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="Good" data-value="3">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="Excellent" data-value="4">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="WOW!!!" data-value="5">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="rating-stars text-center mb-10">
+                <label class="text-uppercase font-weight-400 font-12 mb-10">Communication</label>
+                <ul class="stars">
+                  <li class="star" title="Poor" data-value="1">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="Fair" data-value="2">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="Good" data-value="3">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="Excellent" data-value="4">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="WOW!!!" data-value="5">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="rating-stars text-center mb-10">
+                <label class="text-uppercase font-weight-400 font-12 mb-10">On Time</label>
+                <ul class="stars">
+                  <li class="star" title="Poor" data-value="1">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="Fair" data-value="2">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="Good" data-value="3">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="Excellent" data-value="4">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="WOW!!!" data-value="5">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="rating-stars text-center mb-10">
+                <label class="text-uppercase font-weight-400 font-12 mb-10">Fall Out</label>
+                <ul class="stars">
+                  <li class="star" title="Poor" data-value="1">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="Fair" data-value="2">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="Good" data-value="3">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="Excellent" data-value="4">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                  <li class="star" title="WOW!!!" data-value="5">
+                    <i class="fa fa-star fa-fw"></i>
+                  </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xl-12">
+            <div class="form-group">
+                <textarea class="form-control" rows="4" placeholder="What is your view?"></textarea>
+            </div>
+        </div>
+        <div class="col-xl-12">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="OnTimePickup" value="option1">
+              <label class="form-check-label text-capitalize font-weight-400 font-12 mb-10" for="OnTimePickup">On Time Pickup</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="OnTimeDelivery" value="option2">
+              <label class="form-check-label text-capitalize font-weight-400 font-12 mb-10" for="OnTimeDelivery">On Time Delivery</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="chkPassport" value="option2">
+              <label class="form-check-label text-capitalize font-weight-400 font-12 mb-10" for="chkPassport">Lumper</label>
+            </div>
+        </div>
+        <div id="dvPassport" class="col-xl-12" style="display: none">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="form-group">
+                        <label class="text-uppercase font-weight-400 font-12 mb-10">Lumper Amount</label>
+                        <input type="text" class="form-control" placeholder="Carrier" name="trucklocation">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="form-group">
+                        <label class="text-uppercase font-weight-400 font-12 mb-10">Paid By</label>
+                        <select class="form-group form-select">
+                            <option>Select Option</option>
+                            <option>Paid By Company</option>
+                            <option>Paid By Carrier</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="modal-footer text-center">
+    <a type="button" class="font-weight-400 font-12 me-3" data-bs-dismiss="modal">Cancel</a>
+    <button type="button" class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Submit</button>
+  </div>
+</div>
+</div>
+</div>
+<!-- Delivered Modal :: End -->
+<!-- Edit Pickup :: Start -->
+<div class="modal fade" id="editPickupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title text-capitalize font-18 mb-0">Edit Pickup</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="form-group">
+                    <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Facility<span class="requried ms-1">*</span></label>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-map-marker-alt"></i></span>
+                        <select id="facility-list2" class="js-states form-control form-select" aria-placeholder="Select Truck">
+                            <option></option>
+                            <option>Facility 1</option>
+                            <option>Facility 2</option>
+                            <option>Facility 3</option>
+                            <option>Facility 4</option>
+                            <option>Facility 5</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-clock"></i></span>
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="pickupradio" id="pickupAppt" onclick="ToCalendarPickup()" checked="">
+                            <label class="btn btn-outline-primary text-uppercase" for="pickupAppt">Appt</label>
+                            
+                            <input type="radio" class="btn-check" name="pickupradio" id="pickupfcfs" onclick="ToCalendarPickup()">
+                            <label class="btn btn-outline-primary text-uppercase" for="pickupfcfs">Fcfs</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <div class="input-group">
+                      <input type="datetime-local" class="form-control" placeholder="MM/DD/YYYY hh:mm:ss">
+                      <span class="input-group-text border-0 border-radius-6" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5" id="toCalandarBoxpickup" style="display: none;">
+                <div class="form-group d-flex align-items-center gap-2">
+                    <div>
+                        <label for="inputPassword6" class="col-form-label">to</label>
+                    </div>
+                    <div>
+                        <div class="input-group position-relative">
+                          <input type="datetime-local" class="form-control position-relative" placeholder="MM/DD/YYYY hh:mm:ss">
+                          <span class="input-group-text border-0 border-radius-6" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6">
+                <div class="form-group">
+                    <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Appointment Number</label>
+                    <div class="input-group">
+                        <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-hashtag"></i></span>
+                        <input type="text" class="form-control" placeholder="Enter Appointment">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="form-group">
+                    <label class="text-uppercase font-weight-400 font-12 mb-10">Pickup Number</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Enter Pickup Number">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-12 col-lg-12">
+                <div class="form-group">
+                    <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Commodity</label>
+                    <div class="input-group">
+                        <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-briefcase"></i></span>
+                        <input type="text" class="form-control" placeholder="Enter Commodity">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-12 col-lg-12">
+                <div class="ps-27">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Weight (LBS)</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter Weight">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Pallets Count</label>
+                                <input type="text" class="form-control" id="palletscount" placeholder="Pallets Count">
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Case Count</label>
+                                <input type="text" class="form-control" id="casecount" placeholder="Case Count">
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Pickup Instructions</label>
+                                <textarea class="form-control" rows="5" placeholder="Write Something..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+  <div class="modal-footer">
+    <a type="button" class="font-weight-400 font-12 me-3" data-bs-dismiss="modal">Cancel</a>
+    <button type="button" class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Update Pickup</button>
+  </div>
+</div>
+</div>
+</div>
+<!-- Edit Pickup :: End -->
+<!-- Edit Dropoff :: Start -->
+<div class="modal fade" id="editDropoffModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title text-capitalize font-18 mb-0">Edit Dropoff</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="form-group">
+                <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Facility<span class="requried ms-1">*</span></label>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-map-marker-alt"></i></span>
+                    <select id="facility-list3" class="js-states form-control form-select" aria-placeholder="Select Truck">
+                        <option></option>
+                        <option>Facility 1</option>
+                        <option>Facility 2</option>
+                        <option>Facility 3</option>
+                        <option>Facility 4</option>
+                        <option>Facility 5</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-group">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-clock"></i></span>
+                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="dropoffradio" id="dropoffAppt" onclick="ToCalendarDropoff()" checked>
+                        <label class="btn btn-outline-primary text-uppercase" for="dropoffAppt">Appt</label>
+                        
+                        <input type="radio" class="btn-check" name="dropoffradio" id="dropofffcfs" onclick="ToCalendarDropoff()">
+                        <label class="btn btn-outline-primary text-uppercase" for="dropofffcfs">Fcfs</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <div class="input-group">
+                  <input type="datetime-local" class="form-control" placeholder="MM/DD/YYYY hh:mm:ss A"/>
+                  <span class="input-group-text border-0 border-radius-6" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-5" id="toCalandarBoxdropoff" style="display: none;">
+            <div class="form-group d-flex align-items-center gap-2">
+                <div>
+                    <label for="inputPassword6" class="col-form-label">to</label>
+                </div>
+                <div>
+                    <div class="input-group">
+                      <input type="datetime-local" class="form-control" placeholder="MM/DD/YYYY hh:mm:ss A"/>
+                      <span class="input-group-text border-0 border-radius-6" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-6 col-lg-6">
+            <div class="form-group">
+                <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Appointment Number</label>
+                <div class="input-group">
+                    <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-hashtag"></i></span>
+                    <input type="text" class="form-control" placeholder="Enter Appointment" />
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="form-group">
+                <label class="text-uppercase font-weight-400 font-12 mb-10">Pickup Number</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter Pickup Number" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="collapse" id="collapseOptionDetails">
+          <div class="row">
+            <div class="col-xl-12 col-lg-12">
+                <div class="form-group">
+                    <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Commodity</label>
+                    <div class="input-group">
+                        <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-briefcase"></i></span>
+                        <input type="text" class="form-control" placeholder="Enter Commodity" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-12 col-lg-12">
+                <div class="ps-27">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Weight (LBS)</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter Weight" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Quantity</label>
+                                    <input type="text" class="form-control" placeholder="Enter Quantity" />
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Unit Type</label>
+                                <select class="form-select">
+                                    <option value="1">Select one</option>
+                                    <option value="2">1</option>
+                                    <option value="3">2</option>
+                                    <option value="4">3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">PO Number</label>
+                                <input type="number" class="form-control" placeholder="Enter PO Number" />
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">BOL #</label>
+                                <input type="text" class="form-control" placeholder="Enter BOL" />
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Pickup Instructions</label>
+                                <textarea class="form-control" rows="5" placeholder="Write Something..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="load-card-footer font-12 ps-27">
+            <a data-bs-toggle="collapse" href="#collapseOptionDetails" role="button" aria-expanded="false" aria-controls="collapseOptionDetails"><i class="fas fa-ellipsis-h"></i> Add <span class="text-main text-uppercase font-weight-400">Dropoff</span> notes and <span class="text-main text-uppercase font-weight-400">Commodity</span> Details.</a>
+        </div>
+    </div>
+  <div class="modal-footer">
+    <a type="button" class="font-weight-400 font-12 me-3" data-bs-dismiss="modal">Cancel</a>
+    <button type="button" class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Update Dropoff</button>
+  </div>
+</div>
+</div>
+</div>
+<!-- Edit Dropoff :: End -->

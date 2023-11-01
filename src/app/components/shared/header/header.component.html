@@ -1,0 +1,1107 @@
+<!-- Top Bar :: Start -->
+<header class="top-bar mb-0">
+    <div class="action-group d-flex justify-content-between align-items-center"> 
+        <div class="group1 d-flex align-items-center gap-3">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container-fluid p-0">
+                    <a class="navbar-brand" [routerLink]="['/loads/loads-list']" style="width:120px">
+                        <img src="assets/images/logo-dark1.png" class="img-fluid">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown d-menu">
+                                <a class="nav-link dropdown-toggle font-13 font-weight-400 active" href="javascript:;" data-bs-toggle="dropdown" aria-haspopup="true" aria-haspopup="true" aria-expanded="false">Loads</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li><a class="dropdown-item font-13" (click)="openModal(addLoad)">Add</a></li>
+                                    <!-- <li><a href="javascript:;" class="btn btn-outline-info text-main text-uppercase text-center font-12 me-2" type="button" data-bs-toggle="modal" data-bs-target="#addLoad"><i class="far fa-plus"></i> Add Load</a></li> -->
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/loads/loads-list']" >List</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/loads/delivered-loads']" >Delivered Loads</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/loads/possible-claims']" >Possible Claims</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/loads/load-search']" >Loads Search</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/loads/load-ratings']" >Ratings</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/loads/locked-loads']" >Locked Loads</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/loads/send-loads-to-carriers']" >Send Loads to Carriers</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle font-13 font-weight-400" href="javascript:;" data-bs-toggle="dropdown" data-bs-auto-close="outside">Load Board</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/load-board/template-list']" >Add Template</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/load-board/template-list']" >Template List</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/load-board/load-board-list']" >Add Load to Board</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/load-board/load-board-list']" >Loads Board List</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle font-13 font-weight-400" href="javascript:;" data-bs-toggle="dropdown" data-bs-auto-close="outside">Locations</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/locations/location-list']" >Add</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/locations/location-list']" >List</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle font-13 font-weight-400" href="javascript:;" data-bs-toggle="dropdown" data-bs-auto-close="outside">Customers</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/customers/customer-list']" >Add</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/customers/customer-list']" >List</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/customers/customer-rating']" >Ratings</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/customers/deactivated-customers']" >De-activated Customers</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/customers/potential-customer-list']" >Add Potential Customer</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/customers/potential-customer-list']" >Potential Customer List</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/customers/ad-potential-customers']" >A/D Potential Customers</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle font-13 font-weight-400" href="javascript:;" data-bs-toggle="dropdown" aria-haspopup="true" aria-haspopup="true" aria-expanded="false">Carrier</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/carriers/carrier-list']" >Carrier List</a></li>
+                                    <li class="dropdown dropend">
+                                        <a class="dropdown-item dropdown-toggle font-13" href="javascript:;" id="dropdown-layouts" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drivers</a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown-layouts">
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/carriers/drivers/driver-list']" >Add</a></li>
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/carriers/drivers/driver-list']" >List</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown dropend">
+                                        <a class="dropdown-item dropdown-toggle font-13" href="javascript:;" id="dropdown-layouts" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trucks</a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown-layouts">
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/carriers/trucks/truck-list']">Add</a></li>
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/carriers/trucks/truck-list']">List</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown dropend">
+                                        <a class="dropdown-item dropdown-toggle font-13" href="javascript:;" id="dropdown-layouts" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trailers</a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown-layouts">
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/carriers/trailers/trailer-list']" >Add</a></li>
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/carriers/trailers/trailer-list']" >List</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/carriers/carrier-on-board']" >Carrier on Board</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/carriers/searched-carriers']" >Searched Carriers</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle font-13 font-weight-400" href="javascript:;" data-bs-toggle="dropdown" aria-haspopup="true" aria-haspopup="true" aria-expanded="false">Users</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li class="dropdown dropend">
+                                        <a class="dropdown-item dropdown-toggle font-13" href="javascript:;" id="dropdown-layouts" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Branches</a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown-layouts">
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/users/branches/manage-branches']" >Manage Branches</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown dropend">
+                                        <a class="dropdown-item dropdown-toggle font-13" href="javascript:;" id="dropdown-layouts" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Permissions</a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown-layouts">
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/users/permissions/permission-groups']" >Permission Groups</a></li>
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/users/permissions/group-list']" >Group List</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle font-13 font-weight-400" href="javascript:;" data-bs-toggle="dropdown" aria-haspopup="true" aria-haspopup="true" aria-expanded="false">Accounting</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li class="dropdown dropend">
+                                        <a class="dropdown-item dropdown-toggle font-13" href="#" id="dropdown-layouts" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Carrier Payble</a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown-layouts">
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/accounting/carrier-payble/list']" >List</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/accounting/branch-receivable']" >Branch receivable</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/accounting/account-receivable']" >Account receivable</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/accounting/account-receivable-v2']" >Account receivable v2</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle font-13 font-weight-400" href="javascript:;" data-bs-toggle="dropdown" data-bs-auto-close="outside">Daily Rates</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/daily-rates/daily-rates-list']" >Add</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/daily-rates/daily-rates-list']" >List</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/daily-rates/download-routs-csv']" >Download Routs CSV</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle font-13 font-weight-400" href="javascript:;" data-bs-toggle="dropdown" data-bs-auto-close="outside">Settings</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/settings/activity-logs']" >Activity Logs</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle font-13 font-weight-400" href="javascript:;" data-bs-toggle="dropdown" data-bs-auto-close="outside">Notes</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/notes/comments/daily-carriers']" >Daily Carriers Comments</a></li>
+                                    <li><a class="dropdown-item font-13" [routerLink]="['/notes/comments/daily-customers']" >Daily Customers Comments</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle font-13 font-weight-400" href="javascript:;" data-bs-toggle="dropdown" aria-haspopup="true" aria-haspopup="true" aria-expanded="false">Miscellaneous</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li class="dropdown dropend">
+                                        <a class="dropdown-item dropdown-toggle font-13" href="#" id="dropdown-layouts" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tasks</a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown-layouts">
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/miscellaneous/tasks/task-management']" >Task Management</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown dropend">
+                                        <a class="dropdown-item dropdown-toggle font-13" href="#" id="dropdown-layouts" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tags</a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown-layouts">
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/miscellaneous/tags/tag-management']" >Tag Management</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown dropend">
+                                        <a class="dropdown-item dropdown-toggle font-13" href="#" id="dropdown-layouts" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Expenses</a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown-layouts">
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/miscellaneous/expenses/expenses-manage']" >Manage</a></li>
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/miscellaneous/expenses/expenses-categories']" >Categories</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown dropend">
+                                        <a class="dropdown-item dropdown-toggle font-13" href="#" id="dropdown-layouts" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Advance Payment</a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown-layouts">
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/miscellaneous/advance-payment/advance-payment-manage']" >Manage</a></li>
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/miscellaneous/advance-payment/advance-payment-due-payments']" >Due Payments</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown dropend">
+                                        <a class="dropdown-item dropdown-toggle font-13" href="#" id="dropdown-layouts" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Factoring Companies</a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown-layouts">
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/miscellaneous/factoring-companies/factoring-companies-list']" >Add</a></li>
+                                            <li><a class="dropdown-item font-13" [routerLink]="['/miscellaneous/factoring-companies/factoring-companies-list']" >List</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="group2 d-flex gap-2 align-items-center">
+            <div class="cursor-pointer text-white">
+                <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="text-black"><i class="far fa-search font-13 me-3"></i></a>
+            </div>
+            <div class="user-name display-md-none">
+                <span class="text-capitalize text-black font-13">Hi, <span class="font-weight-600 text-black">User</span></span>
+            </div>
+            <div class="dropdown">
+                <div id="dropdownMenuLink" class="user-profile dropdown-toggle border-radius-50 overflow-hidden" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="assets/images/profile-pic.png" class="img-fluid" alt="profile name" title="profile name">
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li class="text-center text-main bg-lightblue pt-2 pb-2 display-md-block">
+                        <a href="javascript:;" class="dropdown-item font-13">
+                            Hi, <span class="font-weight-400">User Name</span>
+                        </a>
+                    </li>
+                    <li><a class="dropdown-item font-13" href="#"><i class="far fa-user me-2 text-main"></i> Profile</a></li>
+                    <li><a class="dropdown-item font-13" href="#"><i class="far fa-file-invoice me-2 text-main"></i> Invoice</a></li>
+                    <li><a class="dropdown-item font-13" href="#" (click)="logout()"><i class="far fa-sign-out me-2 text-main"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Top Bar :: End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add load modal :: End -->
+<div class="modal fade" id="addLoad" data-bs-keyboard="false" aria-labelledby="addLoadModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title text-capitalize font-18 mb-0" id="staticBackdropLabel">Add Load</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal(addLoad)"></button>
+            </div>
+            <div class="modal-body">
+            <div class="row justify-content-md-center">
+                <div class="col-xl-5 col-lg-5">
+                    <div class="load-card border-radius-10 bg-white mb-20">
+                        <div class="load-card-body p-20">
+                            <div class="load-card-title mb-20">
+                                <h3 class="text-capitalize font-18 mb-0">Load Details</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="form-group mb-10 select-search">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Customer</label>
+                                        <select id="add-customer" class="js-states form-control form-select" aria-placeholder="Select Customer">
+                                            <option></option>
+                                            <option>Customer 1</option>
+                                            <option>Customer 2</option>
+                                            <option>Customer 3</option>
+                                            <option>Customer 4</option>
+                                            <option>Customer 5</option>
+                                        </select>
+                                        <a href="javascript:;" class="text-primary text-uppercase font-weight-400 font-12" (click)="openModal(addCustomer)">+ Add new Customer</a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="form-group mb-10 select-search">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Customer Branch</label>
+                                        <select id="customer-branch" class="js-states form-control form-select" aria-placeholder="Customer Branch">
+                                            <option></option>
+                                            <option>Transfix</option>
+                                            <option>Branch 2</option>
+                                            <option>Branch 3</option>
+                                            <option>Branch 4</option>
+                                            <option>Branch 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="transfix main-bg-color p-10 mb-20 border-radius-6">
+                                <div class="title mb-20 d-flex align-items-center justify-content-between">
+                                    <h6 class="font-16 mb-0">Transfix</h6>
+                                    <a href="javascript:;" class="text-main font-14"><i class="far fa-edit"></i></a>
+                                </div>
+                                <div class="content">
+                                    <p class="font-12 font-weight-500">Customer Contact</p>
+                                    <p class="font-12">No Contact Name</p>
+                                    <p class="font-12">No Email - No Phone Number</p>
+                                    <p class="font-12 font-weight-500">Customer Notes</p>
+                                    <p class="font-12 mb-0">...</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Income</label>
+                                        <input type="text" class="form-control" name="income" id="income" placeholder="Income" />
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">PO Number</label>
+                                        <input type="number" class="form-control" name="rate" id="rate" placeholder="PO Number" />
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="form-group form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="hotload" checked>
+                                        <label class="form-check-label font-12 font-weight-400 text-uppercase" for="hotload">
+                                            Hot Load
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="load-card-title mb-20">
+                                <h3 class="text-capitalize font-18 mb-0">Equipment</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Load Type</label>
+                                        <select id="load-type" class="js-states form-control form-select" aria-placeholder="Select Load Type">
+                                            <option></option>
+                                            <option>53'Reefer</option>
+                                            <option>53'Reefer W/Team</option>
+                                            <option>53'Van or Reefer</option>
+                                            <option>53'Van</option>
+                                            <option>FlatBed</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Total Weight</label>
+                                        <input type="number" class="form-control" name="totalweight" id="totalweight" placeholder="Weight"/>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Total Miles</label>
+                                        <input type="number" class="form-control" name="totalmiles" id="totalmiles" placeholder="Miles"/>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Declared Value</label>
+                                        <input type="number" class="form-control" name=">declaredvalue" id=">declaredvalue" placeholder="Value"/>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Target MIN.</label>
+                                        <input type="number" class="form-control" name=">targetmin" id=">targetmin" placeholder="MIN"/>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Target MAX.</label>
+                                        <input type="number" class="form-control" name=">targetmax" id=">targetmax" placeholder="MAX"/>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="font-12 font-weight-400 text-uppercase mb-10">Offer Price</label>
+                                        <input type="number" class="form-control" name=">carrierofferprice" id=">carrierofferprice" placeholder="Price"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseNote">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label class="font-12 font-weight-400 text-uppercase mb-10">Carrier Notes</label>
+                                            <textarea class="form-control" rows="5" name="carriernotes" placeholder="Write something..."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label class="font-12 font-weight-400 text-uppercase mb-10">Customer Notes</label>
+                                            <textarea class="form-control" rows="5" name="customernotes" placeholder="Write something..."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="load-card-footer font-12">
+                                <a data-bs-toggle="collapse" href="#collapseNote" role="button" aria-expanded="false" aria-controls="collapseNote"><i class="fas fa-ellipsis-h"></i> Add <span class="text-main text-uppercase font-weight-400">Carrier Notes</span> and <span class="text-main text-uppercase font-weight-400">Customer Notes</span> Details.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="load-card border-radius-10 bg-white mb-20">
+                        <div class="load-card-body p-20">
+                            <div class="load-card-title mb-20 d-flex align-items-center gap-2">
+                                <span class="border-radius-6 d-block font-weight-400 text-white">P</span>
+                                <h3 class="text-capitalize font-18 mb-0">Pickup</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="form-group">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Facility<span class="requried ms-1">*</span></label>
+                                        <div class="input-group flex-nowrap">
+                                            <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-map-marker-alt"></i></span>
+                                            <select id="facility-list4" class="js-states form-control form-select" aria-placeholder="Select Truck">
+                                                <option></option>
+                                                <option>Facility 1</option>
+                                                <option>Facility 2</option>
+                                                <option>Facility 3</option>
+                                                <option>Facility 4</option>
+                                                <option>Facility 5</option>
+                                            </select>
+                                        </div>
+                                        <a href="javascript:;" class="text-primary text-uppercase font-weight-400 font-12 ps-27" data-bs-toggle="modal" data-bs-target="#addFacility" (click)="openModal(addFacility)">+ Add new facility</a>
+                                    </div>
+
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <div class="input-group flex-nowrap">
+                                            <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-clock"></i></span>
+                                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic radio toggle button group">
+                                                <input type="radio" class="btn-check" name="pickupradio" id="pickupAppt" onclick="ToCalendarPickup()" checked>
+                                                <label class="btn btn-outline-primary text-uppercase" for="pickupAppt">Appt</label>
+                                                
+                                                <input type="radio" class="btn-check" name="pickupradio" id="pickupfcfs" onclick="ToCalendarPickup()">
+                                                <label class="btn btn-outline-primary text-uppercase" for="pickupfcfs">Fcfs</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input type="datetime-local" class="form-control" placeholder="MM/DD/YYYY hh:mm:ss"/>
+                                            <span class="input-group-text border-0 border-radius-6" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-5" id="toCalandarBoxpickup" style="display: none;">
+                                    <div class="form-group d-flex align-items-center gap-2">
+                                        <div>
+                                            <label for="inputPassword6" class="col-form-label">to</label>
+                                        </div>
+                                        <div>
+                                            <div class="input-group position-relative">
+                                                <input type="datetime-local" class="form-control position-relative" placeholder="MM/DD/YYYY hh:mm:ss"/>
+                                                <span class="input-group-text border-0 border-radius-6" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Appointment Number</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-hashtag"></i></span>
+                                            <input type="text" class="form-control" placeholder="Enter Appointment" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Pickup Number</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Enter Pickup Number" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Commodity</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-briefcase"></i></span>
+                                            <input type="text" class="form-control" placeholder="Enter Commodity" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12">
+                                    <div class="ps-27">
+                                        <div class="row">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Weight (LBS)</label>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Enter Weight" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Pallets Count</label>
+                                                    <input type="text" class="form-control" id="palletscount" placeholder="Pallets Count" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Case Count</label>
+                                                    <input type="text" class="form-control" id="casecount" placeholder="Case Count"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12 col-lg-12">
+                                                <div class="form-group">
+                                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Pickup Instructions</label>
+                                                    <textarea class="form-control" rows="5" placeholder="Write Something..."></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-20">
+                        <div class="col-12">
+                            <button class="btn btn-primary font-weight-400 font-12 pe-3 ps-3">+ Add Pickup 2</button>
+                        </div>
+                    </div>
+                    <div class="load-card border-radius-10 bg-white mb-20">
+                        <div class="load-card-body p-20">
+                            <div class="load-card-title mb-20 d-flex align-items-center gap-2">
+                                <span class="border-radius-6 d-block font-weight-400 text-white">D</span>
+                                <h3 class="text-capitalize font-18 mb-0">Dropoff</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="form-group">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Facility<span class="requried ms-1">*</span></label>
+                                        <div class="input-group flex-nowrap">
+                                            <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-map-marker-alt"></i></span>
+                                            <select id="facility-list5" class="js-states form-control form-select" aria-placeholder="Select Truck">
+                                                <option></option>
+                                                <option>Facility 1</option>
+                                                <option>Facility 2</option>
+                                                <option>Facility 3</option>
+                                                <option>Facility 4</option>
+                                                <option>Facility 5</option>
+                                            </select>
+                                        </div>
+                                        <a href="javascript:;" class="text-primary text-uppercase font-weight-400 font-12 ps-27" data-bs-toggle="modal" data-bs-target="#addFacility" (click)="openModal(addFacility)">+ Add new facility</a>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <div class="input-group flex-nowrap">
+                                            <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-clock"></i></span>
+                                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic radio toggle button group">
+                                                <input type="radio" class="btn-check" name="dropoffradio" id="dropoffAppt" onclick="ToCalendarDropoff()" checked>
+                                                <label class="btn btn-outline-primary text-uppercase" for="dropoffAppt">Appt</label>
+                                                
+                                                <input type="radio" class="btn-check" name="dropoffradio" id="dropofffcfs" onclick="ToCalendarDropoff()">
+                                                <label class="btn btn-outline-primary text-uppercase" for="dropofffcfs">Fcfs</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input type="datetime-local" class="form-control" placeholder="MM/DD/YYYY hh:mm:ss A"/>
+                                            <span class="input-group-text border-0 border-radius-6" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-5" id="toCalandarBoxdropoff" style="display: none;">
+                                    <div class="form-group d-flex align-items-center gap-2">
+                                        <div>
+                                            <label for="inputPassword6" class="col-form-label">to</label>
+                                        </div>
+                                        <div>
+                                            <div class="input-group">
+                                                <input type="datetime-local" class="form-control" placeholder="MM/DD/YYYY hh:mm:ss A"/>
+                                                <span class="input-group-text border-0 border-radius-6" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="time" id="time" value="7:30am"/>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Appointment Number</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-hashtag"></i></span>
+                                            <input type="text" class="form-control" placeholder="Enter Appointment" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Pickup Number</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Enter Pickup Number" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseExample">
+                                    <div class="row">
+                                    <div class="col-xl-12 col-lg-12">
+                                        <div class="form-group">
+                                            <label class="text-uppercase font-weight-400 font-12 mb-10 ps-27">Commodity</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text border-0 bg-transparent ps-1" id="basic-addon1"><i class="far fa-briefcase"></i></span>
+                                                <input type="text" class="form-control" placeholder="Enter Commodity" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12">
+                                        <div class="ps-27">
+                                            <div class="row">
+                                                <div class="col-xl-4 col-lg-4">
+                                                    <div class="form-group">
+                                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Weight (LBS)</label>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="Enter Weight" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-4 col-lg-4">
+                                                    <div class="form-group">
+                                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Quantity</label>
+                                                            <input type="text" class="form-control" placeholder="Enter Quantity" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-4 col-lg-4">
+                                                    <div class="form-group">
+                                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Unit Type</label>
+                                                        <select class="form-select">
+                                                            <option value="1">Select one</option>
+                                                            <option value="2">1</option>
+                                                            <option value="3">2</option>
+                                                            <option value="4">3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6">
+                                                    <div class="form-group">
+                                                        <label class="text-uppercase font-weight-400 font-12 mb-10">PO Number</label>
+                                                        <input type="number" class="form-control" placeholder="Enter PO Number" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6">
+                                                    <div class="form-group">
+                                                        <label class="text-uppercase font-weight-400 font-12 mb-10">BOL #</label>
+                                                        <input type="text" class="form-control" placeholder="Enter BOL" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12 col-lg-12">
+                                                    <div class="form-group">
+                                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Pickup Instructions</label>
+                                                        <textarea class="form-control" rows="5" placeholder="Write Something..."></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                            </div>
+                            <div class="load-card-footer font-12 ps-27">
+                                <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-ellipsis-h"></i> Add <span class="text-main text-uppercase font-weight-400">Dropoff</span> notes and <span class="text-main text-uppercase font-weight-400">Commodity</span> Details.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-20">
+                        <div class="col-12">
+                            <button class="btn btn-primary font-weight-400 font-12 pe-3 ps-3">+ Add Dropoff 2</button>
+                        </div>
+                    </div>
+                    <div class="load-card border-radius-10 bg-white mb-20">
+                        <div class="load-card-body p-20">
+                            <div class="load-card-title mb-20">
+                                <h3 class="text-capitalize font-18 mb-0">Basics</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="form-group">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Carrier<span class="requried ms-1">*</span></label>
+                                            <input type="text" class="form-control" placeholder="Username" value="Mann Trans Inc" />
+                                    </div>
+                                </div>
+                                <div class="col-xl-5 col-lg-5">
+                                    <div class="form-group select-driver">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Driver</label>
+                                        <select id="add-driver" class="js-states form-control form-select" aria-placeholder="Select Driver">
+                                            <option></option>
+                                            <option>Driver 1</option>
+                                            <option>Driver 2</option>
+                                            <option>Driver 3</option>
+                                            <option>Driver 4</option>
+                                            <option>Driver 5</option>
+                                        </select>
+                                        <a href="javascript:;" class="text-primary text-uppercase font-weight-400 font-12" data-bs-toggle="modal" data-bs-target="#addDriver" (click)="openModal(addDriver)">+ Add new driver</a>
+                                    </div>
+                                </div>
+                                <div class="col-1 addriver-icon">
+                                    <div class="add-driver mt-30 mb-0 cursor-pointer text-main" data-bs-toggle="tooltip" title="Add Driver 2"><i class="far fa-users"></i></div>
+                                </div>
+                                <div class="col-xl-5 col-lg-5 select-driver-2 position-relative" style="visibility: hidden;">
+                                    <div class="form-group select-driver" >
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Driver2</label>
+                                        <select id="add-driver-2" class="js-states form-control form-select" aria-placeholder="Select Driver">
+                                            <option></option>
+                                            <option>Driver 1</option>
+                                            <option>Driver 2</option>
+                                            <option>Driver 3</option>
+                                            <option>Driver 4</option>
+                                            <option>Driver 5</option>
+                                        </select>
+                                        <a href="javascript:;" class="text-primary text-uppercase font-weight-400 font-12" data-bs-toggle="modal" data-bs-target="#addDriver" (click)="openModal(addDriver)">+ Add new driver</a>
+                                        <span class="del-adddriver text-red font-14 cursor-pointer del-driver" data-bs-toggle="tooltip" title="Delete Driver 2"><i class="far fa-trash-alt"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="form-group select-search">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Truck</label>
+                                        <select id="add-truck" class="js-states form-control form-select" aria-placeholder="Select Truck">
+                                            <option></option>
+                                            <option>Truck 1</option>
+                                            <option>Truck 2</option>
+                                            <option>Truck 3</option>
+                                            <option>Truck 4</option>
+                                            <option>Truck 5</option>
+                                        </select>
+                                        <a href="javascript:;" class="text-primary text-uppercase font-weight-400 font-12" (click)="openModal(addTruck)">+ Add new Truck</a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="form-group select-search">
+                                        <label class="text-uppercase font-weight-400 font-12 mb-10">Trailer</label>
+                                        <select id="add-trailer" class="js-states form-control form-select" aria-placeholder="Select Trailer">
+                                            <option></option>
+                                            <option>Trailer 1</option>
+                                            <option>Trailer 2</option>
+                                            <option>Trailer 3</option>
+                                            <option>Trailer 4</option>
+                                            <option>Trailer 5</option>
+                                        </select>
+                                        <a href="javascript:;" class="text-primary text-uppercase font-weight-400 font-12" data-bs-toggle="modal" data-bs-target="#addTrailer" (click)="openModal(addTrailer)">+ Add new Trailer</a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12">
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked/>
+                                            <label class="font-12 font-weight-400" for="flexCheckDefault">
+                                            I'm the Dispatcher for this load
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" value="KTS Dispatch" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="load-card border-radius-10 bg-white mb-20">
+                        <div class="load-card-body p-20">
+                            <div class="load-card-title mb-20">
+                                <h3 class="text-capitalize font-18 mb-0">Attachments</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="form-group">
+                                        <input name="file1" type="file" class="dropify border-radius-6" data-height="100" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="modal-footer text-center">
+            <a type="button" class="font-weight-400 font-12 me-3" data-bs-dismiss="modal" (click)="closeModal(addLoad)">Cancel</a>
+            <button type="button" class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Add load modal :: End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add Truck Modal :: Start -->
+<div class="modal fade" id="addTruck" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="background-color: rgba(0, 0, 0, 0.5);">
+<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title text-capitalize font-18 mb-0" id="staticBackdropLabel">Add New Truck</h5>
+        <button type="button" class="btn-close font-14" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal(addTruck)"></button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="alert alert-primary font-12" role="alert">
+                    Lot of trucks to add? Contact us and we'll import your drivers in bulk.
+                </div>
+            </div>
+            <div class="col-xl-12">
+                <form method="post">
+                    <div class="form-group">
+                        <label class="text-uppercase font-weight-400 font-12 mb-10">Truck Number or nick name<span class="requried ms-1">*</span></label>
+                        <input type="text" class="form-control" name="trucknum" placeholder="Truck #"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="text-uppercase font-weight-400 font-12 mb-10">Employer<span class="requried ms-1">*</span></label>
+                        <input type="text" class="form-control cursor-no-drop" name="firstname" placeholder="Employer" value="MANN TRANS INC" disabled />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a type="button" class="font-weight-400 font-12 me-3" data-bs-dismiss="modal" (click)="closeModal(addTruck)">Cancel</a>
+        <button type="button" class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Add Truck</button>
+    </div>
+    </div>
+</div>
+</div>
+<!-- Add Truck Modal :: End -->
+
+
+<!-- Add Driver Modal :: Start -->
+<div class="modal fade" id="addDriver" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="background-color: rgba(0, 0, 0, 0.5);">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-capitalize font-18 mb-0" id="staticBackdropLabel">Add Driver</h5>
+          <button type="button" class="btn-close font-14" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal(addDriver)"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+              <div class="col-xl-12">
+                  <div class="alert alert-primary font-12" role="alert">
+                        Lot of drivers to add? Contact us and we'll import your drivers in bulk.
+                  </div>
+              </div>
+              <div class="col-xl-12">
+                  <form method="post">
+                      <div class="form-group">
+                          <label class="text-uppercase font-weight-400 font-12 mb-10">Full name<span class="requried ms-1">*</span></label>
+                          <input type="text" class="form-control" name="firstname" placeholder="Full Name"/>
+                      </div>
+                      <div class="form-group">
+                          <label class="text-uppercase font-weight-400 font-12 mb-10">Mobile Number<span class="requried ms-1">*</span></label>
+                          <input type="text" class="form-control" name="mobilenumber" placeholder="Mobile Number"/>
+                      </div>
+                      <div class="form-group">
+                          <label class="text-uppercase font-weight-400 font-12 mb-10">Employer<span class="requried ms-1">*</span></label>
+                          <input type="text" class="form-control" name="firstname" placeholder="Employer" value="MANN TRANS INC"/>
+                      </div>
+                      <div class="form-group">
+                          <label class="text-uppercase font-weight-400 font-12 mb-10">Contact Email<span class="requried ms-1">*</span></label>
+                          <input type="text" class="form-control" name="firstname" placeholder="Contact Email"/>
+                      </div>
+                      <div class="col-xl-12 col-lg-12">
+                          <div class="form-group mb-0">
+                              <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                                    <label class="form-check-label font-weight-400 font-12" for="flexSwitchCheckChecked">Enable driver status updates for all loads</label>
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a type="button" class="font-weight-400 font-12 me-3" data-bs-dismiss="modal" (click)="closeModal(addDriver)">Cancel</a>
+          <button type="button" class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Add Driver</button>
+        </div>
+      </div>
+    </div>
+</div>
+  <!-- Add Driver Modal :: End -->
+
+
+<!-- Add Trailer Modal :: Start -->
+<div class="modal fade" id="addTrailer" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="background-color: rgba(0, 0, 0, 0.5);">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title text-capitalize font-18 mb-0" id="staticBackdropLabel">Add New Trailer</h5>
+            <button type="button" class="btn-close font-14" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal(addTrailer)"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="alert alert-primary font-12" role="alert">
+                        Lot of trucks to add? Contact us and we'll import your drivers in bulk.
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <form method="post">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10">Truck Number or nick name<span class="requried ms-1">*</span></label>
+                            <input type="text" class="form-control" name="trailernum" placeholder="Trailer #"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10">Employer<span class="requried ms-1">*</span></label>
+                            <input type="text" class="form-control cursor-no-drop" name="firstname" placeholder="Employer" value="MANN TRANS INC" disabled />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a type="button" class="font-weight-400 font-12 me-3" data-bs-dismiss="modal" (click)="closeModal(addTrailer)">Cancel</a>
+            <button type="button" class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Add Truck</button>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- Add Trailer Modal :: End -->
+
+  
+<!-- Add Facility Modal :: Start -->
+<div class="modal fade" id="addFacility" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="background-color: rgba(0, 0, 0, 0.5);">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-capitalize font-18 mb-0" id="staticBackdropLabel">Add New Facility</h5>
+        <button type="button" class="btn-close font-14" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal(addFacility)"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="alert alert-primary font-12" role="alert">
+                      Lot of facility to add? Contact us and we'll import your drivers in bulk.
+                </div>
+            </div>
+            <div class="col-xl-12">
+                <form method="post">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <p class="mb-3 font-14 font-weight-400">Name and Address</p>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Address line 1<span class="requried ms-1">*</span></label>
+                                <input type="text" class="form-control" name="addressline1" placeholder="Address line 1"/>
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Address line 2</label>
+                                <input type="text" class="form-control" name="addressline2" placeholder="Address line 2"/>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Location<span class="requried ms-1">*</span></label>
+                                <input type="text" class="form-control" name="location" placeholder="Location"/>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Zip Code</label>
+                                <input type="text" class="form-control" name="location" placeholder="Zip Code"/>
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Facility Name</label>
+                                <input type="text" class="form-control" name="facilityname" placeholder="Facility Name"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <p class="mb-3 font-14 font-weight-400">Contact Information (Optional)</p>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Contact Name</label>
+                                <input type="text" class="form-control" name="contactname" placeholder="Contact Name"/>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Phone number</label>
+                                <input type="text" class="form-control" name="phonenumber" placeholder="Phone number"/>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Extension</label>
+                                <input type="text" class="form-control" name="extension" placeholder="Extension"/>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Email</label>
+                                <input type="text" class="form-control" name="email" placeholder="Email"/>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a type="button" class="font-weight-400 font-12 me-3" data-bs-dismiss="modal" (click)="closeModal(addFacility)">Cancel</a>
+        <button type="button" class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Add Facility</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Add Facility Modal :: End -->
+
+  
+<!-- Add Customer Modal :: Start -->
+<div class="modal fade" id="addCustomer" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="background-color: rgba(0, 0, 0, 0.5);">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title text-capitalize font-18 mb-0" id="staticBackdropLabel">Add New Customer</h5>
+            <button type="button" class="btn-close font-14" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal(addCustomer)"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="alert alert-primary font-12" role="alert">
+                        Lot of customer to add? Contact us and we'll import your drivers in bulk.
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <form method="post">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Customer Name<span class="requried ms-1">*</span></label>
+                                    <input type="text" class="form-control" name="customername" placeholder="Customer Name"/>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Customer Contact Name</label>
+                                    <input type="text" class="form-control" name="contactname" placeholder="Customer Contact Name"/>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 col-lg-12">
+                                <div class="form-group">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Customer Contact Phone<span class="requried ms-1">*</span></label>
+                                    <input type="text" class="form-control" name="contactphone" placeholder="Customer Contact Phone"/>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Customer Contact Email</label>
+                                    <input type="text" class="form-control" name="contactemail" placeholder="Customer Contact Email"/>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label class="text-uppercase font-weight-400 font-12 mb-10">Customer Notes</label>
+                                    <textarea rows="5" class="form-control" name="customernotes" placeholder="Customer Notes"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a type="button" class="font-weight-400 font-12 me-3" data-bs-dismiss="modal" (click)="closeModal(addCustomer)">Cancel</a>
+            <button type="button" class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Add Customer</button>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- Add Customer Modal :: End -->

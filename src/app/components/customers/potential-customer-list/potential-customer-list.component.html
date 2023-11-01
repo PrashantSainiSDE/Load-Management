@@ -1,0 +1,451 @@
+<!-- <main>
+    <div class="main-wrapper">
+        <div id="content">
+            <app-header></app-header> -->
+            <div class="main-area position-relative">
+                <!-- Top Search :: Start -->
+                <div class="collapse" id="collapseExample">
+                    <div class="top-search card card-body  border-0 rounded-0">
+                        <form class="form-inline">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="What are you looking for?" aria-label="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button"><i class="far fa-search font-14"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Top Search :: End -->
+                <div class="page-card bg-white">
+                    <div class="page-card-title d-flex align-items-center justify-content-between">
+                        <p class="font-15 font-weight-600 mb-0 text-capitalize">Potential Customer List</p>
+                        <a href="javascript:;" class="btn btn-outline-info text-main text-uppercase text-center font-12" type="button" data-bs-toggle="offcanvas" data-bs-target="#addPotentialCustomer" aria-controls="offcanvasRight"><i class="far fa-plus"></i> Add Potential Customer</a>
+                    </div>
+                        <!-- Search Box :: End -->
+                        <!-- Table Result :: Start -->
+                        <div class="table-responsive p-20 pb-0">
+                            <table class="table table-bordered table-striped position-relative">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-start">Customer Name</th>
+                                        <th class="text-uppercase">Branch</th>
+                                        <th class="text-uppercase">Address</th>
+                                        <th class="text-uppercase">Email</th>
+                                        <th class="text-uppercase whitespace-nowrap">Phone Number</th>
+                                        <th class="text-uppercase">Created By</th>
+                                        <th class="text-uppercase whitespace-nowrap">Status</th>
+                                        <th class="text-uppercase whitespace-nowrap">Notes</th>
+                                        <th class="text-uppercase whitespace-nowrap">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start whitespace-nowrap">Adams Moncrief Transports, Inc</td>
+                                        <td class="text-capitalize"><a class="text-main font-weight-400">Main</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">1979 Monterey Rd-San</td>
+                                        <td>admas125@gmail.com</td>
+                                        <td class="text-capitalize whitespace-nowrap">8542152369</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Approved</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-primary font-weight-400" data-bs-toggle="modal" data-bs-target="#addNotes">Add Notes</a></td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3"><i class="far fa-edit" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start whitespace-nowrap">Adams Moncrief Transports, Inc</td>
+                                        <td class="text-capitalize"><a class="text-main font-weight-400">Main</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">1979 Monterey Rd-San</td>
+                                        <td>admas125@gmail.com</td>
+                                        <td class="text-capitalize whitespace-nowrap">8542152369</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize"><span class="text-warning font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-primary font-weight-400" data-bs-toggle="modal" data-bs-target="#addNotes">Add Notes</a></td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3"><i class="far fa-edit" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start whitespace-nowrap">Adams Moncrief Transports, Inc</td>
+                                        <td class="text-capitalize"><a class="text-main font-weight-400">Main</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">1979 Monterey Rd-San</td>
+                                        <td>admas125@gmail.com</td>
+                                        <td class="text-capitalize whitespace-nowrap">8542152369</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Approved</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-primary font-weight-400" data-bs-toggle="modal" data-bs-target="#addNotes">Add Notes</a></td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3"><i class="far fa-edit" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start whitespace-nowrap">Adams Moncrief Transports, Inc</td>
+                                        <td class="text-capitalize"><a class="text-main font-weight-400">Main</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">1979 Monterey Rd-San</td>
+                                        <td>admas125@gmail.com</td>
+                                        <td class="text-capitalize whitespace-nowrap">8542152369</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Approved</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-primary font-weight-400" data-bs-toggle="modal" data-bs-target="#addNotes">Add Notes</a></td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3"><i class="far fa-edit" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start whitespace-nowrap">Adams Moncrief Transports, Inc</td>
+                                        <td class="text-capitalize"><a class="text-main font-weight-400">Main</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">1979 Monterey Rd-San</td>
+                                        <td>admas125@gmail.com</td>
+                                        <td class="text-capitalize whitespace-nowrap">8542152369</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize"><span class="text-warning font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-primary font-weight-400" data-bs-toggle="modal" data-bs-target="#addNotes">Add Notes</a></td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3"><i class="far fa-edit" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start whitespace-nowrap">Adams Moncrief Transports, Inc</td>
+                                        <td class="text-capitalize"><a class="text-main font-weight-400">Main</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">1979 Monterey Rd-San</td>
+                                        <td>admas125@gmail.com</td>
+                                        <td class="text-capitalize whitespace-nowrap">8542152369</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Approved</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-primary font-weight-400" data-bs-toggle="modal" data-bs-target="#addNotes">Add Notes</a></td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3"><i class="far fa-edit" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start whitespace-nowrap">Adams Moncrief Transports, Inc</td>
+                                        <td class="text-capitalize"><a class="text-main font-weight-400">Main</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">1979 Monterey Rd-San</td>
+                                        <td>admas125@gmail.com</td>
+                                        <td class="text-capitalize whitespace-nowrap">8542152369</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize"><span class="text-warning font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-primary font-weight-400" data-bs-toggle="modal" data-bs-target="#addNotes">Add Notes</a></td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3"><i class="far fa-edit" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start whitespace-nowrap">Adams Moncrief Transports, Inc</td>
+                                        <td class="text-capitalize"><a class="text-main font-weight-400">Main</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">1979 Monterey Rd-San</td>
+                                        <td>admas125@gmail.com</td>
+                                        <td class="text-capitalize whitespace-nowrap">8542152369</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Approved</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-primary font-weight-400" data-bs-toggle="modal" data-bs-target="#addNotes">Add Notes</a></td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3"><i class="far fa-edit" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start whitespace-nowrap">Adams Moncrief Transports, Inc</td>
+                                        <td class="text-capitalize"><a class="text-main font-weight-400">Main</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">1979 Monterey Rd-San</td>
+                                        <td>admas125@gmail.com</td>
+                                        <td class="text-capitalize whitespace-nowrap">8542152369</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Approved</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-primary font-weight-400" data-bs-toggle="modal" data-bs-target="#addNotes">Add Notes</a></td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3"><i class="far fa-edit" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start whitespace-nowrap">Adams Moncrief Transports, Inc</td>
+                                        <td class="text-capitalize"><a class="text-main font-weight-400">Main</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">1979 Monterey Rd-San</td>
+                                        <td>admas125@gmail.com</td>
+                                        <td class="text-capitalize whitespace-nowrap">8542152369</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Approved</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-primary font-weight-400" data-bs-toggle="modal" data-bs-target="#addNotes">Add Notes</a></td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3"><i class="far fa-edit" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start whitespace-nowrap">Adams Moncrief Transports, Inc</td>
+                                        <td class="text-capitalize"><a class="text-main font-weight-400">Main</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">1979 Monterey Rd-San</td>
+                                        <td>admas125@gmail.com</td>
+                                        <td class="text-capitalize whitespace-nowrap">8542152369</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Approved</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-primary font-weight-400" data-bs-toggle="modal" data-bs-target="#addNotes">Add Notes</a></td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3"><i class="far fa-edit" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start whitespace-nowrap">Adams Moncrief Transports, Inc</td>
+                                        <td class="text-capitalize"><a class="text-main font-weight-400">Main</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">1979 Monterey Rd-San</td>
+                                        <td>admas125@gmail.com</td>
+                                        <td class="text-capitalize whitespace-nowrap">8542152369</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize"><span class="text-warning font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Pending</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-primary font-weight-400" data-bs-toggle="modal" data-bs-target="#addNotes">Add Notes</a></td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3"><i class="far fa-edit" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start whitespace-nowrap">Adams Moncrief Transports, Inc</td>
+                                        <td class="text-capitalize"><a class="text-main font-weight-400">Main</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">1979 Monterey Rd-San</td>
+                                        <td>admas125@gmail.com</td>
+                                        <td class="text-capitalize whitespace-nowrap">8542152369</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Approved</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-primary font-weight-400" data-bs-toggle="modal" data-bs-target="#addNotes">Add Notes</a></td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3"><i class="far fa-edit" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start whitespace-nowrap">Adams Moncrief Transports, Inc</td>
+                                        <td class="text-capitalize"><a class="text-main font-weight-400">Main</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">1979 Monterey Rd-San</td>
+                                        <td>admas125@gmail.com</td>
+                                        <td class="text-capitalize whitespace-nowrap">8542152369</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Approved</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-primary font-weight-400" data-bs-toggle="modal" data-bs-target="#addNotes">Add Notes</a></td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3"><i class="far fa-edit" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start whitespace-nowrap">Adams Moncrief Transports, Inc</td>
+                                        <td class="text-capitalize"><a class="text-main font-weight-400">Main</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">1979 Monterey Rd-San</td>
+                                        <td>admas125@gmail.com</td>
+                                        <td class="text-capitalize whitespace-nowrap">8542152369</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Approved</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-primary font-weight-400" data-bs-toggle="modal" data-bs-target="#addNotes">Add Notes</a></td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3"><i class="far fa-edit" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start whitespace-nowrap">Adams Moncrief Transports, Inc</td>
+                                        <td class="text-capitalize"><a class="text-main font-weight-400">Main</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">1979 Monterey Rd-San</td>
+                                        <td>admas125@gmail.com</td>
+                                        <td class="text-capitalize whitespace-nowrap">8542152369</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Approved</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-primary font-weight-400" data-bs-toggle="modal" data-bs-target="#addNotes">Add Notes</a></td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3"><i class="far fa-edit" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start whitespace-nowrap">Adams Moncrief Transports, Inc</td>
+                                        <td class="text-capitalize"><a class="text-main font-weight-400">Main</a></td>
+                                        <td class="text-capitalize whitespace-nowrap">1979 Monterey Rd-San</td>
+                                        <td>admas125@gmail.com</td>
+                                        <td class="text-capitalize whitespace-nowrap">8542152369</td>
+                                        <td class="text-capitalize">Hi Tech India</td>
+                                        <td class="text-capitalize"><span class="text-green font-weight-400"><i class="fas fa-circle font-10 me-1"></i>Approved</span></td>
+                                        <td class="text-capitalize"><a href="javascript:;" class="text-primary font-weight-400" data-bs-toggle="modal" data-bs-target="#addNotes">Add Notes</a></td>
+                                        <td class="text-capitalize">
+                                            <a href="javascript:;" class="text-capitalize font-12 text-info me-3"><i class="far fa-edit" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"></i></a>
+                                            <a href="javascript:;" class="text-capitalize font-12 text-red"><i class="far fa-trash-alt" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Table Result :: End -->
+                        <!-- Pagination :: Start -->
+                        <div class="row mt-30">
+                            <div class="col-xl-12">
+                                <nav aria-label="Page navigation example ms-auto me-auto">
+                                    <ul class="pagination justify-content-center gap-2">
+                                        <li class="page-item">
+                                            <a class="page-link font-22" href="javascript:;" aria-label="Previous"><i class="far fa-angle-left font-weight-300"></i></a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link font-14" href="javascript:;">1</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">2</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">3</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">4</a></li>
+                                        <li class="page-item"><a class="page-link font-14" href="javascript:;">5</a></li>
+                                        <li class="page-item"><a class="page-link font-22" href="javascript:;" aria-label="Next"><i class="far fa-angle-right font-weight-300"></i></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Pagination :: End -->
+                    </div>
+            </div>
+            <!-- </div>
+        </div>
+            <app-footer></app-footer>
+</main> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- addPotentialCustomer Offcanvas :: Start -->
+<div class="offcanvas offcanvas-end add-customer" tabindex="-1" id="addPotentialCustomer" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel" class="font-15 font-weight-600 mb-0 text-capitalize">Add Potential Customer</h5>
+        <a class="btn-close text-reset font-14" data-bs-dismiss="offcanvas" aria-label="Close"></a>
+    </div>
+    <div class="offcanvas-body view-load position-relative">
+        <div class="card border-radius-10 mb-20 toggle-block">
+            <div class="card-header bg-transparent border-0">
+                <div class="heading d-flex align-items-center justify-content-between">
+                    <p class="font-13 font-weight-600 mb-0">Potential Customer</p>
+                    <a class="font-14 font-weight-500 text-main toggle-trigger"><i class="far fa-angle-down"></i></a>
+                </div>
+            </div>
+            <div class="card-body p-20 toggle-able detail-body">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group has-search">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Customer Name<span class="requried ms-1">*</span></label>
+                            <span class="far fa-search form-control-feedback"></span>
+                            <input type="text" name="customername" class="form-control" placeholder="Customer Name"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Email</label>
+                            <input type="text" name="Email" class="form-control" placeholder="Email"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Phone Number</label>
+                            <input type="text" name="companyname" class="form-control" placeholder="Company Name"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Address</label>
+                            <input type="text" name="companydisplayname" class="form-control" placeholder="Address"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">State</label>
+                            <input type="text" name="billingaddress" class="form-control" placeholder="Billing Address"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">City</label>
+                            <input type="text" name="city" class="form-control" placeholder="City"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Zip Code</label>
+                            <input type="text" name="zipcode" class="form-control" placeholder="Zip Code"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Zip Code</label>
+                            <input type="text" name="zipcode" class="form-control" placeholder="Zip Code"/>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="form-group">
+                            <label class="text-uppercase font-weight-400 font-12 mb-10 d-block">Notes</label>
+                            <input type="text" name="Notes" class="form-control" placeholder="Notes"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-footer text-center">
+            <a href="javascript:;" class="font-weight-400 font-12 me-3">Cancel</a>
+            <button class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Submit</button>
+        </div>
+    </div>
+</div>
+<!-- addPotentialCustomer Offcanvas :: End -->
+<!-- Add Notes Modal :: Start -->
+<div class="modal fade" id="addNotes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-capitalize font-18 mb-0" id="staticBackdropLabel">Add Note</h5>
+        <button type="button" class="btn-close font-14" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-xl-12">
+                <form method="post">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="form-group">
+                                <label class="text-uppercase font-weight-400 font-12 mb-10">Note</label>
+                                <textarea class="form-control" name="note" rows="5" placeholder="NOte"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a type="button" class="font-weight-400 font-12 me-3" data-bs-dismiss="modal">Cancel</a>
+        <button type="button" class="btn btn-primary font-weight-400 font-12 ps-4 pe-4">Add Note</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Add Notes Modal :: End -->

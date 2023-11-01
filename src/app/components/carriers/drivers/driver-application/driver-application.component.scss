@@ -1,0 +1,18 @@
+::ng-deep .mat-horizontal-stepper-header-container {
+    display: none !important;
+}
+::ng-deep .mat-horizontal-content-container {
+    padding: 0 !important;
+}
+::ng-deep .mat-stepper-vertical, .mat-stepper-horizontal {
+    font-family: 'Poppins', sans-serif;
+}
+
+label {
+    margin-bottom: 0.5em;
+}
+
+.page-card-body input {
+    display: block;
+    border: 1px solid rgb(204, 204, 204) !important;
+}
